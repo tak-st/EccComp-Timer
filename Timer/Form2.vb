@@ -1282,10 +1282,6 @@ Public Class Form1
         MessageBox.Show("エクスポートが完了しました。", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-    Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
-
-    End Sub
-
     Private Sub 高度な設定をインポートToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 高度な設定をインポートToolStripMenuItem.Click
         OpenFileDialog1.ShowDialog()
         If OpenFileDialog1.FileName = "" Then Exit Sub
@@ -1372,14 +1368,6 @@ Public Class Form1
         MessageBox.Show("インポートが完了しました。", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-    Private Sub ToolStripTextBox1_Click(sender As Object, e As EventArgs) Handles ToolStripTextBox1.Click
-
-    End Sub
-
-    Private Sub ToolStripTextBox2_Click(sender As Object, e As EventArgs) Handles ToolStripTextBox2.Click
-
-    End Sub
-
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
         Dim j = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Hour(counttm), Minute(counttm), 0)
         Dim sabun = DateDiff("s", Now, j)
@@ -1395,7 +1383,7 @@ Public Class Form1
             Me.Opacity = "1"
 
         End If
-        If sabun < 0 Then ProgressBar1.Value = 0 Else ProgressBar1.Value = ProgressBar1.Maximum - sabun
+        If sabun < 0 Then ProgressBar1.Value = 0 Else ProgressBar1.Value = Math.Max(0, ProgressBar1.Maximum - sabun)
         If sabun = 0 Then
             NotifyIcon1.BalloonTipTitle = ""
             NotifyIcon1.BalloonTipText = "時間になりました"
