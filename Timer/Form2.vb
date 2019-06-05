@@ -222,6 +222,11 @@ Public Class Form1
         End Select
         Call バー表示ToolStripMenuItem_Click(Me, e)
         manual = True
+        Dim fileName As String = "AutoLoad.ast"
+        If System.IO.File.Exists(fileName) Then
+            Debug.Print("AutoLoad読み込み")
+            Call autoload(fileName, e)
+        End If
         If My.Settings.kotei Then
             Me.Height = Me.Height - 26
             Me.FormBorderStyle = FormBorderStyle.None
@@ -240,11 +245,6 @@ Public Class Form1
             Call バッテリー残量ToolStripMenuItem_Click(sender, e)
         End If
         Windowsの起動時に自動的に起動するToolStripMenuItem.Checked = My.Settings.StartUp
-        Dim fileName As String = "AutoLoad.ast"
-        If System.IO.File.Exists(fileName) Then
-            Debug.Print("AutoLoad読み込み")
-            Call autoload(fileName, e)
-        End If
     End Sub
 
     Private Sub autoload(filename As String, e As EventArgs)
@@ -602,7 +602,10 @@ Public Class Form1
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
-        MessageBox.Show("授業時間タイマー（ECC Comp.)　v1.70" & vbNewLine & "© 2018-2019 Takuya Shintani", "about", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Dim ver As System.Diagnostics.FileVersionInfo
+        ver = System.Diagnostics.FileVersionInfo.GetVersionInfo(
+        System.Reflection.Assembly.GetExecutingAssembly().Location)
+        MessageBox.Show("授業時間タイマー（ECC Comp.)　v" & ver.FileVersion & vbNewLine & "© 2018-2019 Takuya Shintani", "about", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub アプリと連携ToolStripMenuItem_Click(sender As Object, e As EventArgs)
