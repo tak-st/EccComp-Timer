@@ -111,6 +111,8 @@ Partial Class Form1
         Me.BatteryTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripTextBox3 = New System.Windows.Forms.ToolStripTextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -357,7 +359,7 @@ Partial Class Form1
         '
         '設定ToolStripMenuItem
         '
-        Me.設定ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem4, Me.固定時マウスオーバーで透明化ToolStripMenuItem, Me.フォームの位置を記憶するToolStripMenuItem, Me.起動時固定状態で開始するLToolStripMenuItem, Me.Windowsの起動時に自動的に起動するToolStripMenuItem, Me.フォームのサイズ変更を可能にするToolStripMenuItem, Me.フォームのサイズを記憶するFToolStripMenuItem, Me.休み時間時次の授業情報表示ToolStripMenuItem, Me.ネットワークでシステム時刻を補正ToolStripMenuItem, Me.ToolStripSeparator2, Me.高度な設定ToolStripMenuItem})
+        Me.設定ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem4, Me.固定時マウスオーバーで透明化ToolStripMenuItem, Me.フォームの位置を記憶するToolStripMenuItem, Me.起動時固定状態で開始するLToolStripMenuItem, Me.Windowsの起動時に自動的に起動するToolStripMenuItem, Me.フォームのサイズ変更を可能にするToolStripMenuItem, Me.フォームのサイズを記憶するFToolStripMenuItem, Me.休み時間時次の授業情報表示ToolStripMenuItem, Me.ネットワークでシステム時刻を補正ToolStripMenuItem, Me.ToolStripMenuItem15, Me.ToolStripSeparator2, Me.高度な設定ToolStripMenuItem})
         Me.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem"
         resources.ApplyResources(Me.設定ToolStripMenuItem, "設定ToolStripMenuItem")
         '
@@ -585,6 +587,17 @@ Partial Class Form1
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         '
+        'ToolStripMenuItem15
+        '
+        Me.ToolStripMenuItem15.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox3})
+        Me.ToolStripMenuItem15.Name = "ToolStripMenuItem15"
+        resources.ApplyResources(Me.ToolStripMenuItem15, "ToolStripMenuItem15")
+        '
+        'ToolStripTextBox3
+        '
+        Me.ToolStripTextBox3.Name = "ToolStripTextBox3"
+        resources.ApplyResources(Me.ToolStripTextBox3, "ToolStripTextBox3")
+        '
         'Form1
         '
         resources.ApplyResources(Me, "$this")
@@ -691,4 +704,6 @@ Partial Class Form1
     Friend WithEvents 高度な設定をインポートToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents ToolStripMenuItem15 As ToolStripMenuItem
+    Friend WithEvents ToolStripTextBox3 As ToolStripTextBox
 End Class

@@ -142,6 +142,7 @@ Public Class Form1
         dtTime = dtTime.AddHours(9)
 
         ' 現在の日時表示
+        Dim ts As TimeSpan = dtTime - Now
         Dim r = (Now - dtTime).ToString("hh\:mm\:ss")
         System.Diagnostics.Trace.WriteLine(dtTime)
         Try
@@ -149,6 +150,10 @@ Public Class Form1
             MessageBox.Show(r & " 補正しました", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As System.Security.SecurityException
             MessageBox.Show("時間補正機能を使用するには、" & vbNewLine & "このアプリケーションを管理者権限で起動する必要があります。" & vbNewLine & " (検出された時間のずれ : " & r & ")", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            r = MessageBox.Show("このソフト内でのみ修正することができます。" & vbNewLine & "修正を行いますか?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+            If r = vbYes Then
+                ToolStripTextBox3.Text = Int(ts.TotalSeconds)
+            End If
         End Try
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -348,7 +353,8 @@ Public Class Form1
         Dim y3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 13, 30, 0)
         Dim y4 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 15, 15, 0)
         Dim y5 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 17, 0, 0)
-        jikan = DateTime.Now()
+        Dim tss As New TimeSpan(0, 0, 0, ToolStripTextBox3.Text)
+        jikan = DateTime.Now() + tss
         Application.DoEvents()
         If OSw = True And Oti < 120 And Oti >= 0 Then
             Oti += 1
@@ -596,7 +602,7 @@ Public Class Form1
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
-        MessageBox.Show("授業時間タイマー（ECC Comp.)　v1.50" & vbNewLine & "© 2018-2019 Takuya Shintani", "about", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("授業時間タイマー（ECC Comp.)　v1.70" & vbNewLine & "© 2018-2019 Takuya Shintani", "about", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub アプリと連携ToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -1431,9 +1437,14 @@ Public Class Form1
 
     End Sub
 
+    Private Sub ToolStripTextBox3_Click(sender As Object, e As EventArgs) Handles ToolStripTextBox3.Click
+
+    End Sub
+
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
         Dim j = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Hour(counttm), Minute(counttm), 0)
-        Dim sabun = DateDiff("s", Now, j)
+        Dim tss As New TimeSpan(0, 0, 0, ToolStripTextBox3.Text)
+        Dim sabun = DateDiff("s", Now + tss, j)
         Application.DoEvents()
         If OSw = True And Oti < 120 And Oti >= 0 Then
             Oti += 1
@@ -1522,6 +1533,10 @@ Public Class Form1
         Else
             If Label1.Padding.Top = 0 Then sender.Text = (26 - Label1.Top) * -1 Else sender.Text = Label1.Padding.Top
         End If
+    End Sub
+
+    Private Sub ToolStripTextBox3_TextChanged(sender As Object, e As EventArgs) Handles ToolStripTextBox3.TextChanged
+        If Len(ToolStripTextBox3.Text) = 0 Then ToolStripTextBox3.Text = "0"
     End Sub
 End Class
 'tokenのJsonファイルのデシリアライズ用クラス
