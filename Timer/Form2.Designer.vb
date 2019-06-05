@@ -63,8 +63,8 @@ Partial Class Form1
         Me.ToolStripTextBox10 = New System.Windows.Forms.ToolStripTextBox()
         Me.タイトルにタイマー表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.高度な設定をエクスポートToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.高度な設定をインポートToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.高度な設定をエクスポートToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -249,7 +249,7 @@ Partial Class Form1
         '
         '高度ToolStripMenuItem
         '
-        Me.高度ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.フォントの変更ToolStripMenuItem, Me.タイマーの縦幅ToolStripMenuItem, Me.バーの縦幅ToolStripMenuItem, Me.タイマーとバーの間の幅ToolStripMenuItem, Me.タイマーとバーの左のスペースの幅ToolStripMenuItem, Me.タイマーバーとフォーム端ToolStripMenuItem, Me.文字の場所を上下にずらすToolStripMenuItem, Me.タイトルにタイマー表示ToolStripMenuItem, Me.ToolStripSeparator6, Me.高度な設定をエクスポートToolStripMenuItem, Me.高度な設定をインポートToolStripMenuItem, Me.ToolStripSeparator3, Me.ToolStripMenuItem2})
+        Me.高度ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.フォントの変更ToolStripMenuItem, Me.タイマーの縦幅ToolStripMenuItem, Me.バーの縦幅ToolStripMenuItem, Me.タイマーとバーの間の幅ToolStripMenuItem, Me.タイマーとバーの左のスペースの幅ToolStripMenuItem, Me.タイマーバーとフォーム端ToolStripMenuItem, Me.文字の場所を上下にずらすToolStripMenuItem, Me.タイトルにタイマー表示ToolStripMenuItem, Me.ToolStripSeparator6, Me.高度な設定をインポートToolStripMenuItem, Me.高度な設定をエクスポートToolStripMenuItem, Me.ToolStripSeparator3, Me.ToolStripMenuItem2})
         Me.高度ToolStripMenuItem.Name = "高度ToolStripMenuItem"
         resources.ApplyResources(Me.高度ToolStripMenuItem, "高度ToolStripMenuItem")
         '
@@ -335,15 +335,15 @@ Partial Class Form1
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         resources.ApplyResources(Me.ToolStripSeparator6, "ToolStripSeparator6")
         '
-        '高度な設定をエクスポートToolStripMenuItem
-        '
-        Me.高度な設定をエクスポートToolStripMenuItem.Name = "高度な設定をエクスポートToolStripMenuItem"
-        resources.ApplyResources(Me.高度な設定をエクスポートToolStripMenuItem, "高度な設定をエクスポートToolStripMenuItem")
-        '
         '高度な設定をインポートToolStripMenuItem
         '
         Me.高度な設定をインポートToolStripMenuItem.Name = "高度な設定をインポートToolStripMenuItem"
         resources.ApplyResources(Me.高度な設定をインポートToolStripMenuItem, "高度な設定をインポートToolStripMenuItem")
+        '
+        '高度な設定をエクスポートToolStripMenuItem
+        '
+        Me.高度な設定をエクスポートToolStripMenuItem.Name = "高度な設定をエクスポートToolStripMenuItem"
+        resources.ApplyResources(Me.高度な設定をエクスポートToolStripMenuItem, "高度な設定をエクスポートToolStripMenuItem")
         '
         'ToolStripSeparator3
         '

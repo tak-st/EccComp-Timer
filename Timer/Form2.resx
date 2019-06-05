@@ -135,7 +135,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 65</value>
+    <value>246, 65</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
@@ -166,7 +166,7 @@
     <value>12, 68</value>
   </data>
   <data name="ProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 19</value>
+    <value>246, 19</value>
   </data>
   <data name="ProgressBar1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -229,25 +229,25 @@
     <value>バッテリー残量</value>
   </data>
   <data name="ToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="ToolStripMenuItem3.Text" xml:space="preserve">
     <value>モード</value>
   </data>
   <data name="常に最前面ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="常に最前面ToolStripMenuItem.Text" xml:space="preserve">
     <value>常に最前面(&amp;T)</value>
   </data>
   <data name="バー表示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="バー表示ToolStripMenuItem.Text" xml:space="preserve">
     <value>バー表示(&amp;B)</value>
   </data>
   <data name="秒数表示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="秒数表示ToolStripMenuItem.Text" xml:space="preserve">
     <value>残秒数表示(&amp;A)</value>
@@ -277,13 +277,13 @@
     <value>ミニ(&amp;M)</value>
   </data>
   <data name="文字の大きさToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="文字の大きさToolStripMenuItem.Text" xml:space="preserve">
     <value>大きさ(&amp;S)</value>
   </data>
   <data name="次の授業NToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="次の授業NToolStripMenuItem.Text" xml:space="preserve">
     <value>次の時間(&amp;N)</value>
@@ -292,10 +292,10 @@
     <value>False</value>
   </data>
   <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
+    <value>147, 6</value>
   </data>
   <data name="終了XToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="終了XToolStripMenuItem.Text" xml:space="preserve">
     <value>終了(&amp;X)</value>
@@ -393,17 +393,17 @@
   <data name="ToolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 6</value>
   </data>
-  <data name="高度な設定をエクスポートToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
-  </data>
-  <data name="高度な設定をエクスポートToolStripMenuItem.Text" xml:space="preserve">
-    <value>高度な設定をエクスポート</value>
-  </data>
   <data name="高度な設定をインポートToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
   </data>
   <data name="高度な設定をインポートToolStripMenuItem.Text" xml:space="preserve">
     <value>高度な設定をインポート</value>
+  </data>
+  <data name="高度な設定をエクスポートToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 22</value>
+  </data>
+  <data name="高度な設定をエクスポートToolStripMenuItem.Text" xml:space="preserve">
+    <value>高度な設定をエクスポート</value>
   </data>
   <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 6</value>
@@ -532,7 +532,7 @@
     <value>0, 0</value>
   </data>
   <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 24</value>
+    <value>268, 24</value>
   </data>
   <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1421,7 +1421,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>263, 96</value>
+    <value>268, 96</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2369,16 +2369,16 @@
   <data name="&gt;&gt;ToolStripSeparator6.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;高度な設定をエクスポートToolStripMenuItem.Name" xml:space="preserve">
-    <value>高度な設定をエクスポートToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;高度な設定をエクスポートToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;高度な設定をインポートToolStripMenuItem.Name" xml:space="preserve">
     <value>高度な設定をインポートToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;高度な設定をインポートToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;高度な設定をエクスポートToolStripMenuItem.Name" xml:space="preserve">
+    <value>高度な設定をエクスポートToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;高度な設定をエクスポートToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">

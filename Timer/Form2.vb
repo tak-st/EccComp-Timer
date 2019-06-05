@@ -235,10 +235,69 @@ Public Class Form1
             Call バッテリー残量ToolStripMenuItem_Click(sender, e)
         End If
         Windowsの起動時に自動的に起動するToolStripMenuItem.Checked = My.Settings.StartUp
+        Dim fileName As String = "AutoLoad.ast"
+        If System.IO.File.Exists(fileName) Then
+            Debug.Print("AutoLoad読み込み")
+            Call autoload(fileName, e)
+        End If
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+    Private Sub autoload(filename As String, e As EventArgs)
+        Dim sr As New System.IO.StreamReader(filename,
+            System.Text.Encoding.Default)
+        '内容を一行ずつ読み込む
+        Dim i = 0
+        While sr.Peek() > -1
+            i += 1
+            Select Case i
+                Case 1
+                    Dim Namev = sr.ReadLine()
+                    Dim Sizev = sr.ReadLine()
+                    Dim Sizevs = CSng(Sizev)
+                    Dim Stv As FontStyle = sr.ReadLine()
+                    Label1.Font = New System.Drawing.Font(Namev, Sizevs, Stv)
+                Case 2
+                    Dim n = sr.ReadLine()
+                    If n <> -1 Then
+                        Me.Left = n
+                    End If
+                Case 3
+                    Dim n = sr.ReadLine()
+                    If n <> -1 Then
+                        Me.Top = n
+                    End If
+                Case 4
+                    Dim n = sr.ReadLine()
+                    If n <> -1 Then
+                        Me.Width = n
+                    End If
+                Case 5
+                    Dim n = sr.ReadLine()
+                    If n <> -1 Then
+                        Me.Height = n
+                    End If
+                Case 6
+                    ToolStripTextBox1.Text = sr.ReadLine()
+                    Call ToolStripTextBox1_LostFocus(ToolStripTextBox1, e)
+                Case 7
+                    ToolStripTextBox2.Text = sr.ReadLine()
+                    Call ToolStripTextBox2_LostFocus(ToolStripTextBox2, e)
+                Case 8
+                    ToolStripTextBox7.Text = sr.ReadLine()
+                    Call ToolStripTextBox7_Leave(ToolStripTextBox7, e)
+                Case 9
+                    ToolStripTextBox8.Text = sr.ReadLine()
+                    Call ToolStripTextBox8_Leave(ToolStripTextBox8, e)
+                Case 10
+                    ToolStripTextBox10.Text = sr.ReadLine()
+                    Call ToolStripTextBox10_LostFocus(ToolStripTextBox10, e)
+                Case 11
+                    ToolStripTextBox6.Text = sr.ReadLine()
+                    Call ToolStripTextBox6_LostFocus(ToolStripTextBox6, e)
+            End Select
+        End While
+        '閉じる
+        sr.Close()
     End Sub
 
     Private Sub Label1_DoubleClick(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles Label1.DoubleClick
@@ -1366,6 +1425,10 @@ Public Class Form1
         '閉じる
         sr.Close()
         MessageBox.Show("インポートが完了しました。", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub ToolStripTextBox1_Click(sender As Object, e As EventArgs) Handles ToolStripTextBox1.Click
+
     End Sub
 
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
