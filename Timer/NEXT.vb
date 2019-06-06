@@ -3,8 +3,8 @@ Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim w As Integer = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width
         Me.StartPosition = FormStartPosition.Manual
-        If Form1.Left + Me.Width > w Then Me.Left = w - Me.Width + 5 Else Me.Left = Form1.Left
-        Me.Top = Form1.Top + Form1.Height + 2
+        If Main.Left + Me.Width > w Then Me.Left = w - Me.Width + 5 Else Me.Left = Main.Left
+        Me.Top = Main.Top + Main.Height + 2
         Dim j1 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 10, 45, 0)
         Dim j2 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 12, 30, 0)
         Dim j3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 15, 0, 0)

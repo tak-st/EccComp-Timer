@@ -1,7 +1,7 @@
 ﻿Imports System.Net
 Imports System.IO
 Imports Newtonsoft.Json
-Public Class Form1
+Public Class Main
     Public Secsw, OSw, Oti, sSw, nsize, manual, Nsw, SOK, countti
     Public counttm As DateTime
     Private Sub noti()
@@ -49,7 +49,7 @@ Public Class Form1
                 End If
             End If
         End If
-        Dim ln, rm
+        Dim ln = 0, rm = 0
         Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TIME)
         For i As Integer = 0 To TimeTable.timetable.Count - 1
             If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
@@ -339,7 +339,7 @@ Public Class Form1
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim jikan
         Dim sabun = 0
-        Dim infome
+        Dim infome = ""
         Dim term = 0
         Dim Ntu = False
         If 学籍番号で連携ToolStripMenuItem.Checked = True And SOK Then Ntu = True
@@ -1128,7 +1128,7 @@ Public Class Form1
                         End If
                     End If
                 End If
-                Dim ln, rm
+                Dim ln = 0, rm = 0
                 Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TIME)
                 For i As Integer = 0 To TimeTable.timetable.Count - 1
                     If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
@@ -1150,7 +1150,7 @@ Public Class Form1
                 Form3.Show()
             End If
         Else
-                Me.TopMost = False
+            Me.TopMost = False
             Dim r = MessageBox.Show("時間割の取得に失敗しています。" & vbNewLine & "インターネットの接続を確認してください。" & vbNewLine & vbNewLine & "前回取得したデータを使用しますか？", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error)
             If r = vbYes Then SOK = True : 次の授業NToolStripMenuItem.ForeColor = Color.Black : ToolStripMenuItem7.ForeColor = Color.Black : Form3.Show() : WebTimer.Stop() : Exit Sub
             r = MessageBox.Show("今すぐ再試行しますか？", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error)
@@ -1436,14 +1436,6 @@ Public Class Form1
         MessageBox.Show("インポートが完了しました。", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-    Private Sub ToolStripTextBox1_Click(sender As Object, e As EventArgs) Handles ToolStripTextBox1.Click
-
-    End Sub
-
-    Private Sub ToolStripTextBox3_Click(sender As Object, e As EventArgs) Handles ToolStripTextBox3.Click
-
-    End Sub
-
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
         Dim j = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Hour(counttm), Minute(counttm), 0)
         Dim tss As New TimeSpan(0, 0, 0, ToolStripTextBox3.Text)
@@ -1539,7 +1531,7 @@ Public Class Form1
     End Sub
 
     Private Sub ToolStripTextBox3_TextChanged(sender As Object, e As EventArgs) Handles ToolStripTextBox3.TextChanged
-        If Len(ToolStripTextBox3.Text) = 0 Then ToolStripTextBox3.Text = "0"
+        If Len(ToolStripTextBox3.Text) = 0 Or Not IsNumeric(ToolStripTextBox3.Text) Then ToolStripTextBox3.Text = "0"
     End Sub
 End Class
 'tokenのJsonファイルのデシリアライズ用クラス

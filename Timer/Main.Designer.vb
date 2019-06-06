@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Main
     Inherits System.Windows.Forms.Form
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -81,6 +81,8 @@ Partial Class Form1
         Me.通知ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ポップアップ表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ネットワークでシステム時刻を補正ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripTextBox3 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.高度な設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ヘルプToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -111,8 +113,6 @@ Partial Class Form1
         Me.BatteryTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox3 = New System.Windows.Forms.ToolStripTextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -135,7 +135,7 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.表示ToolStripMenuItem, Me.高度ToolStripMenuItem, Me.設定ToolStripMenuItem, Me.ヘルプToolStripMenuItem, Me.ToolStripMenuItem1})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.表示ToolStripMenuItem, Me.設定ToolStripMenuItem, Me.高度ToolStripMenuItem, Me.ヘルプToolStripMenuItem, Me.ToolStripMenuItem1})
         resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
         '
@@ -441,6 +441,17 @@ Partial Class Form1
         Me.ネットワークでシステム時刻を補正ToolStripMenuItem.Name = "ネットワークでシステム時刻を補正ToolStripMenuItem"
         resources.ApplyResources(Me.ネットワークでシステム時刻を補正ToolStripMenuItem, "ネットワークでシステム時刻を補正ToolStripMenuItem")
         '
+        'ToolStripMenuItem15
+        '
+        Me.ToolStripMenuItem15.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox3})
+        Me.ToolStripMenuItem15.Name = "ToolStripMenuItem15"
+        resources.ApplyResources(Me.ToolStripMenuItem15, "ToolStripMenuItem15")
+        '
+        'ToolStripTextBox3
+        '
+        Me.ToolStripTextBox3.Name = "ToolStripTextBox3"
+        resources.ApplyResources(Me.ToolStripTextBox3, "ToolStripTextBox3")
+        '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
@@ -587,18 +598,7 @@ Partial Class Form1
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         '
-        'ToolStripMenuItem15
-        '
-        Me.ToolStripMenuItem15.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox3})
-        Me.ToolStripMenuItem15.Name = "ToolStripMenuItem15"
-        resources.ApplyResources(Me.ToolStripMenuItem15, "ToolStripMenuItem15")
-        '
-        'ToolStripTextBox3
-        '
-        Me.ToolStripTextBox3.Name = "ToolStripTextBox3"
-        resources.ApplyResources(Me.ToolStripTextBox3, "ToolStripTextBox3")
-        '
-        'Form1
+        'Main
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -608,7 +608,7 @@ Partial Class Form1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.Name = "Form1"
+        Me.Name = "Main"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
