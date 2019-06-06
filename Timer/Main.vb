@@ -459,10 +459,6 @@ Public Class Main
         NotifyIcon1.Text = infome & " : 残り " & Label1.Text
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
-
-    End Sub
-
     Private Sub バー表示ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles バー表示ToolStripMenuItem.Click
         If Not バー表示ToolStripMenuItem.Checked Then
             ProgressBar1.Visible = False
@@ -566,15 +562,6 @@ Public Class Main
         中ToolStripMenuItem.Checked = False
         ビッグToolStripMenuItem.Checked = True
     End Sub
-
-    Private Sub 設定ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 設定ToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub フォームの位置を記憶するToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles フォームの位置を記憶するToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub Windowsの起動時に自動的に起動するToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Windowsの起動時に自動的に起動するToolStripMenuItem.Click
         If Not Windowsの起動時に自動的に起動するToolStripMenuItem.Checked Then
             Call SetCurrentVersionDelete()
@@ -799,10 +786,6 @@ Public Class Main
         文字の大きさToolStripMenuItem.Enabled = True
     End Sub
 
-    Private Sub タイトルにタイマー表示ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles タイトルにタイマー表示ToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub 高度ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 高度ToolStripMenuItem.Click
         ToolStripTextBox1.Text = Label1.Height
         ToolStripTextBox2.Text = ProgressBar1.Height
@@ -811,7 +794,6 @@ Public Class Main
         ToolStripTextBox8.Text = Me.Width - Label1.Left - Label1.Width
         If Label1.Padding.Top = 0 Then ToolStripTextBox10.Text = (26 - Label1.Top) * -1 Else ToolStripTextBox10.Text = Label1.Padding.Top
     End Sub
-
     Private Sub 文字の場所を上にずらすToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 文字の場所を上下にずらすToolStripMenuItem.Click
 
     End Sub
@@ -856,15 +838,6 @@ Public Class Main
         If バッテリー残量ToolStripMenuItem.Checked Then My.Settings.bmode = True Else My.Settings.bmode = False
         'End
     End Sub
-
-    Private Sub ToolStripTextBox7_Click(sender As Object, e As EventArgs) Handles ToolStripTextBox7.Click
-
-    End Sub
-
-    Private Sub ToolStripTextBox8_Click(sender As Object, e As EventArgs) Handles ToolStripTextBox8.Click
-
-    End Sub
-
     Private Sub カウントアップタイマーToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles カウントアップタイマーToolStripMenuItem.Click, ToolStripMenuItem10.Click
         countti = 0
         キッチンタイマーToolStripMenuItem.Checked = False
@@ -1267,24 +1240,12 @@ Public Class Main
         NotifyIcon1.ShowBalloonTip(1000)
     End Sub
 
-    Private Sub NotifyIcon1_DoubleClick(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub NotifyIcon1_BalloonTipClicked(sender As Object, e As EventArgs) Handles NotifyIcon1.BalloonTipClicked
         If Me.WindowState = FormWindowState.Minimized Then
             Call 表示するToolStripMenuItem_Click(Me, e)
         Else
             Call 最小化するToolStripMenuItem_Click(Me, e)
         End If
-    End Sub
-
-    Private Sub Label1_DoubleClick(sender As Object, e As EventArgs) Handles Label1.DoubleClick
-
-    End Sub
-
-    Private Sub ToolStripMenuItem8_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem8.Click
-
     End Sub
 
     Private Sub ToolStripMenuItem8_DropDownOpened(sender As Object, e As EventArgs) Handles ToolStripMenuItem8.DropDownOpened
@@ -1488,11 +1449,6 @@ Public Class Main
         中ToolStripMenuItem.Checked = False
         ビッグToolStripMenuItem.Checked = False
     End Sub
-
-    Private Sub ProgressBar1_Click(sender As Object, e As EventArgs) Handles ProgressBar1.Click
-
-    End Sub
-
     Private Sub ProgressBar1_DoubleClick(sender As Object, e As EventArgs) Handles ProgressBar1.DoubleClick
         Me.Close()
     End Sub

@@ -2,10 +2,6 @@
 
 Public Class IDInput
 
-    Private Sub IDInput_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub IDInput_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If IsNumeric(TextBox1.Text) Then
             My.Settings.ID = TextBox1.Text
