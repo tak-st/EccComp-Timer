@@ -47,6 +47,24 @@ Partial Class Main
         Me.次の授業NToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.終了XToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.固定時マウスオーバーで透明化ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.フォームの位置を記憶するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.起動時固定状態で開始するLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Windowsの起動時に自動的に起動するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.フォームのサイズ変更を可能にするToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.フォームのサイズを記憶するFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.休み時間時次の授業情報表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.学籍番号で連携ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.通知ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ポップアップ表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ネットワークでシステム時刻を補正ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripTextBox3 = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.高度な設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.高度ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.フォントの変更ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.タイマーの縦幅ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,24 +85,6 @@ Partial Class Main
         Me.高度な設定をエクスポートToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.フォームの位置を記憶するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.起動時固定状態で開始するLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Windowsの起動時に自動的に起動するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.フォームのサイズ変更を可能にするToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.フォームのサイズを記憶するFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.休み時間時次の授業情報表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.学籍番号で連携ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.通知ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ポップアップ表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ネットワークでシステム時刻を補正ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox3 = New System.Windows.Forms.ToolStripTextBox()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.高度な設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ヘルプToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -135,7 +135,7 @@ Partial Class Main
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.表示ToolStripMenuItem, Me.設定ToolStripMenuItem, Me.高度ToolStripMenuItem, Me.ヘルプToolStripMenuItem, Me.ToolStripMenuItem1})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.表示ToolStripMenuItem, Me.高度ToolStripMenuItem, Me.設定ToolStripMenuItem, Me.ヘルプToolStripMenuItem, Me.ToolStripMenuItem1})
         resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
         '
@@ -249,6 +249,111 @@ Partial Class Main
         Me.終了XToolStripMenuItem.Name = "終了XToolStripMenuItem"
         resources.ApplyResources(Me.終了XToolStripMenuItem, "終了XToolStripMenuItem")
         '
+        '設定ToolStripMenuItem
+        '
+        Me.設定ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem4, Me.固定時マウスオーバーで透明化ToolStripMenuItem, Me.フォームの位置を記憶するToolStripMenuItem, Me.起動時固定状態で開始するLToolStripMenuItem, Me.Windowsの起動時に自動的に起動するToolStripMenuItem, Me.フォームのサイズ変更を可能にするToolStripMenuItem, Me.フォームのサイズを記憶するFToolStripMenuItem, Me.休み時間時次の授業情報表示ToolStripMenuItem, Me.ネットワークでシステム時刻を補正ToolStripMenuItem, Me.ToolStripMenuItem15, Me.ToolStripSeparator2, Me.高度な設定ToolStripMenuItem})
+        Me.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem"
+        resources.ApplyResources(Me.設定ToolStripMenuItem, "設定ToolStripMenuItem")
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.CheckOnClick = True
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        resources.ApplyResources(Me.ToolStripMenuItem4, "ToolStripMenuItem4")
+        '
+        '固定時マウスオーバーで透明化ToolStripMenuItem
+        '
+        Me.固定時マウスオーバーで透明化ToolStripMenuItem.AutoToolTip = True
+        Me.固定時マウスオーバーで透明化ToolStripMenuItem.Checked = True
+        Me.固定時マウスオーバーで透明化ToolStripMenuItem.CheckOnClick = True
+        Me.固定時マウスオーバーで透明化ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.固定時マウスオーバーで透明化ToolStripMenuItem.Name = "固定時マウスオーバーで透明化ToolStripMenuItem"
+        resources.ApplyResources(Me.固定時マウスオーバーで透明化ToolStripMenuItem, "固定時マウスオーバーで透明化ToolStripMenuItem")
+        '
+        'フォームの位置を記憶するToolStripMenuItem
+        '
+        Me.フォームの位置を記憶するToolStripMenuItem.CheckOnClick = True
+        Me.フォームの位置を記憶するToolStripMenuItem.Name = "フォームの位置を記憶するToolStripMenuItem"
+        resources.ApplyResources(Me.フォームの位置を記憶するToolStripMenuItem, "フォームの位置を記憶するToolStripMenuItem")
+        '
+        '起動時固定状態で開始するLToolStripMenuItem
+        '
+        Me.起動時固定状態で開始するLToolStripMenuItem.CheckOnClick = True
+        Me.起動時固定状態で開始するLToolStripMenuItem.Name = "起動時固定状態で開始するLToolStripMenuItem"
+        resources.ApplyResources(Me.起動時固定状態で開始するLToolStripMenuItem, "起動時固定状態で開始するLToolStripMenuItem")
+        '
+        'Windowsの起動時に自動的に起動するToolStripMenuItem
+        '
+        Me.Windowsの起動時に自動的に起動するToolStripMenuItem.CheckOnClick = True
+        Me.Windowsの起動時に自動的に起動するToolStripMenuItem.Name = "Windowsの起動時に自動的に起動するToolStripMenuItem"
+        resources.ApplyResources(Me.Windowsの起動時に自動的に起動するToolStripMenuItem, "Windowsの起動時に自動的に起動するToolStripMenuItem")
+        '
+        'フォームのサイズ変更を可能にするToolStripMenuItem
+        '
+        Me.フォームのサイズ変更を可能にするToolStripMenuItem.CheckOnClick = True
+        Me.フォームのサイズ変更を可能にするToolStripMenuItem.Name = "フォームのサイズ変更を可能にするToolStripMenuItem"
+        resources.ApplyResources(Me.フォームのサイズ変更を可能にするToolStripMenuItem, "フォームのサイズ変更を可能にするToolStripMenuItem")
+        '
+        'フォームのサイズを記憶するFToolStripMenuItem
+        '
+        Me.フォームのサイズを記憶するFToolStripMenuItem.CheckOnClick = True
+        Me.フォームのサイズを記憶するFToolStripMenuItem.Name = "フォームのサイズを記憶するFToolStripMenuItem"
+        resources.ApplyResources(Me.フォームのサイズを記憶するFToolStripMenuItem, "フォームのサイズを記憶するFToolStripMenuItem")
+        '
+        '休み時間時次の授業情報表示ToolStripMenuItem
+        '
+        Me.休み時間時次の授業情報表示ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.学籍番号で連携ToolStripMenuItem, Me.ToolStripSeparator4, Me.通知ToolStripMenuItem, Me.ポップアップ表示ToolStripMenuItem})
+        Me.休み時間時次の授業情報表示ToolStripMenuItem.Name = "休み時間時次の授業情報表示ToolStripMenuItem"
+        resources.ApplyResources(Me.休み時間時次の授業情報表示ToolStripMenuItem, "休み時間時次の授業情報表示ToolStripMenuItem")
+        '
+        '学籍番号で連携ToolStripMenuItem
+        '
+        Me.学籍番号で連携ToolStripMenuItem.Name = "学籍番号で連携ToolStripMenuItem"
+        resources.ApplyResources(Me.学籍番号で連携ToolStripMenuItem, "学籍番号で連携ToolStripMenuItem")
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
+        '
+        '通知ToolStripMenuItem
+        '
+        Me.通知ToolStripMenuItem.CheckOnClick = True
+        Me.通知ToolStripMenuItem.Name = "通知ToolStripMenuItem"
+        resources.ApplyResources(Me.通知ToolStripMenuItem, "通知ToolStripMenuItem")
+        '
+        'ポップアップ表示ToolStripMenuItem
+        '
+        Me.ポップアップ表示ToolStripMenuItem.CheckOnClick = True
+        Me.ポップアップ表示ToolStripMenuItem.Name = "ポップアップ表示ToolStripMenuItem"
+        resources.ApplyResources(Me.ポップアップ表示ToolStripMenuItem, "ポップアップ表示ToolStripMenuItem")
+        '
+        'ネットワークでシステム時刻を補正ToolStripMenuItem
+        '
+        Me.ネットワークでシステム時刻を補正ToolStripMenuItem.Name = "ネットワークでシステム時刻を補正ToolStripMenuItem"
+        resources.ApplyResources(Me.ネットワークでシステム時刻を補正ToolStripMenuItem, "ネットワークでシステム時刻を補正ToolStripMenuItem")
+        '
+        'ToolStripMenuItem15
+        '
+        Me.ToolStripMenuItem15.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox3})
+        Me.ToolStripMenuItem15.Name = "ToolStripMenuItem15"
+        resources.ApplyResources(Me.ToolStripMenuItem15, "ToolStripMenuItem15")
+        '
+        'ToolStripTextBox3
+        '
+        Me.ToolStripTextBox3.Name = "ToolStripTextBox3"
+        resources.ApplyResources(Me.ToolStripTextBox3, "ToolStripTextBox3")
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        '
+        '高度な設定ToolStripMenuItem
+        '
+        Me.高度な設定ToolStripMenuItem.Name = "高度な設定ToolStripMenuItem"
+        resources.ApplyResources(Me.高度な設定ToolStripMenuItem, "高度な設定ToolStripMenuItem")
+        '
         '高度ToolStripMenuItem
         '
         Me.高度ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.フォントの変更ToolStripMenuItem, Me.タイマーの縦幅ToolStripMenuItem, Me.バーの縦幅ToolStripMenuItem, Me.タイマーとバーの間の幅ToolStripMenuItem, Me.タイマーとバーの左のスペースの幅ToolStripMenuItem, Me.タイマーバーとフォーム端ToolStripMenuItem, Me.文字の場所を上下にずらすToolStripMenuItem, Me.タイトルにタイマー表示ToolStripMenuItem, Me.ToolStripSeparator6, Me.高度な設定をインポートToolStripMenuItem, Me.高度な設定をエクスポートToolStripMenuItem, Me.ToolStripSeparator3, Me.ToolStripMenuItem2})
@@ -356,111 +461,6 @@ Partial Class Main
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         resources.ApplyResources(Me.ToolStripMenuItem2, "ToolStripMenuItem2")
-        '
-        '設定ToolStripMenuItem
-        '
-        Me.設定ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem4, Me.固定時マウスオーバーで透明化ToolStripMenuItem, Me.フォームの位置を記憶するToolStripMenuItem, Me.起動時固定状態で開始するLToolStripMenuItem, Me.Windowsの起動時に自動的に起動するToolStripMenuItem, Me.フォームのサイズ変更を可能にするToolStripMenuItem, Me.フォームのサイズを記憶するFToolStripMenuItem, Me.休み時間時次の授業情報表示ToolStripMenuItem, Me.ネットワークでシステム時刻を補正ToolStripMenuItem, Me.ToolStripMenuItem15, Me.ToolStripSeparator2, Me.高度な設定ToolStripMenuItem})
-        Me.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem"
-        resources.ApplyResources(Me.設定ToolStripMenuItem, "設定ToolStripMenuItem")
-        '
-        'ToolStripMenuItem4
-        '
-        Me.ToolStripMenuItem4.CheckOnClick = True
-        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        resources.ApplyResources(Me.ToolStripMenuItem4, "ToolStripMenuItem4")
-        '
-        '固定時マウスオーバーで透明化ToolStripMenuItem
-        '
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.AutoToolTip = True
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.Checked = True
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.CheckOnClick = True
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.Name = "固定時マウスオーバーで透明化ToolStripMenuItem"
-        resources.ApplyResources(Me.固定時マウスオーバーで透明化ToolStripMenuItem, "固定時マウスオーバーで透明化ToolStripMenuItem")
-        '
-        'フォームの位置を記憶するToolStripMenuItem
-        '
-        Me.フォームの位置を記憶するToolStripMenuItem.CheckOnClick = True
-        Me.フォームの位置を記憶するToolStripMenuItem.Name = "フォームの位置を記憶するToolStripMenuItem"
-        resources.ApplyResources(Me.フォームの位置を記憶するToolStripMenuItem, "フォームの位置を記憶するToolStripMenuItem")
-        '
-        '起動時固定状態で開始するLToolStripMenuItem
-        '
-        Me.起動時固定状態で開始するLToolStripMenuItem.CheckOnClick = True
-        Me.起動時固定状態で開始するLToolStripMenuItem.Name = "起動時固定状態で開始するLToolStripMenuItem"
-        resources.ApplyResources(Me.起動時固定状態で開始するLToolStripMenuItem, "起動時固定状態で開始するLToolStripMenuItem")
-        '
-        'Windowsの起動時に自動的に起動するToolStripMenuItem
-        '
-        Me.Windowsの起動時に自動的に起動するToolStripMenuItem.CheckOnClick = True
-        Me.Windowsの起動時に自動的に起動するToolStripMenuItem.Name = "Windowsの起動時に自動的に起動するToolStripMenuItem"
-        resources.ApplyResources(Me.Windowsの起動時に自動的に起動するToolStripMenuItem, "Windowsの起動時に自動的に起動するToolStripMenuItem")
-        '
-        'フォームのサイズ変更を可能にするToolStripMenuItem
-        '
-        Me.フォームのサイズ変更を可能にするToolStripMenuItem.CheckOnClick = True
-        Me.フォームのサイズ変更を可能にするToolStripMenuItem.Name = "フォームのサイズ変更を可能にするToolStripMenuItem"
-        resources.ApplyResources(Me.フォームのサイズ変更を可能にするToolStripMenuItem, "フォームのサイズ変更を可能にするToolStripMenuItem")
-        '
-        'フォームのサイズを記憶するFToolStripMenuItem
-        '
-        Me.フォームのサイズを記憶するFToolStripMenuItem.CheckOnClick = True
-        Me.フォームのサイズを記憶するFToolStripMenuItem.Name = "フォームのサイズを記憶するFToolStripMenuItem"
-        resources.ApplyResources(Me.フォームのサイズを記憶するFToolStripMenuItem, "フォームのサイズを記憶するFToolStripMenuItem")
-        '
-        '休み時間時次の授業情報表示ToolStripMenuItem
-        '
-        Me.休み時間時次の授業情報表示ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.学籍番号で連携ToolStripMenuItem, Me.ToolStripSeparator4, Me.通知ToolStripMenuItem, Me.ポップアップ表示ToolStripMenuItem})
-        Me.休み時間時次の授業情報表示ToolStripMenuItem.Name = "休み時間時次の授業情報表示ToolStripMenuItem"
-        resources.ApplyResources(Me.休み時間時次の授業情報表示ToolStripMenuItem, "休み時間時次の授業情報表示ToolStripMenuItem")
-        '
-        '学籍番号で連携ToolStripMenuItem
-        '
-        Me.学籍番号で連携ToolStripMenuItem.Name = "学籍番号で連携ToolStripMenuItem"
-        resources.ApplyResources(Me.学籍番号で連携ToolStripMenuItem, "学籍番号で連携ToolStripMenuItem")
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
-        '
-        '通知ToolStripMenuItem
-        '
-        Me.通知ToolStripMenuItem.CheckOnClick = True
-        Me.通知ToolStripMenuItem.Name = "通知ToolStripMenuItem"
-        resources.ApplyResources(Me.通知ToolStripMenuItem, "通知ToolStripMenuItem")
-        '
-        'ポップアップ表示ToolStripMenuItem
-        '
-        Me.ポップアップ表示ToolStripMenuItem.CheckOnClick = True
-        Me.ポップアップ表示ToolStripMenuItem.Name = "ポップアップ表示ToolStripMenuItem"
-        resources.ApplyResources(Me.ポップアップ表示ToolStripMenuItem, "ポップアップ表示ToolStripMenuItem")
-        '
-        'ネットワークでシステム時刻を補正ToolStripMenuItem
-        '
-        Me.ネットワークでシステム時刻を補正ToolStripMenuItem.Name = "ネットワークでシステム時刻を補正ToolStripMenuItem"
-        resources.ApplyResources(Me.ネットワークでシステム時刻を補正ToolStripMenuItem, "ネットワークでシステム時刻を補正ToolStripMenuItem")
-        '
-        'ToolStripMenuItem15
-        '
-        Me.ToolStripMenuItem15.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox3})
-        Me.ToolStripMenuItem15.Name = "ToolStripMenuItem15"
-        resources.ApplyResources(Me.ToolStripMenuItem15, "ToolStripMenuItem15")
-        '
-        'ToolStripTextBox3
-        '
-        Me.ToolStripTextBox3.Name = "ToolStripTextBox3"
-        resources.ApplyResources(Me.ToolStripTextBox3, "ToolStripTextBox3")
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
-        '
-        '高度な設定ToolStripMenuItem
-        '
-        Me.高度な設定ToolStripMenuItem.Name = "高度な設定ToolStripMenuItem"
-        resources.ApplyResources(Me.高度な設定ToolStripMenuItem, "高度な設定ToolStripMenuItem")
         '
         'ヘルプToolStripMenuItem
         '

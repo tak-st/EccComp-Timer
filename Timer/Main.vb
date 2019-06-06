@@ -106,7 +106,7 @@ Public Class Main
         Dim sdat As Byte() = New Byte(47) {}
         sdat(0) = &HB
         objSck.Send(sdat, sdat.GetLength(0),
-        "time.windows.com", 123)
+        "ntp.nict.jp", 123)
 
         ' UDP受信
         Dim rdat As Byte() = objSck.Receive(ipAny)
