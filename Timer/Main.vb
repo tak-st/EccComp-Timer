@@ -49,7 +49,7 @@ Public Class Main
                 End If
             End If
         End If
-        Dim ln = 0, rm = 0
+        Dim ln = "", rm = ""
         Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TIME)
         For i As Integer = 0 To TimeTable.timetable.Count - 1
             If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
@@ -1101,7 +1101,7 @@ Public Class Main
                         End If
                     End If
                 End If
-                Dim ln = 0, rm = 0
+                Dim ln = "", rm = ""
                 Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TIME)
                 For i As Integer = 0 To TimeTable.timetable.Count - 1
                     If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
