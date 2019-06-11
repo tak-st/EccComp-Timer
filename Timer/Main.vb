@@ -899,6 +899,7 @@ Public Class Main
         CountdownTimer.Stop()
         CountupTimer.Stop()
         Timer1.Stop()
+        BatteryTimer.Stop()
         kitchenTimer.Start()
     End Sub
 
