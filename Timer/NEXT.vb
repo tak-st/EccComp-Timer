@@ -9,10 +9,13 @@ Public Class Form3
         Dim j2 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 12, 30, 0)
         Dim j3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 15, 0, 0)
         Dim j4 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 16, 45, 0)
+        Dim j5 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 18, 30, 0)
+        Dim j6 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 20, 0, 0)
         Dim y1 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 9, 15, 0)
         Dim y2 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 11, 0, 0)
         Dim y3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 13, 30, 0)
         Dim y4 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 15, 15, 0)
+        Dim y5 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 17, 0, 0)
         Dim jikan = DateTime.Now()
         Dim term = 0
         Application.DoEvents()
@@ -41,6 +44,18 @@ Public Class Form3
 
                                     If jikan < j4 Then
                                         term = 5
+                                    Else
+                                        If jikan < y5 Then
+                                            term = 5
+                                        Else
+                                            If jikan < j5 Then
+                                                term = 6
+                                            Else
+                                                If jikan < j6 Then
+                                                    term = 7
+                                                End If
+                                            End If
+                                        End If
                                     End If
                                 End If
                             End If
