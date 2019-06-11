@@ -808,11 +808,16 @@ Public Class Main
         ToolStripTextBox8.Text = Me.Width - Label1.Left - Label1.Width
         If Label1.Padding.Top = 0 Then ToolStripTextBox10.Text = (26 - Label1.Top) * -1 Else ToolStripTextBox10.Text = Label1.Padding.Top
     End Sub
-    Private Sub 文字の場所を上にずらすToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 文字の場所を上下にずらすToolStripMenuItem.Click
-
-    End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If Me.FormBorderStyle = FormBorderStyle.None Then
+            Call フォームのサイズ変更を可能にするToolStripMenuItem_Click(Me, e)
+            Me.Height = Me.Height + 26
+            MenuStrip1.Visible = True
+            Label1.Top = Label1.Top + 26
+            ProgressBar1.Top = ProgressBar1.Top + 26
+            sSw = False
+        End If
         If My.Settings.Size <> 0 Then
             If 小ToolStripMenuItem.Checked Then My.Settings.Size = 1
             If コンパクトToolStripMenuItem.Checked Then My.Settings.Size = 2
@@ -1045,6 +1050,7 @@ Public Class Main
 
     Private Sub ToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5.Click
         If Me.FormBorderStyle <> FormBorderStyle.None Then
+            Me.WindowState = FormWindowState.Normal
             Me.Height = Me.Height - 26
             Me.FormBorderStyle = FormBorderStyle.None
             MenuStrip1.Visible = False
@@ -1054,6 +1060,7 @@ Public Class Main
             OSw = True
             sSw = True
         Else
+            Me.WindowState = FormWindowState.Normal
             Call フォームのサイズ変更を可能にするToolStripMenuItem_Click(Me, e)
             Me.Height = Me.Height + 26
             MenuStrip1.Visible = True
@@ -1440,7 +1447,14 @@ Public Class Main
     End Sub
 
     Private Sub ToolStripMenuItem5o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5o.CheckedChanged
+        If ToolStripMenuItem5o.Checked Then
+            ToolStripMenuItem6o.Enabled = True
+        Else
 
+            ToolStripMenuItem6o.Checked = False
+            ToolStripMenuItem6o.Enabled = False
+
+        End If
     End Sub
 
     Private Sub ToolStripMenuItem6o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem6o.CheckedChanged
@@ -1468,6 +1482,10 @@ Public Class Main
             End Select
         End If
         plsm = pls
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
