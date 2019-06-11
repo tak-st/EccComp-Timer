@@ -189,6 +189,111 @@
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>106, 17</value>
   </metadata>
+  <data name="表示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="表示ToolStripMenuItem.Text" xml:space="preserve">
+    <value>機能(&amp;S)</value>
+  </data>
+  <data name="高度ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="高度ToolStripMenuItem.Text" xml:space="preserve">
+    <value>高度な設定</value>
+  </data>
+  <data name="高度ToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ToolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="ToolStripMenuItem4.Text" xml:space="preserve">
+    <value>特殊な時限を使用する</value>
+  </data>
+  <data name="固定時マウスオーバーで透明化ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="固定時マウスオーバーで透明化ToolStripMenuItem.Text" xml:space="preserve">
+    <value>固定時マウスオーバーで透明化(&amp;H)</value>
+  </data>
+  <data name="フォームの位置を記憶するToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="フォームの位置を記憶するToolStripMenuItem.Text" xml:space="preserve">
+    <value>フォームの位置を記憶する(&amp;P)</value>
+  </data>
+  <data name="起動時固定状態で開始するLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="起動時固定状態で開始するLToolStripMenuItem.Text" xml:space="preserve">
+    <value>起動時固定状態にする(&amp;L)</value>
+  </data>
+  <data name="Windowsの起動時に自動的に起動するToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="Windowsの起動時に自動的に起動するToolStripMenuItem.Text" xml:space="preserve">
+    <value>Windowsの起動時に自動的に起動する(&amp;A)</value>
+  </data>
+  <data name="フォームのサイズ変更を可能にするToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="フォームのサイズ変更を可能にするToolStripMenuItem.Text" xml:space="preserve">
+    <value>フォームのサイズ変更を可能にする(&amp;S)</value>
+  </data>
+  <data name="フォームのサイズを記憶するFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="フォームのサイズを記憶するFToolStripMenuItem.Text" xml:space="preserve">
+    <value>フォームのサイズを記憶する(&amp;F)</value>
+  </data>
+  <data name="バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Text" xml:space="preserve">
+    <value>充電停止時、バッテリー表示に切り替える</value>
+  </data>
+  <data name="休み時間時次の授業情報表示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="休み時間時次の授業情報表示ToolStripMenuItem.Text" xml:space="preserve">
+    <value>休み時間時次の授業情報表示(&amp;I)</value>
+  </data>
+  <data name="ネットワークでシステム時刻を補正ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="ネットワークでシステム時刻を補正ToolStripMenuItem.Text" xml:space="preserve">
+    <value>ネットワークでシステム時刻を補正する</value>
+  </data>
+  <data name="ToolStripMenuItem15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="ToolStripMenuItem15.Text" xml:space="preserve">
+    <value>タイマーの時間をずらす (秒)</value>
+  </data>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 6</value>
+  </data>
+  <data name="高度な設定ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="高度な設定ToolStripMenuItem.Text" xml:space="preserve">
+    <value>高度なデザイン設定をONにする</value>
+  </data>
+  <data name="設定ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="設定ToolStripMenuItem.Text" xml:space="preserve">
+    <value>設定(&amp;O)</value>
+  </data>
+  <data name="ヘルプToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 20</value>
+  </data>
+  <data name="ヘルプToolStripMenuItem.Text" xml:space="preserve">
+    <value>操作方法(&amp;H)</value>
+  </data>
+  <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
+  </data>
   <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -212,12 +317,6 @@
   </data>
   <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="表示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
-  </data>
-  <data name="表示ToolStripMenuItem.Text" xml:space="preserve">
-    <value>機能(&amp;S)</value>
   </data>
   <data name="ToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 22</value>
@@ -330,15 +429,6 @@
   <data name="終了XToolStripMenuItem.Text" xml:space="preserve">
     <value>終了(&amp;X)</value>
   </data>
-  <data name="高度ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 20</value>
-  </data>
-  <data name="高度ToolStripMenuItem.Text" xml:space="preserve">
-    <value>高度な設定</value>
-  </data>
-  <data name="高度ToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="フォントの変更ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
   </data>
@@ -447,18 +537,6 @@
   <data name="ToolStripMenuItem2.Text" xml:space="preserve">
     <value>高度なデザイン設定をOFFにする</value>
   </data>
-  <data name="設定ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="設定ToolStripMenuItem.Text" xml:space="preserve">
-    <value>設定(&amp;O)</value>
-  </data>
-  <data name="ToolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="ToolStripMenuItem4.Text" xml:space="preserve">
-    <value>特殊な時限を使用する</value>
-  </data>
   <data name="ToolStripMenuItem5o.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 22</value>
   </data>
@@ -473,54 +551,6 @@
   </data>
   <data name="ToolStripMenuItem6o.Text" xml:space="preserve">
     <value>6時限目</value>
-  </data>
-  <data name="固定時マウスオーバーで透明化ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="固定時マウスオーバーで透明化ToolStripMenuItem.Text" xml:space="preserve">
-    <value>固定時マウスオーバーで透明化(&amp;H)</value>
-  </data>
-  <data name="フォームの位置を記憶するToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="フォームの位置を記憶するToolStripMenuItem.Text" xml:space="preserve">
-    <value>フォームの位置を記憶する(&amp;P)</value>
-  </data>
-  <data name="起動時固定状態で開始するLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="起動時固定状態で開始するLToolStripMenuItem.Text" xml:space="preserve">
-    <value>起動時固定状態にする(&amp;L)</value>
-  </data>
-  <data name="Windowsの起動時に自動的に起動するToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="Windowsの起動時に自動的に起動するToolStripMenuItem.Text" xml:space="preserve">
-    <value>Windowsの起動時に自動的に起動する(&amp;A)</value>
-  </data>
-  <data name="フォームのサイズ変更を可能にするToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="フォームのサイズ変更を可能にするToolStripMenuItem.Text" xml:space="preserve">
-    <value>フォームのサイズ変更を可能にする(&amp;S)</value>
-  </data>
-  <data name="フォームのサイズを記憶するFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="フォームのサイズを記憶するFToolStripMenuItem.Text" xml:space="preserve">
-    <value>フォームのサイズを記憶する(&amp;F)</value>
-  </data>
-  <data name="バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Text" xml:space="preserve">
-    <value>充電停止時、バッテリー表示に切り替える</value>
-  </data>
-  <data name="休み時間時次の授業情報表示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="休み時間時次の授業情報表示ToolStripMenuItem.Text" xml:space="preserve">
-    <value>休み時間時次の授業情報表示(&amp;I)</value>
   </data>
   <data name="学籍番号で連携ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 22</value>
@@ -543,41 +573,11 @@
   <data name="ポップアップ表示ToolStripMenuItem.Text" xml:space="preserve">
     <value>ポップアップを表示</value>
   </data>
-  <data name="ネットワークでシステム時刻を補正ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="ネットワークでシステム時刻を補正ToolStripMenuItem.Text" xml:space="preserve">
-    <value>ネットワークでシステム時刻を補正する</value>
-  </data>
-  <data name="ToolStripMenuItem15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="ToolStripMenuItem15.Text" xml:space="preserve">
-    <value>タイマーの時間をずらす (秒)</value>
-  </data>
   <data name="ToolStripTextBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
   <data name="ToolStripTextBox3.Text" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 6</value>
-  </data>
-  <data name="高度な設定ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="高度な設定ToolStripMenuItem.Text" xml:space="preserve">
-    <value>高度なデザイン設定をONにする</value>
-  </data>
-  <data name="ヘルプToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 20</value>
-  </data>
-  <data name="ヘルプToolStripMenuItem.Text" xml:space="preserve">
-    <value>操作方法(&amp;H)</value>
-  </data>
-  <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 20</value>
   </data>
   <data name="AboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>

@@ -1488,6 +1488,16 @@ Public Class Main
 
     End Sub
 
+    Private Sub 設定ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 設定ToolStripMenuItem.Click
+        If ToolStripMenuItem5o.Checked = True And ToolStripMenuItem6o.Checked = True Then
+            ToolStripMenuItem4.Checked = True
+        Else
+            ToolStripMenuItem4.Checked = False
+        End If
+        休み時間時次の授業情報表示ToolStripMenuItem.Checked = 学籍番号で連携ToolStripMenuItem.Checked
+        If ToolStripTextBox3.Text <> 0 Then ToolStripMenuItem15.Checked = True Else ToolStripMenuItem15.Checked = False
+    End Sub
+
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
         Dim j = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Hour(counttm), Minute(counttm), 0)
         Dim tss As New TimeSpan(0, 0, 0, ToolStripTextBox3.Text)
