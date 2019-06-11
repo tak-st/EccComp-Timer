@@ -69,12 +69,15 @@ Partial Class Main
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem5o = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem6o = New System.Windows.Forms.ToolStripMenuItem()
         Me.固定時マウスオーバーで透明化ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.フォームの位置を記憶するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.起動時固定状態で開始するLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Windowsの起動時に自動的に起動するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.フォームのサイズ変更を可能にするToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.フォームのサイズを記憶するFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.休み時間時次の授業情報表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.学籍番号で連携ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
@@ -113,9 +116,6 @@ Partial Class Main
         Me.BatteryTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.ToolStripMenuItem5o = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem6o = New System.Windows.Forms.ToolStripMenuItem()
-        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KanshiTimer = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -374,6 +374,18 @@ Partial Class Main
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
         resources.ApplyResources(Me.ToolStripMenuItem4, "ToolStripMenuItem4")
         '
+        'ToolStripMenuItem5o
+        '
+        Me.ToolStripMenuItem5o.CheckOnClick = True
+        Me.ToolStripMenuItem5o.Name = "ToolStripMenuItem5o"
+        resources.ApplyResources(Me.ToolStripMenuItem5o, "ToolStripMenuItem5o")
+        '
+        'ToolStripMenuItem6o
+        '
+        Me.ToolStripMenuItem6o.CheckOnClick = True
+        resources.ApplyResources(Me.ToolStripMenuItem6o, "ToolStripMenuItem6o")
+        Me.ToolStripMenuItem6o.Name = "ToolStripMenuItem6o"
+        '
         '固定時マウスオーバーで透明化ToolStripMenuItem
         '
         Me.固定時マウスオーバーで透明化ToolStripMenuItem.AutoToolTip = True
@@ -412,6 +424,12 @@ Partial Class Main
         Me.フォームのサイズを記憶するFToolStripMenuItem.CheckOnClick = True
         Me.フォームのサイズを記憶するFToolStripMenuItem.Name = "フォームのサイズを記憶するFToolStripMenuItem"
         resources.ApplyResources(Me.フォームのサイズを記憶するFToolStripMenuItem, "フォームのサイズを記憶するFToolStripMenuItem")
+        '
+        'バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem
+        '
+        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.CheckOnClick = True
+        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Name = "バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem"
+        resources.ApplyResources(Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem, "バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem")
         '
         '休み時間時次の授業情報表示ToolStripMenuItem
         '
@@ -602,24 +620,6 @@ Partial Class Main
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
-        '
-        'ToolStripMenuItem5o
-        '
-        Me.ToolStripMenuItem5o.CheckOnClick = True
-        Me.ToolStripMenuItem5o.Name = "ToolStripMenuItem5o"
-        resources.ApplyResources(Me.ToolStripMenuItem5o, "ToolStripMenuItem5o")
-        '
-        'ToolStripMenuItem6o
-        '
-        Me.ToolStripMenuItem6o.CheckOnClick = True
-        resources.ApplyResources(Me.ToolStripMenuItem6o, "ToolStripMenuItem6o")
-        Me.ToolStripMenuItem6o.Name = "ToolStripMenuItem6o"
-        '
-        'バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem
-        '
-        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.CheckOnClick = True
-        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Name = "バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem"
-        resources.ApplyResources(Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem, "バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem")
         '
         'KanshiTimer
         '
