@@ -156,7 +156,9 @@ Public Class Main
             End If
         End Try
     End Sub
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ToolStripMenuItem5o.Checked = My.Settings.t5
+        ToolStripMenuItem6o.Checked = My.Settings.t6
         ToolStripTextBox3.Text = My.Settings.zure
         Me.TopMost = True
         nsize = 48
@@ -850,6 +852,8 @@ Public Class Main
         If バッテリー残量ToolStripMenuItem.Checked Then My.Settings.bmode = True Else My.Settings.bmode = False
         My.Settings.zure = ToolStripTextBox3.Text
         My.Settings.kirikae = バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Checked
+        My.Settings.t5 = ToolStripMenuItem5o.Checked
+        My.Settings.t6 = ToolStripMenuItem6o.Checked
         'End
     End Sub
     Private Sub カウントアップタイマーToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles カウントアップタイマーToolStripMenuItem.Click, ToolStripMenuItem10.Click
@@ -1435,16 +1439,11 @@ Public Class Main
         MenuStrip1.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow
     End Sub
 
-    Private Sub ToolStripMenuItem5o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5o.Click
-        If ToolStripMenuItem5o.Checked Then
-            ToolStripMenuItem6o.Enabled = True
-        Else
-            ToolStripMenuItem6o.Enabled = False
-            ToolStripMenuItem6o.Checked = False
-        End If
+    Private Sub ToolStripMenuItem5o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5o.CheckedChanged
+
     End Sub
 
-    Private Sub ToolStripMenuItem6o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem6o.Click
+    Private Sub ToolStripMenuItem6o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem6o.CheckedChanged
 
     End Sub
 
@@ -1527,7 +1526,7 @@ Public Class Main
         Me.Close()
     End Sub
 
-    Private Sub Form1_MouseEnter(sender As Object, e As EventArgs) Handles MyBase.MouseEnter, Label1.MouseEnter, ProgressBar1.MouseEnter
+    Private Sub Form1_MouseEnter(sender As Object, e As EventArgs) Handles ProgressBar1.MouseEnter, MyBase.MouseEnter, Label1.MouseEnter
         If Oti < 40 And Me.FormBorderStyle = FormBorderStyle.None And Oti >= 0 Then
             OSw = True
             Oti = 0
@@ -1535,7 +1534,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub Form1_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+    Private Sub Form1_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
     End Sub
 
     Private Sub ToolStripTextBox2_LostFocus(sender As Object, e As EventArgs) Handles ToolStripTextBox2.LostFocus
