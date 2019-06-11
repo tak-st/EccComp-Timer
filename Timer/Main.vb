@@ -246,6 +246,8 @@ Public Class Main
             Call バッテリー残量ToolStripMenuItem_Click(sender, e)
         End If
         Windowsの起動時に自動的に起動するToolStripMenuItem.Checked = My.Settings.StartUp
+        バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Checked = My.Settings.kirikae
+        Call バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem_Click(sender, e)
     End Sub
 
     Private Sub autoload(filename As String, e As EventArgs)
@@ -847,6 +849,7 @@ Public Class Main
         My.Settings.popup = ポップアップ表示ToolStripMenuItem.Checked
         If バッテリー残量ToolStripMenuItem.Checked Then My.Settings.bmode = True Else My.Settings.bmode = False
         My.Settings.zure = ToolStripTextBox3.Text
+        My.Settings.kirikae = バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Checked
         'End
     End Sub
     Private Sub カウントアップタイマーToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles カウントアップタイマーToolStripMenuItem.Click, ToolStripMenuItem10.Click
@@ -1443,6 +1446,29 @@ Public Class Main
 
     Private Sub ToolStripMenuItem6o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem6o.Click
 
+    End Sub
+
+    Private Sub バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Click
+        If バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Checked = True Then
+            KanshiTimer.Start()
+        Else
+            KanshiTimer.Stop()
+        End If
+    End Sub
+
+    Private Sub KanshiTimer_Tick(sender As Object, e As EventArgs) Handles KanshiTimer.Tick
+        Dim pls As PowerLineStatus = SystemInformation.PowerStatus.PowerLineStatus
+        Static plsm As PowerLineStatus
+        If plsm <> pls Then
+            Select Case pls
+                Case PowerLineStatus.Offline
+                    Call バッテリー残量ToolStripMenuItem_Click(sender, e)
+                Case PowerLineStatus.Online
+                    Call 授業時間タイマーToolStripMenuItem_Click(sender, e)
+                Case PowerLineStatus.Unknown
+            End Select
+        End If
+        plsm = pls
     End Sub
 
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick

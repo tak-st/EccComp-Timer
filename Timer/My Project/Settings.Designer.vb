@@ -374,6 +374,18 @@ Namespace My
                 Me("zure") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property kirikae() As Boolean
+            Get
+                Return CType(Me("kirikae"),Boolean)
+            End Get
+            Set
+                Me("kirikae") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
