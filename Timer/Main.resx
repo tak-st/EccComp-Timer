@@ -169,7 +169,7 @@
     <value>246, 19</value>
   </data>
   <data name="ProgressBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;ProgressBar1.Name" xml:space="preserve">
     <value>ProgressBar1</value>
@@ -547,7 +547,7 @@
     <value>268, 24</value>
   </data>
   <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="MenuStrip1.Text" xml:space="preserve">
     <value>MenuStrip1</value>
@@ -2285,114 +2285,6 @@
   <data name="&gt;&gt;終了XToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;設定ToolStripMenuItem.Name" xml:space="preserve">
-    <value>設定ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;設定ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem4.Name" xml:space="preserve">
-    <value>ToolStripMenuItem4</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;固定時マウスオーバーで透明化ToolStripMenuItem.Name" xml:space="preserve">
-    <value>固定時マウスオーバーで透明化ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;固定時マウスオーバーで透明化ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;フォームの位置を記憶するToolStripMenuItem.Name" xml:space="preserve">
-    <value>フォームの位置を記憶するToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;フォームの位置を記憶するToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;起動時固定状態で開始するLToolStripMenuItem.Name" xml:space="preserve">
-    <value>起動時固定状態で開始するLToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;起動時固定状態で開始するLToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Windowsの起動時に自動的に起動するToolStripMenuItem.Name" xml:space="preserve">
-    <value>Windowsの起動時に自動的に起動するToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;Windowsの起動時に自動的に起動するToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;フォームのサイズ変更を可能にするToolStripMenuItem.Name" xml:space="preserve">
-    <value>フォームのサイズ変更を可能にするToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;フォームのサイズ変更を可能にするToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;フォームのサイズを記憶するFToolStripMenuItem.Name" xml:space="preserve">
-    <value>フォームのサイズを記憶するFToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;フォームのサイズを記憶するFToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;休み時間時次の授業情報表示ToolStripMenuItem.Name" xml:space="preserve">
-    <value>休み時間時次の授業情報表示ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;休み時間時次の授業情報表示ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;学籍番号で連携ToolStripMenuItem.Name" xml:space="preserve">
-    <value>学籍番号で連携ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;学籍番号で連携ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator4.Name" xml:space="preserve">
-    <value>ToolStripSeparator4</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;通知ToolStripMenuItem.Name" xml:space="preserve">
-    <value>通知ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;通知ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ポップアップ表示ToolStripMenuItem.Name" xml:space="preserve">
-    <value>ポップアップ表示ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ポップアップ表示ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ネットワークでシステム時刻を補正ToolStripMenuItem.Name" xml:space="preserve">
-    <value>ネットワークでシステム時刻を補正ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ネットワークでシステム時刻を補正ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem15.Name" xml:space="preserve">
-    <value>ToolStripMenuItem15</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripTextBox3.Name" xml:space="preserve">
-    <value>ToolStripTextBox3</value>
-  </data>
-  <data name="&gt;&gt;ToolStripTextBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
-    <value>ToolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;高度な設定ToolStripMenuItem.Name" xml:space="preserve">
-    <value>高度な設定ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;高度な設定ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;高度ToolStripMenuItem.Name" xml:space="preserve">
     <value>高度ToolStripMenuItem</value>
   </data>
@@ -2511,6 +2403,114 @@
     <value>ToolStripMenuItem2</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;設定ToolStripMenuItem.Name" xml:space="preserve">
+    <value>設定ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;設定ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem4.Name" xml:space="preserve">
+    <value>ToolStripMenuItem4</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;固定時マウスオーバーで透明化ToolStripMenuItem.Name" xml:space="preserve">
+    <value>固定時マウスオーバーで透明化ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;固定時マウスオーバーで透明化ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;フォームの位置を記憶するToolStripMenuItem.Name" xml:space="preserve">
+    <value>フォームの位置を記憶するToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;フォームの位置を記憶するToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;起動時固定状態で開始するLToolStripMenuItem.Name" xml:space="preserve">
+    <value>起動時固定状態で開始するLToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;起動時固定状態で開始するLToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Windowsの起動時に自動的に起動するToolStripMenuItem.Name" xml:space="preserve">
+    <value>Windowsの起動時に自動的に起動するToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;Windowsの起動時に自動的に起動するToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;フォームのサイズ変更を可能にするToolStripMenuItem.Name" xml:space="preserve">
+    <value>フォームのサイズ変更を可能にするToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;フォームのサイズ変更を可能にするToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;フォームのサイズを記憶するFToolStripMenuItem.Name" xml:space="preserve">
+    <value>フォームのサイズを記憶するFToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;フォームのサイズを記憶するFToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;休み時間時次の授業情報表示ToolStripMenuItem.Name" xml:space="preserve">
+    <value>休み時間時次の授業情報表示ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;休み時間時次の授業情報表示ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;学籍番号で連携ToolStripMenuItem.Name" xml:space="preserve">
+    <value>学籍番号で連携ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;学籍番号で連携ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator4.Name" xml:space="preserve">
+    <value>ToolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;通知ToolStripMenuItem.Name" xml:space="preserve">
+    <value>通知ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;通知ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ポップアップ表示ToolStripMenuItem.Name" xml:space="preserve">
+    <value>ポップアップ表示ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ポップアップ表示ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ネットワークでシステム時刻を補正ToolStripMenuItem.Name" xml:space="preserve">
+    <value>ネットワークでシステム時刻を補正ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ネットワークでシステム時刻を補正ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem15.Name" xml:space="preserve">
+    <value>ToolStripMenuItem15</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripTextBox3.Name" xml:space="preserve">
+    <value>ToolStripTextBox3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripTextBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;高度な設定ToolStripMenuItem.Name" xml:space="preserve">
+    <value>高度な設定ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;高度な設定ToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ヘルプToolStripMenuItem.Name" xml:space="preserve">

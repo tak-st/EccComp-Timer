@@ -1397,6 +1397,14 @@ Public Class Main
         MessageBox.Show("インポートが完了しました。", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
+    Private Sub MenuStrip1_MouseHover(sender As Object, e As EventArgs) Handles MenuStrip1.MouseHover
+        MenuStrip1.LayoutStyle = ToolStripLayoutStyle.Flow
+    End Sub
+
+    Private Sub MenuStrip1_MouseLeave(sender As Object, e As EventArgs) Handles MenuStrip1.MouseLeave
+        MenuStrip1.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow
+    End Sub
+
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
         Dim j = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Hour(counttm), Minute(counttm), 0)
         Dim tss As New TimeSpan(0, 0, 0, ToolStripTextBox3.Text)
