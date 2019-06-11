@@ -157,6 +157,7 @@ Public Class Main
         End Try
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+        ToolStripTextBox3.Text = My.Settings.zure
         Me.TopMost = True
         nsize = 48
         Me.Height = Me.Height + 26
@@ -348,6 +349,7 @@ Public Class Main
         Dim j3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 15, 0, 0)
         Dim j4 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 16, 45, 0)
         Dim j5 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 18, 30, 0)
+        Dim j6 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 20, 0, 0)
         Dim y1 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 9, 15, 0)
         Dim y2 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 11, 0, 0)
         Dim y3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 13, 30, 0)
@@ -417,7 +419,7 @@ Public Class Main
                                         ProgressBar1.Maximum = 5400
                                         infome = "4時限目"
                                     Else
-                                        If ToolStripMenuItem4.Checked Then
+                                        If ToolStripMenuItem5o.Checked Then
                                             If jikan < y5 Then
                                                 If Nsw And Ntu Then Nsw = False : Call noti()
                                                 sabun = DateDiff("s", y5, jikan)
@@ -430,6 +432,14 @@ Public Class Main
                                                     ProgressBar1.Maximum = 5400
                                                     infome = "5時限目"
                                                 End If
+                                            End If
+                                        End If
+                                        If ToolStripMenuItem6o.Checked Then
+                                            If jikan < j6 Then
+                                                Nsw = True
+                                                sabun = DateDiff("s", j5, jikan)
+                                                ProgressBar1.Maximum = 5400
+                                                infome = "6時限目"
                                             End If
                                         End If
                                     End If
@@ -836,6 +846,7 @@ Public Class Main
         My.Settings.noti = 通知ToolStripMenuItem.Checked
         My.Settings.popup = ポップアップ表示ToolStripMenuItem.Checked
         If バッテリー残量ToolStripMenuItem.Checked Then My.Settings.bmode = True Else My.Settings.bmode = False
+        My.Settings.zure = ToolStripTextBox3.Text
         'End
     End Sub
     Private Sub カウントアップタイマーToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles カウントアップタイマーToolStripMenuItem.Click, ToolStripMenuItem10.Click
@@ -1062,10 +1073,13 @@ Public Class Main
                 Dim j2 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 12, 30, 0)
                 Dim j3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 15, 0, 0)
                 Dim j4 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 16, 45, 0)
+                Dim j5 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 18, 30, 0)
+                Dim j6 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 20, 0, 0)
                 Dim y1 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 9, 15, 0)
                 Dim y2 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 11, 0, 0)
                 Dim y3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 13, 30, 0)
                 Dim y4 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 15, 15, 0)
+                Dim y5 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 17, 0, 0)
                 Dim jikan = DateTime.Now()
                 Dim term = 0
                 Application.DoEvents()
@@ -1094,6 +1108,18 @@ Public Class Main
 
                                             If jikan < j4 Then
                                                 term = 5
+                                            Else
+                                                If jikan < y5 Then
+                                                    term = 5
+                                                Else
+                                                    If jikan < j5 Then
+                                                        term = 6
+                                                    Else
+                                                        If jikan < j6 Then
+                                                            term = 7
+                                                        End If
+                                                    End If
+                                                End If
                                             End If
                                         End If
                                     End If
@@ -1404,6 +1430,19 @@ Public Class Main
 
     Private Sub MenuStrip1_MouseLeave(sender As Object, e As EventArgs) Handles MenuStrip1.MouseLeave
         MenuStrip1.LayoutStyle = ToolStripLayoutStyle.HorizontalStackWithOverflow
+    End Sub
+
+    Private Sub ToolStripMenuItem5o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5o.Click
+        If ToolStripMenuItem5o.Checked Then
+            ToolStripMenuItem6o.Enabled = True
+        Else
+            ToolStripMenuItem6o.Enabled = False
+            ToolStripMenuItem6o.Checked = False
+        End If
+    End Sub
+
+    Private Sub ToolStripMenuItem6o_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem6o.Click
+
     End Sub
 
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick

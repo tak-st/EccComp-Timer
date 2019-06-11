@@ -362,6 +362,18 @@ Namespace My
                 Me("bmode") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property zure() As Integer
+            Get
+                Return CType(Me("zure"),Integer)
+            End Get
+            Set
+                Me("zure") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

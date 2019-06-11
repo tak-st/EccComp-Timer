@@ -113,6 +113,8 @@ Partial Class Main
         Me.BatteryTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolStripMenuItem5o = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem6o = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -366,7 +368,7 @@ Partial Class Main
         '
         'ToolStripMenuItem4
         '
-        Me.ToolStripMenuItem4.CheckOnClick = True
+        Me.ToolStripMenuItem4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem5o, Me.ToolStripMenuItem6o})
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
         resources.ApplyResources(Me.ToolStripMenuItem4, "ToolStripMenuItem4")
         '
@@ -599,6 +601,18 @@ Partial Class Main
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         '
+        'ToolStripMenuItem5o
+        '
+        Me.ToolStripMenuItem5o.CheckOnClick = True
+        Me.ToolStripMenuItem5o.Name = "ToolStripMenuItem5o"
+        resources.ApplyResources(Me.ToolStripMenuItem5o, "ToolStripMenuItem5o")
+        '
+        'ToolStripMenuItem6o
+        '
+        Me.ToolStripMenuItem6o.CheckOnClick = True
+        resources.ApplyResources(Me.ToolStripMenuItem6o, "ToolStripMenuItem6o")
+        Me.ToolStripMenuItem6o.Name = "ToolStripMenuItem6o"
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -707,4 +721,6 @@ Partial Class Main
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ToolStripMenuItem15 As ToolStripMenuItem
     Friend WithEvents ToolStripTextBox3 As ToolStripTextBox
+    Friend WithEvents ToolStripMenuItem5o As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem6o As ToolStripMenuItem
 End Class
