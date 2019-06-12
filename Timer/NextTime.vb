@@ -1,5 +1,5 @@
 ﻿Imports Newtonsoft.Json
-Public Class Form3
+Public Class NextTimeForm
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim w As Integer = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width
         Me.StartPosition = FormStartPosition.Manual
@@ -65,11 +65,11 @@ Public Class Form3
             End If
         End If
 
-        Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TIME)
+        Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TimeTable)
         For i As Integer = 0 To TimeTable.timetable.Count - 1
             If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
-                Label3.Text = TimeTable.timetable(i).lesson_name
-                Label4.Text = TimeTable.timetable(i).room
+                ShowNextTimeLabel.Text = TimeTable.timetable(i).lesson_name
+                RoomLabel.Text = TimeTable.timetable(i).room
             End If
         Next
         Me.Text = "次の時間 (Week : " & Weekday(Today, FirstDayOfWeek.Monday) & ",Term : " & term & ")"

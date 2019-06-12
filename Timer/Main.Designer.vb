@@ -24,587 +24,580 @@ Partial Class Main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.授業時間タイマーToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.カウントアップタイマーToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.キッチンタイマーToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.カウントダウンタイマーToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ポドローモタイマーToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.バッテリー残量ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.常に最前面ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.バー表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.秒数表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.文字の大きさToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ビッグToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.中ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.コンパクトToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.小ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.次の授業NToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.終了XToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.高度ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.フォントの変更ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.タイマーの縦幅ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
-        Me.バーの縦幅ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
-        Me.タイマーとバーの間の幅ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox6 = New System.Windows.Forms.ToolStripTextBox()
-        Me.タイマーとバーの左のスペースの幅ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox7 = New System.Windows.Forms.ToolStripTextBox()
-        Me.タイマーバーとフォーム端ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox8 = New System.Windows.Forms.ToolStripTextBox()
-        Me.文字の場所を上下にずらすToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox10 = New System.Windows.Forms.ToolStripTextBox()
-        Me.タイトルにタイマー表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.高度な設定をインポートToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.高度な設定をエクスポートToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem5o = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem6o = New System.Windows.Forms.ToolStripMenuItem()
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.フォームの位置を記憶するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.起動時固定状態で開始するLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Windowsの起動時に自動的に起動するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.フォームのサイズ変更を可能にするToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.フォームのサイズを記憶するFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.休み時間時次の授業情報表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.学籍番号で連携ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimerLabel = New System.Windows.Forms.Label()
+        Me.TimerBar = New System.Windows.Forms.ProgressBar()
+        Me.ClassTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerMenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.FuncMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClassMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CountupMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KitchenMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CountdownMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PomodoroMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BatteryMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TopmostMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowBarMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowsecMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SizeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Size1MenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Size2MenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Size3MenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Size4MenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NextTimeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FuncSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExitMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdvancedMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangeFontMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimerHeightMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimerHeightToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.BarHeightMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarHeightToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
+        Me.SpaceWidthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SpaceWidthToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.LeftSpaceMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LeftSpaceToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.RightSpaceMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RightSpaceToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.MarginMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MarginToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.TitleShowTimerMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdvancedSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ImportMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdvancedSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AdvancedOffMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SpecialTimeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Term5MenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Term6MenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TransparentMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PositionSaveMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LockStartMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AutorunMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CanSizeChangeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SizeSaveMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangeBatteryMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowNextTermMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IDPassMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.通知ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ポップアップ表示ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ネットワークでシステム時刻を補正ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox3 = New System.Windows.Forms.ToolStripTextBox()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.高度な設定ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ヘルプToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowNotifyMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowPopUpMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NTPTimeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeviationMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeviationToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.SettingSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AdvancedOnMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowAboutMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.FontDialog1 = New System.Windows.Forms.FontDialog()
+        Me.SelectFontDialog = New System.Windows.Forms.FontDialog()
         Me.CountupTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.kitchenTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem12 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem13 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem14 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.表示するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.最小化するToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KitchenTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.NotifyRightMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ModeMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClassMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CountupMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KitchenMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CountdownMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PomodoroMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BatteryMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangeSecMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangeLockMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NextTimeMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MinimizeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.終了ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
         Me.CountdownTimer = New System.Windows.Forms.Timer(Me.components)
         Me.BatteryTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.KanshiTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.MenuStrip1.SuspendLayout()
-        Me.ContextMenuStrip1.SuspendLayout()
+        Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
+        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerMenuStrip.SuspendLayout()
+        Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'TimerLabel
         '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label1.Name = "Label1"
+        resources.ApplyResources(Me.TimerLabel, "TimerLabel")
+        Me.TimerLabel.Cursor = System.Windows.Forms.Cursors.Default
+        Me.TimerLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.TimerLabel.Name = "TimerLabel"
         '
-        'ProgressBar1
+        'TimerBar
         '
-        resources.ApplyResources(Me.ProgressBar1, "ProgressBar1")
-        Me.ProgressBar1.Name = "ProgressBar1"
+        resources.ApplyResources(Me.TimerBar, "TimerBar")
+        Me.TimerBar.Name = "TimerBar"
         '
-        'Timer1
+        'ClassTimer
         '
-        Me.Timer1.Enabled = True
+        Me.ClassTimer.Enabled = True
         '
-        'MenuStrip1
+        'TimerMenuStrip
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.表示ToolStripMenuItem, Me.高度ToolStripMenuItem, Me.設定ToolStripMenuItem, Me.ヘルプToolStripMenuItem, Me.ToolStripMenuItem1})
-        Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
-        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.TimerMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FuncMenuItem, Me.AdvancedMenuItem, Me.SettingMenuItem, Me.HelpMenuItem, Me.AboutMenuItem})
+        Me.TimerMenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
+        resources.ApplyResources(Me.TimerMenuStrip, "TimerMenuStrip")
+        Me.TimerMenuStrip.Name = "TimerMenuStrip"
         '
-        '表示ToolStripMenuItem
+        'FuncMenuItem
         '
-        Me.表示ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem3, Me.常に最前面ToolStripMenuItem, Me.バー表示ToolStripMenuItem, Me.秒数表示ToolStripMenuItem, Me.文字の大きさToolStripMenuItem, Me.次の授業NToolStripMenuItem, Me.ToolStripSeparator1, Me.終了XToolStripMenuItem})
-        Me.表示ToolStripMenuItem.Name = "表示ToolStripMenuItem"
-        resources.ApplyResources(Me.表示ToolStripMenuItem, "表示ToolStripMenuItem")
+        Me.FuncMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItem, Me.TopmostMenuItem, Me.ShowBarMenuItem, Me.ShowsecMenuItem, Me.SizeMenuItem, Me.NextTimeMenuItem, Me.FuncSeparator1, Me.ExitMenuItem})
+        Me.FuncMenuItem.Name = "FuncMenuItem"
+        resources.ApplyResources(Me.FuncMenuItem, "FuncMenuItem")
         '
-        'ToolStripMenuItem3
+        'ModeMenuItem
         '
-        Me.ToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.授業時間タイマーToolStripMenuItem, Me.カウントアップタイマーToolStripMenuItem, Me.キッチンタイマーToolStripMenuItem, Me.カウントダウンタイマーToolStripMenuItem, Me.ポドローモタイマーToolStripMenuItem, Me.バッテリー残量ToolStripMenuItem})
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        resources.ApplyResources(Me.ToolStripMenuItem3, "ToolStripMenuItem3")
+        Me.ModeMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClassMenuItem, Me.CountupMenuItem, Me.KitchenMenuItem, Me.CountdownMenuItem, Me.PomodoroMenuItem, Me.BatteryMenuItem})
+        Me.ModeMenuItem.Name = "ModeMenuItem"
+        resources.ApplyResources(Me.ModeMenuItem, "ModeMenuItem")
         '
-        '授業時間タイマーToolStripMenuItem
+        'ClassMenuItem
         '
-        Me.授業時間タイマーToolStripMenuItem.Checked = True
-        Me.授業時間タイマーToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.授業時間タイマーToolStripMenuItem.Name = "授業時間タイマーToolStripMenuItem"
-        resources.ApplyResources(Me.授業時間タイマーToolStripMenuItem, "授業時間タイマーToolStripMenuItem")
+        Me.ClassMenuItem.Checked = True
+        Me.ClassMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ClassMenuItem.Name = "ClassMenuItem"
+        resources.ApplyResources(Me.ClassMenuItem, "ClassMenuItem")
         '
-        'カウントアップタイマーToolStripMenuItem
+        'CountupMenuItem
         '
-        Me.カウントアップタイマーToolStripMenuItem.Name = "カウントアップタイマーToolStripMenuItem"
-        resources.ApplyResources(Me.カウントアップタイマーToolStripMenuItem, "カウントアップタイマーToolStripMenuItem")
+        Me.CountupMenuItem.Name = "CountupMenuItem"
+        resources.ApplyResources(Me.CountupMenuItem, "CountupMenuItem")
         '
-        'キッチンタイマーToolStripMenuItem
+        'KitchenMenuItem
         '
-        Me.キッチンタイマーToolStripMenuItem.Name = "キッチンタイマーToolStripMenuItem"
-        resources.ApplyResources(Me.キッチンタイマーToolStripMenuItem, "キッチンタイマーToolStripMenuItem")
+        Me.KitchenMenuItem.Name = "KitchenMenuItem"
+        resources.ApplyResources(Me.KitchenMenuItem, "KitchenMenuItem")
         '
-        'カウントダウンタイマーToolStripMenuItem
+        'CountdownMenuItem
         '
-        Me.カウントダウンタイマーToolStripMenuItem.Name = "カウントダウンタイマーToolStripMenuItem"
-        resources.ApplyResources(Me.カウントダウンタイマーToolStripMenuItem, "カウントダウンタイマーToolStripMenuItem")
+        Me.CountdownMenuItem.Name = "CountdownMenuItem"
+        resources.ApplyResources(Me.CountdownMenuItem, "CountdownMenuItem")
         '
-        'ポドローモタイマーToolStripMenuItem
+        'PomodoroMenuItem
         '
-        Me.ポドローモタイマーToolStripMenuItem.Name = "ポドローモタイマーToolStripMenuItem"
-        resources.ApplyResources(Me.ポドローモタイマーToolStripMenuItem, "ポドローモタイマーToolStripMenuItem")
+        Me.PomodoroMenuItem.Name = "PomodoroMenuItem"
+        resources.ApplyResources(Me.PomodoroMenuItem, "PomodoroMenuItem")
         '
-        'バッテリー残量ToolStripMenuItem
+        'BatteryMenuItem
         '
-        Me.バッテリー残量ToolStripMenuItem.Name = "バッテリー残量ToolStripMenuItem"
-        resources.ApplyResources(Me.バッテリー残量ToolStripMenuItem, "バッテリー残量ToolStripMenuItem")
+        Me.BatteryMenuItem.Name = "BatteryMenuItem"
+        resources.ApplyResources(Me.BatteryMenuItem, "BatteryMenuItem")
         '
-        '常に最前面ToolStripMenuItem
+        'TopmostMenuItem
         '
-        Me.常に最前面ToolStripMenuItem.Checked = True
-        Me.常に最前面ToolStripMenuItem.CheckOnClick = True
-        Me.常に最前面ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.常に最前面ToolStripMenuItem.Name = "常に最前面ToolStripMenuItem"
-        resources.ApplyResources(Me.常に最前面ToolStripMenuItem, "常に最前面ToolStripMenuItem")
+        Me.TopmostMenuItem.Checked = True
+        Me.TopmostMenuItem.CheckOnClick = True
+        Me.TopmostMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.TopmostMenuItem.Name = "TopmostMenuItem"
+        resources.ApplyResources(Me.TopmostMenuItem, "TopmostMenuItem")
         '
-        'バー表示ToolStripMenuItem
+        'ShowBarMenuItem
         '
-        Me.バー表示ToolStripMenuItem.Checked = True
-        Me.バー表示ToolStripMenuItem.CheckOnClick = True
-        Me.バー表示ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.バー表示ToolStripMenuItem.Name = "バー表示ToolStripMenuItem"
-        resources.ApplyResources(Me.バー表示ToolStripMenuItem, "バー表示ToolStripMenuItem")
+        Me.ShowBarMenuItem.Checked = True
+        Me.ShowBarMenuItem.CheckOnClick = True
+        Me.ShowBarMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ShowBarMenuItem.Name = "ShowBarMenuItem"
+        resources.ApplyResources(Me.ShowBarMenuItem, "ShowBarMenuItem")
         '
-        '秒数表示ToolStripMenuItem
+        'ShowsecMenuItem
         '
-        Me.秒数表示ToolStripMenuItem.CheckOnClick = True
-        Me.秒数表示ToolStripMenuItem.Name = "秒数表示ToolStripMenuItem"
-        resources.ApplyResources(Me.秒数表示ToolStripMenuItem, "秒数表示ToolStripMenuItem")
+        Me.ShowsecMenuItem.CheckOnClick = True
+        Me.ShowsecMenuItem.Name = "ShowsecMenuItem"
+        resources.ApplyResources(Me.ShowsecMenuItem, "ShowsecMenuItem")
         '
-        '文字の大きさToolStripMenuItem
+        'SizeMenuItem
         '
-        Me.文字の大きさToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ビッグToolStripMenuItem, Me.中ToolStripMenuItem, Me.コンパクトToolStripMenuItem, Me.小ToolStripMenuItem})
-        Me.文字の大きさToolStripMenuItem.Name = "文字の大きさToolStripMenuItem"
-        resources.ApplyResources(Me.文字の大きさToolStripMenuItem, "文字の大きさToolStripMenuItem")
+        Me.SizeMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Size1MenuItem, Me.Size2MenuItem, Me.Size3MenuItem, Me.Size4MenuItem})
+        Me.SizeMenuItem.Name = "SizeMenuItem"
+        resources.ApplyResources(Me.SizeMenuItem, "SizeMenuItem")
         '
-        'ビッグToolStripMenuItem
+        'Size1MenuItem
         '
-        Me.ビッグToolStripMenuItem.Name = "ビッグToolStripMenuItem"
-        resources.ApplyResources(Me.ビッグToolStripMenuItem, "ビッグToolStripMenuItem")
+        Me.Size1MenuItem.Name = "Size1MenuItem"
+        resources.ApplyResources(Me.Size1MenuItem, "Size1MenuItem")
         '
-        '中ToolStripMenuItem
+        'Size2MenuItem
         '
-        Me.中ToolStripMenuItem.Checked = True
-        Me.中ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.中ToolStripMenuItem.Name = "中ToolStripMenuItem"
-        resources.ApplyResources(Me.中ToolStripMenuItem, "中ToolStripMenuItem")
+        Me.Size2MenuItem.Checked = True
+        Me.Size2MenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.Size2MenuItem.Name = "Size2MenuItem"
+        resources.ApplyResources(Me.Size2MenuItem, "Size2MenuItem")
         '
-        'コンパクトToolStripMenuItem
+        'Size3MenuItem
         '
-        Me.コンパクトToolStripMenuItem.Name = "コンパクトToolStripMenuItem"
-        resources.ApplyResources(Me.コンパクトToolStripMenuItem, "コンパクトToolStripMenuItem")
+        Me.Size3MenuItem.Name = "Size3MenuItem"
+        resources.ApplyResources(Me.Size3MenuItem, "Size3MenuItem")
         '
-        '小ToolStripMenuItem
+        'Size4MenuItem
         '
-        Me.小ToolStripMenuItem.Name = "小ToolStripMenuItem"
-        resources.ApplyResources(Me.小ToolStripMenuItem, "小ToolStripMenuItem")
+        Me.Size4MenuItem.Name = "Size4MenuItem"
+        resources.ApplyResources(Me.Size4MenuItem, "Size4MenuItem")
         '
-        '次の授業NToolStripMenuItem
+        'NextTimeMenuItem
         '
-        Me.次の授業NToolStripMenuItem.ForeColor = System.Drawing.Color.Gray
-        Me.次の授業NToolStripMenuItem.Name = "次の授業NToolStripMenuItem"
-        resources.ApplyResources(Me.次の授業NToolStripMenuItem, "次の授業NToolStripMenuItem")
+        Me.NextTimeMenuItem.ForeColor = System.Drawing.Color.Gray
+        Me.NextTimeMenuItem.Name = "NextTimeMenuItem"
+        resources.ApplyResources(Me.NextTimeMenuItem, "NextTimeMenuItem")
         '
-        'ToolStripSeparator1
+        'FuncSeparator1
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
+        Me.FuncSeparator1.Name = "FuncSeparator1"
+        resources.ApplyResources(Me.FuncSeparator1, "FuncSeparator1")
         '
-        '終了XToolStripMenuItem
+        'ExitMenuItem
         '
-        Me.終了XToolStripMenuItem.Name = "終了XToolStripMenuItem"
-        resources.ApplyResources(Me.終了XToolStripMenuItem, "終了XToolStripMenuItem")
+        Me.ExitMenuItem.Name = "ExitMenuItem"
+        resources.ApplyResources(Me.ExitMenuItem, "ExitMenuItem")
         '
-        '高度ToolStripMenuItem
+        'AdvancedMenuItem
         '
-        Me.高度ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.フォントの変更ToolStripMenuItem, Me.タイマーの縦幅ToolStripMenuItem, Me.バーの縦幅ToolStripMenuItem, Me.タイマーとバーの間の幅ToolStripMenuItem, Me.タイマーとバーの左のスペースの幅ToolStripMenuItem, Me.タイマーバーとフォーム端ToolStripMenuItem, Me.文字の場所を上下にずらすToolStripMenuItem, Me.タイトルにタイマー表示ToolStripMenuItem, Me.ToolStripSeparator6, Me.高度な設定をインポートToolStripMenuItem, Me.高度な設定をエクスポートToolStripMenuItem, Me.ToolStripSeparator3, Me.ToolStripMenuItem2})
-        Me.高度ToolStripMenuItem.Name = "高度ToolStripMenuItem"
-        resources.ApplyResources(Me.高度ToolStripMenuItem, "高度ToolStripMenuItem")
+        Me.AdvancedMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeFontMenuItem, Me.TimerHeightMenuItem, Me.BarHeightMenuItem, Me.SpaceWidthToolStripMenuItem, Me.LeftSpaceMenuItem, Me.RightSpaceMenuItem, Me.MarginMenuItem, Me.TitleShowTimerMenuItem, Me.AdvancedSeparator1, Me.ImportMenuItem, Me.ExportMenuItem, Me.AdvancedSeparator2, Me.AdvancedOffMenuItem})
+        Me.AdvancedMenuItem.Name = "AdvancedMenuItem"
+        resources.ApplyResources(Me.AdvancedMenuItem, "AdvancedMenuItem")
         '
-        'フォントの変更ToolStripMenuItem
+        'ChangeFontMenuItem
         '
-        Me.フォントの変更ToolStripMenuItem.Name = "フォントの変更ToolStripMenuItem"
-        resources.ApplyResources(Me.フォントの変更ToolStripMenuItem, "フォントの変更ToolStripMenuItem")
+        Me.ChangeFontMenuItem.Name = "ChangeFontMenuItem"
+        resources.ApplyResources(Me.ChangeFontMenuItem, "ChangeFontMenuItem")
         '
-        'タイマーの縦幅ToolStripMenuItem
+        'TimerHeightMenuItem
         '
-        Me.タイマーの縦幅ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox1})
-        Me.タイマーの縦幅ToolStripMenuItem.Name = "タイマーの縦幅ToolStripMenuItem"
-        resources.ApplyResources(Me.タイマーの縦幅ToolStripMenuItem, "タイマーの縦幅ToolStripMenuItem")
+        Me.TimerHeightMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TimerHeightToolStripTextBox})
+        Me.TimerHeightMenuItem.Name = "TimerHeightMenuItem"
+        resources.ApplyResources(Me.TimerHeightMenuItem, "TimerHeightMenuItem")
         '
-        'ToolStripTextBox1
+        'TimerHeightToolStripTextBox
         '
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        resources.ApplyResources(Me.ToolStripTextBox1, "ToolStripTextBox1")
+        Me.TimerHeightToolStripTextBox.Name = "TimerHeightToolStripTextBox"
+        resources.ApplyResources(Me.TimerHeightToolStripTextBox, "TimerHeightToolStripTextBox")
         '
-        'バーの縦幅ToolStripMenuItem
+        'BarHeightMenuItem
         '
-        Me.バーの縦幅ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox2})
-        Me.バーの縦幅ToolStripMenuItem.Name = "バーの縦幅ToolStripMenuItem"
-        resources.ApplyResources(Me.バーの縦幅ToolStripMenuItem, "バーの縦幅ToolStripMenuItem")
+        Me.BarHeightMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarHeightToolStripTextBox2})
+        Me.BarHeightMenuItem.Name = "BarHeightMenuItem"
+        resources.ApplyResources(Me.BarHeightMenuItem, "BarHeightMenuItem")
         '
-        'ToolStripTextBox2
+        'BarHeightToolStripTextBox2
         '
-        Me.ToolStripTextBox2.Name = "ToolStripTextBox2"
-        resources.ApplyResources(Me.ToolStripTextBox2, "ToolStripTextBox2")
+        Me.BarHeightToolStripTextBox2.Name = "BarHeightToolStripTextBox2"
+        resources.ApplyResources(Me.BarHeightToolStripTextBox2, "BarHeightToolStripTextBox2")
         '
-        'タイマーとバーの間の幅ToolStripMenuItem
+        'SpaceWidthToolStripMenuItem
         '
-        Me.タイマーとバーの間の幅ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox6})
-        Me.タイマーとバーの間の幅ToolStripMenuItem.Name = "タイマーとバーの間の幅ToolStripMenuItem"
-        resources.ApplyResources(Me.タイマーとバーの間の幅ToolStripMenuItem, "タイマーとバーの間の幅ToolStripMenuItem")
+        Me.SpaceWidthToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpaceWidthToolStripTextBox})
+        Me.SpaceWidthToolStripMenuItem.Name = "SpaceWidthToolStripMenuItem"
+        resources.ApplyResources(Me.SpaceWidthToolStripMenuItem, "SpaceWidthToolStripMenuItem")
         '
-        'ToolStripTextBox6
+        'SpaceWidthToolStripTextBox
         '
-        Me.ToolStripTextBox6.Name = "ToolStripTextBox6"
-        resources.ApplyResources(Me.ToolStripTextBox6, "ToolStripTextBox6")
+        Me.SpaceWidthToolStripTextBox.Name = "SpaceWidthToolStripTextBox"
+        resources.ApplyResources(Me.SpaceWidthToolStripTextBox, "SpaceWidthToolStripTextBox")
         '
-        'タイマーとバーの左のスペースの幅ToolStripMenuItem
+        'LeftSpaceMenuItem
         '
-        Me.タイマーとバーの左のスペースの幅ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox7})
-        Me.タイマーとバーの左のスペースの幅ToolStripMenuItem.Name = "タイマーとバーの左のスペースの幅ToolStripMenuItem"
-        resources.ApplyResources(Me.タイマーとバーの左のスペースの幅ToolStripMenuItem, "タイマーとバーの左のスペースの幅ToolStripMenuItem")
+        Me.LeftSpaceMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LeftSpaceToolStripTextBox})
+        Me.LeftSpaceMenuItem.Name = "LeftSpaceMenuItem"
+        resources.ApplyResources(Me.LeftSpaceMenuItem, "LeftSpaceMenuItem")
         '
-        'ToolStripTextBox7
+        'LeftSpaceToolStripTextBox
         '
-        Me.ToolStripTextBox7.Name = "ToolStripTextBox7"
-        resources.ApplyResources(Me.ToolStripTextBox7, "ToolStripTextBox7")
+        Me.LeftSpaceToolStripTextBox.Name = "LeftSpaceToolStripTextBox"
+        resources.ApplyResources(Me.LeftSpaceToolStripTextBox, "LeftSpaceToolStripTextBox")
         '
-        'タイマーバーとフォーム端ToolStripMenuItem
+        'RightSpaceMenuItem
         '
-        Me.タイマーバーとフォーム端ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox8})
-        Me.タイマーバーとフォーム端ToolStripMenuItem.Name = "タイマーバーとフォーム端ToolStripMenuItem"
-        resources.ApplyResources(Me.タイマーバーとフォーム端ToolStripMenuItem, "タイマーバーとフォーム端ToolStripMenuItem")
+        Me.RightSpaceMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RightSpaceToolStripTextBox})
+        Me.RightSpaceMenuItem.Name = "RightSpaceMenuItem"
+        resources.ApplyResources(Me.RightSpaceMenuItem, "RightSpaceMenuItem")
         '
-        'ToolStripTextBox8
+        'RightSpaceToolStripTextBox
         '
-        Me.ToolStripTextBox8.Name = "ToolStripTextBox8"
-        resources.ApplyResources(Me.ToolStripTextBox8, "ToolStripTextBox8")
+        Me.RightSpaceToolStripTextBox.Name = "RightSpaceToolStripTextBox"
+        resources.ApplyResources(Me.RightSpaceToolStripTextBox, "RightSpaceToolStripTextBox")
         '
-        '文字の場所を上下にずらすToolStripMenuItem
+        'MarginMenuItem
         '
-        Me.文字の場所を上下にずらすToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox10})
-        Me.文字の場所を上下にずらすToolStripMenuItem.Name = "文字の場所を上下にずらすToolStripMenuItem"
-        resources.ApplyResources(Me.文字の場所を上下にずらすToolStripMenuItem, "文字の場所を上下にずらすToolStripMenuItem")
+        Me.MarginMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MarginToolStripTextBox})
+        Me.MarginMenuItem.Name = "MarginMenuItem"
+        resources.ApplyResources(Me.MarginMenuItem, "MarginMenuItem")
         '
-        'ToolStripTextBox10
+        'MarginToolStripTextBox
         '
-        Me.ToolStripTextBox10.Name = "ToolStripTextBox10"
-        resources.ApplyResources(Me.ToolStripTextBox10, "ToolStripTextBox10")
+        Me.MarginToolStripTextBox.Name = "MarginToolStripTextBox"
+        resources.ApplyResources(Me.MarginToolStripTextBox, "MarginToolStripTextBox")
         '
-        'タイトルにタイマー表示ToolStripMenuItem
+        'TitleShowTimerMenuItem
         '
-        Me.タイトルにタイマー表示ToolStripMenuItem.CheckOnClick = True
-        Me.タイトルにタイマー表示ToolStripMenuItem.Name = "タイトルにタイマー表示ToolStripMenuItem"
-        resources.ApplyResources(Me.タイトルにタイマー表示ToolStripMenuItem, "タイトルにタイマー表示ToolStripMenuItem")
+        Me.TitleShowTimerMenuItem.CheckOnClick = True
+        Me.TitleShowTimerMenuItem.Name = "TitleShowTimerMenuItem"
+        resources.ApplyResources(Me.TitleShowTimerMenuItem, "TitleShowTimerMenuItem")
         '
-        'ToolStripSeparator6
+        'AdvancedSeparator1
         '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        resources.ApplyResources(Me.ToolStripSeparator6, "ToolStripSeparator6")
+        Me.AdvancedSeparator1.Name = "AdvancedSeparator1"
+        resources.ApplyResources(Me.AdvancedSeparator1, "AdvancedSeparator1")
         '
-        '高度な設定をインポートToolStripMenuItem
+        'ImportMenuItem
         '
-        Me.高度な設定をインポートToolStripMenuItem.Name = "高度な設定をインポートToolStripMenuItem"
-        resources.ApplyResources(Me.高度な設定をインポートToolStripMenuItem, "高度な設定をインポートToolStripMenuItem")
+        Me.ImportMenuItem.Name = "ImportMenuItem"
+        resources.ApplyResources(Me.ImportMenuItem, "ImportMenuItem")
         '
-        '高度な設定をエクスポートToolStripMenuItem
+        'ExportMenuItem
         '
-        Me.高度な設定をエクスポートToolStripMenuItem.Name = "高度な設定をエクスポートToolStripMenuItem"
-        resources.ApplyResources(Me.高度な設定をエクスポートToolStripMenuItem, "高度な設定をエクスポートToolStripMenuItem")
+        Me.ExportMenuItem.Name = "ExportMenuItem"
+        resources.ApplyResources(Me.ExportMenuItem, "ExportMenuItem")
         '
-        'ToolStripSeparator3
+        'AdvancedSeparator2
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        resources.ApplyResources(Me.ToolStripSeparator3, "ToolStripSeparator3")
+        Me.AdvancedSeparator2.Name = "AdvancedSeparator2"
+        resources.ApplyResources(Me.AdvancedSeparator2, "AdvancedSeparator2")
         '
-        'ToolStripMenuItem2
+        'AdvancedOffMenuItem
         '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        resources.ApplyResources(Me.ToolStripMenuItem2, "ToolStripMenuItem2")
+        Me.AdvancedOffMenuItem.Name = "AdvancedOffMenuItem"
+        resources.ApplyResources(Me.AdvancedOffMenuItem, "AdvancedOffMenuItem")
         '
-        '設定ToolStripMenuItem
+        'SettingMenuItem
         '
-        Me.設定ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem4, Me.固定時マウスオーバーで透明化ToolStripMenuItem, Me.フォームの位置を記憶するToolStripMenuItem, Me.起動時固定状態で開始するLToolStripMenuItem, Me.Windowsの起動時に自動的に起動するToolStripMenuItem, Me.フォームのサイズ変更を可能にするToolStripMenuItem, Me.フォームのサイズを記憶するFToolStripMenuItem, Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem, Me.休み時間時次の授業情報表示ToolStripMenuItem, Me.ネットワークでシステム時刻を補正ToolStripMenuItem, Me.ToolStripMenuItem15, Me.ToolStripSeparator2, Me.高度な設定ToolStripMenuItem})
-        Me.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem"
-        resources.ApplyResources(Me.設定ToolStripMenuItem, "設定ToolStripMenuItem")
+        Me.SettingMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpecialTimeMenuItem, Me.TransparentMenuItem, Me.PositionSaveMenuItem, Me.LockStartMenuItem, Me.AutorunMenuItem, Me.CanSizeChangeMenuItem, Me.SizeSaveMenuItem, Me.ChangeBatteryMenuItem, Me.ShowNextTermMenuItem, Me.NTPTimeMenuItem, Me.DeviationMenuItem, Me.SettingSeparator1, Me.AdvancedOnMenuItem})
+        Me.SettingMenuItem.Name = "SettingMenuItem"
+        resources.ApplyResources(Me.SettingMenuItem, "SettingMenuItem")
         '
-        'ToolStripMenuItem4
+        'SpecialTimeMenuItem
         '
-        Me.ToolStripMenuItem4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem5o, Me.ToolStripMenuItem6o})
-        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        resources.ApplyResources(Me.ToolStripMenuItem4, "ToolStripMenuItem4")
+        Me.SpecialTimeMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Term5MenuItem, Me.Term6MenuItem})
+        Me.SpecialTimeMenuItem.Name = "SpecialTimeMenuItem"
+        resources.ApplyResources(Me.SpecialTimeMenuItem, "SpecialTimeMenuItem")
         '
-        'ToolStripMenuItem5o
+        'Term5MenuItem
         '
-        Me.ToolStripMenuItem5o.CheckOnClick = True
-        Me.ToolStripMenuItem5o.Name = "ToolStripMenuItem5o"
-        resources.ApplyResources(Me.ToolStripMenuItem5o, "ToolStripMenuItem5o")
+        Me.Term5MenuItem.CheckOnClick = True
+        Me.Term5MenuItem.Name = "Term5MenuItem"
+        resources.ApplyResources(Me.Term5MenuItem, "Term5MenuItem")
         '
-        'ToolStripMenuItem6o
+        'Term6MenuItem
         '
-        Me.ToolStripMenuItem6o.CheckOnClick = True
-        resources.ApplyResources(Me.ToolStripMenuItem6o, "ToolStripMenuItem6o")
-        Me.ToolStripMenuItem6o.Name = "ToolStripMenuItem6o"
+        Me.Term6MenuItem.CheckOnClick = True
+        resources.ApplyResources(Me.Term6MenuItem, "Term6MenuItem")
+        Me.Term6MenuItem.Name = "Term6MenuItem"
         '
-        '固定時マウスオーバーで透明化ToolStripMenuItem
+        'TransparentMenuItem
         '
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.AutoToolTip = True
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.Checked = True
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.CheckOnClick = True
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.固定時マウスオーバーで透明化ToolStripMenuItem.Name = "固定時マウスオーバーで透明化ToolStripMenuItem"
-        resources.ApplyResources(Me.固定時マウスオーバーで透明化ToolStripMenuItem, "固定時マウスオーバーで透明化ToolStripMenuItem")
+        Me.TransparentMenuItem.AutoToolTip = True
+        Me.TransparentMenuItem.Checked = True
+        Me.TransparentMenuItem.CheckOnClick = True
+        Me.TransparentMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.TransparentMenuItem.Name = "TransparentMenuItem"
+        resources.ApplyResources(Me.TransparentMenuItem, "TransparentMenuItem")
         '
-        'フォームの位置を記憶するToolStripMenuItem
+        'PositionSaveMenuItem
         '
-        Me.フォームの位置を記憶するToolStripMenuItem.CheckOnClick = True
-        Me.フォームの位置を記憶するToolStripMenuItem.Name = "フォームの位置を記憶するToolStripMenuItem"
-        resources.ApplyResources(Me.フォームの位置を記憶するToolStripMenuItem, "フォームの位置を記憶するToolStripMenuItem")
+        Me.PositionSaveMenuItem.CheckOnClick = True
+        Me.PositionSaveMenuItem.Name = "PositionSaveMenuItem"
+        resources.ApplyResources(Me.PositionSaveMenuItem, "PositionSaveMenuItem")
         '
-        '起動時固定状態で開始するLToolStripMenuItem
+        'LockStartMenuItem
         '
-        Me.起動時固定状態で開始するLToolStripMenuItem.CheckOnClick = True
-        Me.起動時固定状態で開始するLToolStripMenuItem.Name = "起動時固定状態で開始するLToolStripMenuItem"
-        resources.ApplyResources(Me.起動時固定状態で開始するLToolStripMenuItem, "起動時固定状態で開始するLToolStripMenuItem")
+        Me.LockStartMenuItem.CheckOnClick = True
+        Me.LockStartMenuItem.Name = "LockStartMenuItem"
+        resources.ApplyResources(Me.LockStartMenuItem, "LockStartMenuItem")
         '
-        'Windowsの起動時に自動的に起動するToolStripMenuItem
+        'AutorunMenuItem
         '
-        Me.Windowsの起動時に自動的に起動するToolStripMenuItem.CheckOnClick = True
-        Me.Windowsの起動時に自動的に起動するToolStripMenuItem.Name = "Windowsの起動時に自動的に起動するToolStripMenuItem"
-        resources.ApplyResources(Me.Windowsの起動時に自動的に起動するToolStripMenuItem, "Windowsの起動時に自動的に起動するToolStripMenuItem")
+        Me.AutorunMenuItem.CheckOnClick = True
+        Me.AutorunMenuItem.Name = "AutorunMenuItem"
+        resources.ApplyResources(Me.AutorunMenuItem, "AutorunMenuItem")
         '
-        'フォームのサイズ変更を可能にするToolStripMenuItem
+        'CanSizeChangeMenuItem
         '
-        Me.フォームのサイズ変更を可能にするToolStripMenuItem.CheckOnClick = True
-        Me.フォームのサイズ変更を可能にするToolStripMenuItem.Name = "フォームのサイズ変更を可能にするToolStripMenuItem"
-        resources.ApplyResources(Me.フォームのサイズ変更を可能にするToolStripMenuItem, "フォームのサイズ変更を可能にするToolStripMenuItem")
+        Me.CanSizeChangeMenuItem.CheckOnClick = True
+        Me.CanSizeChangeMenuItem.Name = "CanSizeChangeMenuItem"
+        resources.ApplyResources(Me.CanSizeChangeMenuItem, "CanSizeChangeMenuItem")
         '
-        'フォームのサイズを記憶するFToolStripMenuItem
+        'SizeSaveMenuItem
         '
-        Me.フォームのサイズを記憶するFToolStripMenuItem.CheckOnClick = True
-        Me.フォームのサイズを記憶するFToolStripMenuItem.Name = "フォームのサイズを記憶するFToolStripMenuItem"
-        resources.ApplyResources(Me.フォームのサイズを記憶するFToolStripMenuItem, "フォームのサイズを記憶するFToolStripMenuItem")
+        Me.SizeSaveMenuItem.CheckOnClick = True
+        Me.SizeSaveMenuItem.Name = "SizeSaveMenuItem"
+        resources.ApplyResources(Me.SizeSaveMenuItem, "SizeSaveMenuItem")
         '
-        'バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem
+        'ChangeBatteryMenuItem
         '
-        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.CheckOnClick = True
-        Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem.Name = "バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem"
-        resources.ApplyResources(Me.バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem, "バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem")
+        Me.ChangeBatteryMenuItem.CheckOnClick = True
+        Me.ChangeBatteryMenuItem.Name = "ChangeBatteryMenuItem"
+        resources.ApplyResources(Me.ChangeBatteryMenuItem, "ChangeBatteryMenuItem")
         '
-        '休み時間時次の授業情報表示ToolStripMenuItem
+        'ShowNextTermMenuItem
         '
-        Me.休み時間時次の授業情報表示ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.学籍番号で連携ToolStripMenuItem, Me.ToolStripSeparator4, Me.通知ToolStripMenuItem, Me.ポップアップ表示ToolStripMenuItem})
-        Me.休み時間時次の授業情報表示ToolStripMenuItem.Name = "休み時間時次の授業情報表示ToolStripMenuItem"
-        resources.ApplyResources(Me.休み時間時次の授業情報表示ToolStripMenuItem, "休み時間時次の授業情報表示ToolStripMenuItem")
+        Me.ShowNextTermMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IDPassMenuItem, Me.ToolStripSeparator4, Me.ShowNotifyMenuItem, Me.ShowPopUpMenuItem})
+        Me.ShowNextTermMenuItem.Name = "ShowNextTermMenuItem"
+        resources.ApplyResources(Me.ShowNextTermMenuItem, "ShowNextTermMenuItem")
         '
-        '学籍番号で連携ToolStripMenuItem
+        'IDPassMenuItem
         '
-        Me.学籍番号で連携ToolStripMenuItem.Name = "学籍番号で連携ToolStripMenuItem"
-        resources.ApplyResources(Me.学籍番号で連携ToolStripMenuItem, "学籍番号で連携ToolStripMenuItem")
+        Me.IDPassMenuItem.Name = "IDPassMenuItem"
+        resources.ApplyResources(Me.IDPassMenuItem, "IDPassMenuItem")
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
         '
-        '通知ToolStripMenuItem
+        'ShowNotifyMenuItem
         '
-        Me.通知ToolStripMenuItem.CheckOnClick = True
-        Me.通知ToolStripMenuItem.Name = "通知ToolStripMenuItem"
-        resources.ApplyResources(Me.通知ToolStripMenuItem, "通知ToolStripMenuItem")
+        Me.ShowNotifyMenuItem.CheckOnClick = True
+        Me.ShowNotifyMenuItem.Name = "ShowNotifyMenuItem"
+        resources.ApplyResources(Me.ShowNotifyMenuItem, "ShowNotifyMenuItem")
         '
-        'ポップアップ表示ToolStripMenuItem
+        'ShowPopUpMenuItem
         '
-        Me.ポップアップ表示ToolStripMenuItem.CheckOnClick = True
-        Me.ポップアップ表示ToolStripMenuItem.Name = "ポップアップ表示ToolStripMenuItem"
-        resources.ApplyResources(Me.ポップアップ表示ToolStripMenuItem, "ポップアップ表示ToolStripMenuItem")
+        Me.ShowPopUpMenuItem.CheckOnClick = True
+        Me.ShowPopUpMenuItem.Name = "ShowPopUpMenuItem"
+        resources.ApplyResources(Me.ShowPopUpMenuItem, "ShowPopUpMenuItem")
         '
-        'ネットワークでシステム時刻を補正ToolStripMenuItem
+        'NTPTimeMenuItem
         '
-        Me.ネットワークでシステム時刻を補正ToolStripMenuItem.Name = "ネットワークでシステム時刻を補正ToolStripMenuItem"
-        resources.ApplyResources(Me.ネットワークでシステム時刻を補正ToolStripMenuItem, "ネットワークでシステム時刻を補正ToolStripMenuItem")
+        Me.NTPTimeMenuItem.Name = "NTPTimeMenuItem"
+        resources.ApplyResources(Me.NTPTimeMenuItem, "NTPTimeMenuItem")
         '
-        'ToolStripMenuItem15
+        'DeviationMenuItem
         '
-        Me.ToolStripMenuItem15.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox3})
-        Me.ToolStripMenuItem15.Name = "ToolStripMenuItem15"
-        resources.ApplyResources(Me.ToolStripMenuItem15, "ToolStripMenuItem15")
+        Me.DeviationMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeviationToolStripTextBox})
+        Me.DeviationMenuItem.Name = "DeviationMenuItem"
+        resources.ApplyResources(Me.DeviationMenuItem, "DeviationMenuItem")
         '
-        'ToolStripTextBox3
+        'DeviationToolStripTextBox
         '
-        Me.ToolStripTextBox3.Name = "ToolStripTextBox3"
-        resources.ApplyResources(Me.ToolStripTextBox3, "ToolStripTextBox3")
+        Me.DeviationToolStripTextBox.Name = "DeviationToolStripTextBox"
+        resources.ApplyResources(Me.DeviationToolStripTextBox, "DeviationToolStripTextBox")
         '
-        'ToolStripSeparator2
+        'SettingSeparator1
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        Me.SettingSeparator1.Name = "SettingSeparator1"
+        resources.ApplyResources(Me.SettingSeparator1, "SettingSeparator1")
         '
-        '高度な設定ToolStripMenuItem
+        'AdvancedOnMenuItem
         '
-        Me.高度な設定ToolStripMenuItem.Name = "高度な設定ToolStripMenuItem"
-        resources.ApplyResources(Me.高度な設定ToolStripMenuItem, "高度な設定ToolStripMenuItem")
+        Me.AdvancedOnMenuItem.Name = "AdvancedOnMenuItem"
+        resources.ApplyResources(Me.AdvancedOnMenuItem, "AdvancedOnMenuItem")
         '
-        'ヘルプToolStripMenuItem
+        'HelpMenuItem
         '
-        Me.ヘルプToolStripMenuItem.Name = "ヘルプToolStripMenuItem"
-        resources.ApplyResources(Me.ヘルプToolStripMenuItem, "ヘルプToolStripMenuItem")
+        Me.HelpMenuItem.Name = "HelpMenuItem"
+        resources.ApplyResources(Me.HelpMenuItem, "HelpMenuItem")
         '
-        'ToolStripMenuItem1
+        'AboutMenuItem
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        resources.ApplyResources(Me.ToolStripMenuItem1, "ToolStripMenuItem1")
+        Me.AboutMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowAboutMenuItem})
+        Me.AboutMenuItem.Name = "AboutMenuItem"
+        resources.ApplyResources(Me.AboutMenuItem, "AboutMenuItem")
         '
-        'AboutToolStripMenuItem
+        'ShowAboutMenuItem
         '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        resources.ApplyResources(Me.AboutToolStripMenuItem, "AboutToolStripMenuItem")
+        Me.ShowAboutMenuItem.Name = "ShowAboutMenuItem"
+        resources.ApplyResources(Me.ShowAboutMenuItem, "ShowAboutMenuItem")
         '
         'WebTimer
         '
         Me.WebTimer.Interval = 1000
         '
-        'ImageList1
+        'SelectFontDialog
         '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
-        resources.ApplyResources(Me.ImageList1, "ImageList1")
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        '
-        'FontDialog1
-        '
-        Me.FontDialog1.ShowEffects = False
+        Me.SelectFontDialog.ShowEffects = False
         '
         'CountupTimer
         '
         '
-        'kitchenTimer
+        'KitchenTimer
         '
         '
-        'NotifyIcon1
+        'NotifyIcon
         '
-        Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStrip1
-        resources.ApplyResources(Me.NotifyIcon1, "NotifyIcon1")
+        Me.NotifyIcon.ContextMenuStrip = Me.NotifyRightMenuStrip
+        resources.ApplyResources(Me.NotifyIcon, "NotifyIcon")
         '
-        'ContextMenuStrip1
+        'NotifyRightMenuStrip
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem8, Me.ToolStripMenuItem6, Me.ToolStripMenuItem5, Me.ToolStripMenuItem7, Me.表示するToolStripMenuItem, Me.最小化するToolStripMenuItem, Me.ToolStripSeparator5, Me.終了ToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        resources.ApplyResources(Me.ContextMenuStrip1, "ContextMenuStrip1")
+        Me.NotifyRightMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItemN, Me.ChangeSecMenuItem, Me.ChangeLockMenuItem, Me.NextTimeMenuItemN, Me.ShowMenuItem, Me.MinimizeMenuItem, Me.ToolStripSeparator5, Me.ExitMenuItemN})
+        Me.NotifyRightMenuStrip.Name = "ContextMenuStrip1"
+        resources.ApplyResources(Me.NotifyRightMenuStrip, "NotifyRightMenuStrip")
         '
-        'ToolStripMenuItem8
+        'ModeMenuItemN
         '
-        Me.ToolStripMenuItem8.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem9, Me.ToolStripMenuItem10, Me.ToolStripMenuItem11, Me.ToolStripMenuItem12, Me.ToolStripMenuItem13, Me.ToolStripMenuItem14})
-        Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        resources.ApplyResources(Me.ToolStripMenuItem8, "ToolStripMenuItem8")
+        Me.ModeMenuItemN.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClassMenuItemN, Me.CountupMenuItemN, Me.KitchenMenuItemN, Me.CountdownMenuItemN, Me.PomodoroMenuItemN, Me.BatteryMenuItemN})
+        Me.ModeMenuItemN.Name = "ModeMenuItemN"
+        resources.ApplyResources(Me.ModeMenuItemN, "ModeMenuItemN")
         '
-        'ToolStripMenuItem9
+        'ClassMenuItemN
         '
-        Me.ToolStripMenuItem9.Checked = True
-        Me.ToolStripMenuItem9.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
-        resources.ApplyResources(Me.ToolStripMenuItem9, "ToolStripMenuItem9")
+        Me.ClassMenuItemN.Checked = True
+        Me.ClassMenuItemN.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ClassMenuItemN.Name = "ClassMenuItemN"
+        resources.ApplyResources(Me.ClassMenuItemN, "ClassMenuItemN")
         '
-        'ToolStripMenuItem10
+        'CountupMenuItemN
         '
-        Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
-        resources.ApplyResources(Me.ToolStripMenuItem10, "ToolStripMenuItem10")
+        Me.CountupMenuItemN.Name = "CountupMenuItemN"
+        resources.ApplyResources(Me.CountupMenuItemN, "CountupMenuItemN")
         '
-        'ToolStripMenuItem11
+        'KitchenMenuItemN
         '
-        Me.ToolStripMenuItem11.Name = "ToolStripMenuItem11"
-        resources.ApplyResources(Me.ToolStripMenuItem11, "ToolStripMenuItem11")
+        Me.KitchenMenuItemN.Name = "KitchenMenuItemN"
+        resources.ApplyResources(Me.KitchenMenuItemN, "KitchenMenuItemN")
         '
-        'ToolStripMenuItem12
+        'CountdownMenuItemN
         '
-        Me.ToolStripMenuItem12.Name = "ToolStripMenuItem12"
-        resources.ApplyResources(Me.ToolStripMenuItem12, "ToolStripMenuItem12")
+        Me.CountdownMenuItemN.Name = "CountdownMenuItemN"
+        resources.ApplyResources(Me.CountdownMenuItemN, "CountdownMenuItemN")
         '
-        'ToolStripMenuItem13
+        'PomodoroMenuItemN
         '
-        Me.ToolStripMenuItem13.Name = "ToolStripMenuItem13"
-        resources.ApplyResources(Me.ToolStripMenuItem13, "ToolStripMenuItem13")
+        Me.PomodoroMenuItemN.Name = "PomodoroMenuItemN"
+        resources.ApplyResources(Me.PomodoroMenuItemN, "PomodoroMenuItemN")
         '
-        'ToolStripMenuItem14
+        'BatteryMenuItemN
         '
-        Me.ToolStripMenuItem14.Name = "ToolStripMenuItem14"
-        resources.ApplyResources(Me.ToolStripMenuItem14, "ToolStripMenuItem14")
+        Me.BatteryMenuItemN.Name = "BatteryMenuItemN"
+        resources.ApplyResources(Me.BatteryMenuItemN, "BatteryMenuItemN")
         '
-        'ToolStripMenuItem6
+        'ChangeSecMenuItem
         '
-        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        resources.ApplyResources(Me.ToolStripMenuItem6, "ToolStripMenuItem6")
+        Me.ChangeSecMenuItem.Name = "ChangeSecMenuItem"
+        resources.ApplyResources(Me.ChangeSecMenuItem, "ChangeSecMenuItem")
         '
-        'ToolStripMenuItem5
+        'ChangeLockMenuItem
         '
-        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        resources.ApplyResources(Me.ToolStripMenuItem5, "ToolStripMenuItem5")
+        Me.ChangeLockMenuItem.Name = "ChangeLockMenuItem"
+        resources.ApplyResources(Me.ChangeLockMenuItem, "ChangeLockMenuItem")
         '
-        'ToolStripMenuItem7
+        'NextTimeMenuItemN
         '
-        Me.ToolStripMenuItem7.ForeColor = System.Drawing.Color.Gray
-        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        resources.ApplyResources(Me.ToolStripMenuItem7, "ToolStripMenuItem7")
+        Me.NextTimeMenuItemN.ForeColor = System.Drawing.Color.Gray
+        Me.NextTimeMenuItemN.Name = "NextTimeMenuItemN"
+        resources.ApplyResources(Me.NextTimeMenuItemN, "NextTimeMenuItemN")
         '
-        '表示するToolStripMenuItem
+        'ShowMenuItem
         '
-        Me.表示するToolStripMenuItem.Name = "表示するToolStripMenuItem"
-        resources.ApplyResources(Me.表示するToolStripMenuItem, "表示するToolStripMenuItem")
+        Me.ShowMenuItem.Name = "ShowMenuItem"
+        resources.ApplyResources(Me.ShowMenuItem, "ShowMenuItem")
         '
-        '最小化するToolStripMenuItem
+        'MinimizeMenuItem
         '
-        Me.最小化するToolStripMenuItem.Name = "最小化するToolStripMenuItem"
-        resources.ApplyResources(Me.最小化するToolStripMenuItem, "最小化するToolStripMenuItem")
+        Me.MinimizeMenuItem.Name = "MinimizeMenuItem"
+        resources.ApplyResources(Me.MinimizeMenuItem, "MinimizeMenuItem")
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         resources.ApplyResources(Me.ToolStripSeparator5, "ToolStripSeparator5")
         '
-        '終了ToolStripMenuItem
+        'ExitMenuItemN
         '
-        Me.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem"
-        resources.ApplyResources(Me.終了ToolStripMenuItem, "終了ToolStripMenuItem")
+        Me.ExitMenuItemN.Name = "ExitMenuItemN"
+        resources.ApplyResources(Me.ExitMenuItemN, "ExitMenuItemN")
         '
         'CountdownTimer
         '
@@ -612,130 +605,129 @@ Partial Class Main
         'BatteryTimer
         '
         '
-        'SaveFileDialog1
+        'SaveFileDialog
         '
-        resources.ApplyResources(Me.SaveFileDialog1, "SaveFileDialog1")
+        resources.ApplyResources(Me.SaveFileDialog, "SaveFileDialog")
         '
-        'OpenFileDialog1
+        'OpenFileDialog
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
+        Me.OpenFileDialog.FileName = "OpenFileDialog1"
+        resources.ApplyResources(Me.OpenFileDialog, "OpenFileDialog")
         '
-        'KanshiTimer
+        'BatteryMonitorTimer
         '
-        Me.KanshiTimer.Interval = 250
+        Me.BatteryMonitorTimer.Interval = 250
         '
         'Main
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TimerMenuStrip)
+        Me.Controls.Add(Me.TimerBar)
+        Me.Controls.Add(Me.TimerLabel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.MainMenuStrip = Me.TimerMenuStrip
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Main"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.TimerMenuStrip.ResumeLayout(False)
+        Me.TimerMenuStrip.PerformLayout()
+        Me.NotifyRightMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents 表示ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 秒数表示ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents バー表示ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 設定ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 固定時マウスオーバーで透明化ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 常に最前面ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 休み時間時次の授業情報表示ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ヘルプToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents 文字の大きさToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 中ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 小ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents フォームのサイズ変更を可能にするToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents コンパクトToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ビッグToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents フォームの位置を記憶するToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 起動時固定状態で開始するLToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Windowsの起動時に自動的に起動するToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 学籍番号で連携ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TimerLabel As Label
+    Friend WithEvents TimerBar As ProgressBar
+    Friend WithEvents ClassTimer As System.Windows.Forms.Timer
+    Friend WithEvents TimerMenuStrip As MenuStrip
+    Friend WithEvents FuncMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowsecMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowBarMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingMenuItem As ToolStripMenuItem
+    Friend WithEvents TransparentMenuItem As ToolStripMenuItem
+    Friend WithEvents TopmostMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowNextTermMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutMenuItem As ToolStripMenuItem
+    Friend WithEvents SizeMenuItem As ToolStripMenuItem
+    Friend WithEvents Size2MenuItem As ToolStripMenuItem
+    Friend WithEvents Size4MenuItem As ToolStripMenuItem
+    Friend WithEvents CanSizeChangeMenuItem As ToolStripMenuItem
+    Friend WithEvents Size3MenuItem As ToolStripMenuItem
+    Friend WithEvents Size1MenuItem As ToolStripMenuItem
+    Friend WithEvents PositionSaveMenuItem As ToolStripMenuItem
+    Friend WithEvents LockStartMenuItem As ToolStripMenuItem
+    Friend WithEvents AutorunMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowAboutMenuItem As ToolStripMenuItem
+    Friend WithEvents IDPassMenuItem As ToolStripMenuItem
     Friend WithEvents WebTimer As System.Windows.Forms.Timer
-    Friend WithEvents 次の授業NToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ImageList1 As ImageList
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents 終了XToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents フォームのサイズを記憶するFToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents 高度な設定ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 高度ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents フォントの変更ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents タイマーの縦幅ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
-    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents バーの縦幅ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripTextBox2 As ToolStripTextBox
-    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents タイトルにタイマー表示ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FontDialog1 As FontDialog
-    Friend WithEvents タイマーとバーの間の幅ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents タイマーとバーの左のスペースの幅ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents タイマーバーとフォーム端ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripTextBox6 As ToolStripTextBox
-    Friend WithEvents ToolStripTextBox7 As ToolStripTextBox
-    Friend WithEvents ToolStripTextBox8 As ToolStripTextBox
-    Friend WithEvents 文字の場所を上下にずらすToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripTextBox10 As ToolStripTextBox
-    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
-    Friend WithEvents 授業時間タイマーToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents カウントアップタイマーToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents カウントダウンタイマーToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents キッチンタイマーToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents NextTimeMenuItem As ToolStripMenuItem
+    Friend WithEvents FuncSeparator1 As ToolStripSeparator
+    Friend WithEvents ExitMenuItem As ToolStripMenuItem
+    Friend WithEvents SizeSaveMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingSeparator1 As ToolStripSeparator
+    Friend WithEvents AdvancedOnMenuItem As ToolStripMenuItem
+    Friend WithEvents AdvancedMenuItem As ToolStripMenuItem
+    Friend WithEvents ChangeFontMenuItem As ToolStripMenuItem
+    Friend WithEvents TimerHeightMenuItem As ToolStripMenuItem
+    Friend WithEvents TimerHeightToolStripTextBox As ToolStripTextBox
+    Friend WithEvents AdvancedOffMenuItem As ToolStripMenuItem
+    Friend WithEvents BarHeightMenuItem As ToolStripMenuItem
+    Friend WithEvents BarHeightToolStripTextBox2 As ToolStripTextBox
+    Friend WithEvents AdvancedSeparator2 As ToolStripSeparator
+    Friend WithEvents TitleShowTimerMenuItem As ToolStripMenuItem
+    Friend WithEvents SelectFontDialog As FontDialog
+    Friend WithEvents SpaceWidthToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LeftSpaceMenuItem As ToolStripMenuItem
+    Friend WithEvents RightSpaceMenuItem As ToolStripMenuItem
+    Friend WithEvents SpaceWidthToolStripTextBox As ToolStripTextBox
+    Friend WithEvents LeftSpaceToolStripTextBox As ToolStripTextBox
+    Friend WithEvents RightSpaceToolStripTextBox As ToolStripTextBox
+    Friend WithEvents MarginMenuItem As ToolStripMenuItem
+    Friend WithEvents MarginToolStripTextBox As ToolStripTextBox
+    Friend WithEvents ModeMenuItem As ToolStripMenuItem
+    Friend WithEvents ClassMenuItem As ToolStripMenuItem
+    Friend WithEvents CountupMenuItem As ToolStripMenuItem
+    Friend WithEvents CountdownMenuItem As ToolStripMenuItem
+    Friend WithEvents KitchenMenuItem As ToolStripMenuItem
+    Friend WithEvents SpecialTimeMenuItem As ToolStripMenuItem
     Friend WithEvents CountupTimer As System.Windows.Forms.Timer
-    Friend WithEvents ポドローモタイマーToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents kitchenTimer As System.Windows.Forms.Timer
-    Friend WithEvents NotifyIcon1 As NotifyIcon
-    Friend WithEvents ネットワークでシステム時刻を補正ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PomodoroMenuItem As ToolStripMenuItem
+    Friend WithEvents KitchenTimer As System.Windows.Forms.Timer
+    Friend WithEvents NotifyIcon As NotifyIcon
+    Friend WithEvents NTPTimeMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents 通知ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ポップアップ表示ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowNotifyMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowPopUpMenuItem As ToolStripMenuItem
     Friend WithEvents CountdownTimer As System.Windows.Forms.Timer
-    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents 表示するToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 最小化するToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NotifyRightMenuStrip As ContextMenuStrip
+    Friend WithEvents ShowMenuItem As ToolStripMenuItem
+    Friend WithEvents MinimizeMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
-    Friend WithEvents 終了ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem5 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem7 As ToolStripMenuItem
-    Friend WithEvents バッテリー残量ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitMenuItemN As ToolStripMenuItem
+    Friend WithEvents ChangeLockMenuItem As ToolStripMenuItem
+    Friend WithEvents ChangeSecMenuItem As ToolStripMenuItem
+    Friend WithEvents NextTimeMenuItemN As ToolStripMenuItem
+    Friend WithEvents BatteryMenuItem As ToolStripMenuItem
     Friend WithEvents BatteryTimer As System.Windows.Forms.Timer
-    Friend WithEvents ToolStripMenuItem8 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem9 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem10 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem11 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem12 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem13 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem14 As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
-    Friend WithEvents 高度な設定をエクスポートToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 高度な設定をインポートToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SaveFileDialog1 As SaveFileDialog
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents ToolStripMenuItem15 As ToolStripMenuItem
-    Friend WithEvents ToolStripTextBox3 As ToolStripTextBox
-    Friend WithEvents ToolStripMenuItem5o As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem6o As ToolStripMenuItem
-    Friend WithEvents バッテリー充電停止時残りバッテリー表示に切り替えるToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents KanshiTimer As System.Windows.Forms.Timer
+    Friend WithEvents ModeMenuItemN As ToolStripMenuItem
+    Friend WithEvents ClassMenuItemN As ToolStripMenuItem
+    Friend WithEvents CountupMenuItemN As ToolStripMenuItem
+    Friend WithEvents KitchenMenuItemN As ToolStripMenuItem
+    Friend WithEvents CountdownMenuItemN As ToolStripMenuItem
+    Friend WithEvents PomodoroMenuItemN As ToolStripMenuItem
+    Friend WithEvents BatteryMenuItemN As ToolStripMenuItem
+    Friend WithEvents AdvancedSeparator1 As ToolStripSeparator
+    Friend WithEvents ExportMenuItem As ToolStripMenuItem
+    Friend WithEvents ImportMenuItem As ToolStripMenuItem
+    Friend WithEvents SaveFileDialog As SaveFileDialog
+    Friend WithEvents OpenFileDialog As OpenFileDialog
+    Friend WithEvents DeviationMenuItem As ToolStripMenuItem
+    Friend WithEvents DeviationToolStripTextBox As ToolStripTextBox
+    Friend WithEvents Term5MenuItem As ToolStripMenuItem
+    Friend WithEvents Term6MenuItem As ToolStripMenuItem
+    Friend WithEvents ChangeBatteryMenuItem As ToolStripMenuItem
+    Friend WithEvents BatteryMonitorTimer As System.Windows.Forms.Timer
 End Class
