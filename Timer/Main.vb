@@ -8,6 +8,7 @@ Public Class Main
         '通知表示用の関数です。
         Dim term = CheckTerm()
         Dim lessonname = "", Room = ""
+        '取得しているjsonから検索
         Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TimeTable)
         For i As Integer = 0 To TimeTable.timetable.Count - 1
             If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
@@ -15,6 +16,8 @@ Public Class Main
                 Room = TimeTable.timetable(i).room
             End If
         Next
+
+        '授業があるか?
         If lessonname = "" Then
             NotifyIcon.BalloonTipTitle = "お疲れ様です。"
             NotifyIcon.BalloonTipText = "次の時間は授業がないようです。"
@@ -168,6 +171,7 @@ Public Class Main
         Call TransparentMenuItemMenuItem_Click(Me, e)
         Call CanSizeChangeMenuItem_Click(Me, e)
 
+        'サイズセット 0 = 高度な設定がON
         Select Case My.Settings.SizeSet
             Case 0
                 SettingSeparator1.Visible = False
@@ -201,6 +205,7 @@ Public Class Main
 
         manual = True
 
+        'AutoLoad.ast検索
         Dim fileName As String = "AutoLoad.ast"
 
         If System.IO.File.Exists(fileName) Then
@@ -586,12 +591,15 @@ Public Class Main
     End Sub
 
     Private Sub ShowAboutMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAboutMenuItem.Click
+        'バージョンを取得して表示
         Dim ver As System.Diagnostics.FileVersionInfo
         ver = System.Diagnostics.FileVersionInfo.GetVersionInfo(
         System.Reflection.Assembly.GetExecutingAssembly().Location)
         MessageBox.Show("授業時間タイマー（ECC Comp.)　v" & ver.FileVersion & vbNewLine & "© 2018-2019 Takuya Shintani", "about", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
     Private Sub IDPassMenuItemMenuItem_Click(sender As Object, e As EventArgs) Handles IDPassMenuItem.Click
+
+        'My.Settings.ID = -1 は未設定
 
         If IDPassMenuItem.Checked Then
             IDPassMenuItem.Checked = False
@@ -623,7 +631,8 @@ Public Class Main
             NextTimeForm.Show()
         Else
             Me.TopMost = False
-            Dim r = MessageBox.Show("時間割の取得に失敗しています。" & vbNewLine & "インターネットの接続を確認してください。" & vbNewLine & vbNewLine & "前回取得したデータを使用しますか？", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+            Dim r = MessageBox.Show("時間割の取得に失敗しています。" & vbNewLine & "インターネットの接続を確認してください。" &
+                                    vbNewLine & vbNewLine & "前回取得したデータを使用しますか？", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error)
             If r = vbYes Then TimeTableGetOK = True : NextTimeMenuItem.ForeColor = Color.Black : NextTimeMenuItemN.ForeColor = Color.Black : NextTimeForm.Show() : WebTimer.Stop() : Exit Sub
             r = MessageBox.Show("今すぐ再試行しますか？", Me.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Error)
             If r = vbYes Then WebTimer.Start() : WebTimer.Interval = 1500
@@ -632,6 +641,9 @@ Public Class Main
     End Sub
 
     Private Sub WebTimer_Tick(sender As Object, e As EventArgs) Handles WebTimer.Tick
+
+        'ネットワークから時間割を取得しようとする
+
         WebTimer.Interval = 1800000
         'Pingオブジェクトの作成
         Dim p As New System.Net.NetworkInformation.Ping()
@@ -707,6 +719,7 @@ Public Class Main
     End Sub
 
     Private Sub ChangeFontMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeFontMenuItem.Click
+
         SelectFontDialog.Font = TimerLabel.Font
         SelectFontDialog.Color = TimerLabel.ForeColor
         If SelectFontDialog.ShowDialog <> DialogResult.Cancel Then
@@ -714,44 +727,56 @@ Public Class Main
             TimerLabel.ForeColor = SelectFontDialog.Color
             My.Settings.SaveFont = SelectFontDialog.Font
         End If
+
     End Sub
 
     Private Sub TimerHeightToolStripTextBox_LostFocus(sender As Object, e As EventArgs) Handles TimerHeightToolStripTextBox.LostFocus
+
         If IsNumeric(TimerHeightToolStripTextBox.Text) Then
             TimerLabel.Height = Val(TimerHeightToolStripTextBox.Text)
         Else
             TimerHeightToolStripTextBox.Text = TimerLabel.Height
         End If
+
     End Sub
 
     Private Sub SpaceWidthToolStripTextBox_LostFocus(sender As Object, e As EventArgs) Handles SpaceWidthToolStripTextBox.LostFocus
+
         If IsNumeric(sender.Text) Then
             TimerBar.Top = TimerLabel.Top + TimerLabel.Height + Val(sender.Text)
         Else
             sender.Text = TimerBar.Top - (TimerLabel.Top + TimerLabel.Height)
         End If
+
     End Sub
 
 
     Private Sub LeftSpaceToolStripTextBox_Leave(sender As Object, e As EventArgs) Handles LeftSpaceToolStripTextBox.LostFocus
+
         If IsNumeric(sender.Text) Then
             TimerLabel.Left = Val(sender.Text)
             TimerBar.Left = Val(sender.Text)
         Else
             sender.Text = TimerLabel.Left
         End If
+
     End Sub
 
     Private Sub RightSpaceToolStripTextBox_Leave(sender As Object, e As EventArgs) Handles RightSpaceToolStripTextBox.LostFocus
+
         If IsNumeric(sender.Text) Then
             TimerLabel.Width = Me.Width - TimerLabel.Left - Val(sender.Text)
             TimerBar.Width = TimerLabel.Width
         Else
             sender.Text = Me.Width - TimerLabel.Left - TimerLabel.Width
         End If
+
     End Sub
 
     Private Sub AdvancedOnMenuItem_Click(sender As Object, e As EventArgs) Handles AdvancedOnMenuItem.Click
+
+        '高度な設定をONにしたとき
+
         AdvancedMenuItem.Visible = True
         CanSizeChangeMenuItem.Checked = True
         Call CanSizeChangeMenuItem_Click(sender, e)
@@ -767,9 +792,12 @@ Public Class Main
         My.Settings.LeftSpace = TimerLabel.Left
         My.Settings.RightSpace = Me.Width - TimerLabel.Left - TimerLabel.Width
         My.Settings.Padding = 0
+
     End Sub
 
     Private Sub AdvancedOffMenuItem_Click(sender As Object, e As EventArgs) Handles AdvancedOffMenuItem.Click
+
+        '高度な設定をOFFにしたとき
 
         SettingSeparator1.Visible = True
         AdvancedMenuItem.Visible = False
@@ -777,18 +805,24 @@ Public Class Main
         Call Size2MenuItem_Click(sender, e)
         AdvancedOnMenuItem.Visible = True
         SizeMenuItem.Enabled = True
+
     End Sub
 
     Private Sub AdvancedMenuItem_Click(sender As Object, e As EventArgs) Handles AdvancedMenuItem.Click
+
         TimerHeightToolStripTextBox.Text = TimerLabel.Height
         BarHeightToolStripTextBox.Text = TimerBar.Height
         SpaceWidthToolStripTextBox.Text = TimerBar.Top - (TimerLabel.Top + TimerLabel.Height)
         LeftSpaceToolStripTextBox.Text = TimerLabel.Left
         RightSpaceToolStripTextBox.Text = Me.Width - TimerLabel.Left - TimerLabel.Width
         If TimerLabel.Padding.Top = 0 Then MarginToolStripTextBox.Text = (26 - TimerLabel.Top) * -1 Else MarginToolStripTextBox.Text = TimerLabel.Padding.Top
+
     End Sub
 
     Private Sub Main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+
+        '終了するとき、固定状態を解除し、設定を保存する。
+
         If Me.FormBorderStyle = FormBorderStyle.None Then
             Call CanSizeChangeMenuItem_Click(Me, e)
             Me.Height = Me.Height + 26
@@ -841,6 +875,9 @@ Public Class Main
         'End
     End Sub
     Private Sub CountupMenuItem_Click(sender As Object, e As EventArgs) Handles CountupMenuItem.Click, CountupMenuItemN.Click
+
+        'カウントアップ開始時の処理
+
         countti = 0
         KitchenMenuItem.Checked = False
         ClassMenuItem.Checked = False
@@ -852,28 +889,36 @@ Public Class Main
         KitchenTimer.Stop()
         BatteryTimer.Stop()
         CountupTimer.Start()
+
     End Sub
 
     Private Sub ClassMenuItem_Click(sender As Object, e As EventArgs) Handles ClassMenuItem.Click, ClassMenuItemN.Click
+
+        '授業タイマー開始時の処理
+
+        TimerBar.Style = ProgressBarStyle.Blocks
         KitchenMenuItem.Checked = False
         CountupMenuItem.Checked = False
         CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = False
-        TimerBar.Style = ProgressBarStyle.Blocks
         ClassMenuItem.Checked = True
         CountdownTimer.Stop()
         CountupTimer.Stop()
         KitchenTimer.Stop()
         BatteryTimer.Stop()
         ClassTimer.Start()
+
     End Sub
 
     Private Sub BatteryMenuItem_Click(sender As Object, e As EventArgs) Handles BatteryMenuItem.Click, BatteryMenuItemN.Click
+
+        'バッテリータイマー開始時の処理
+
+        TimerBar.Style = ProgressBarStyle.Blocks
         ClassMenuItem.Checked = False
         KitchenMenuItem.Checked = False
         CountupMenuItem.Checked = False
         CountdownMenuItem.Checked = False
-        TimerBar.Style = ProgressBarStyle.Blocks
         BatteryMenuItem.Checked = True
         TimerBar.Value = 0
         TimerBar.Maximum = 100
@@ -885,6 +930,9 @@ Public Class Main
 
     End Sub
     Private Sub KitchenMenuItem_Click(sender As Object, e As EventArgs) Handles KitchenMenuItem.Click, KitchenMenuItemN.Click
+
+        'キッチンタイマー開始時の処理
+
         Me.TopMost = False
         countti = InputBox("測る時間を入力してください（分）")
         Call TopmostMenuItemMenuItem_Click(Me, e)
@@ -903,9 +951,13 @@ Public Class Main
         ClassTimer.Stop()
         BatteryTimer.Stop()
         KitchenTimer.Start()
+
     End Sub
 
     Private Sub CountdownMenuItem_Click(sender As Object, e As EventArgs) Handles CountdownMenuItem.Click, CountdownMenuItemN.Click
+
+        'カウントダウンタイマー開始時の処理
+
         Me.TopMost = False
         Dim h = InputBox("目標時間を入力してください（時）")
         If IsNumeric(h) = False Or h < 0 Or h > 23 Then MessageBox.Show("0-23の数字である必要があります", "", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
@@ -917,20 +969,23 @@ Public Class Main
         CountupMenuItem.Checked = False
         KitchenMenuItem.Checked = False
         BatteryMenuItem.Checked = False
+        CountdownMenuItem.Checked = True
         TimerBar.Style = ProgressBarStyle.Blocks
         Dim sabun = DateDiff("s", Now, counttm)
         TimerBar.Value = 0
         TimerBar.Maximum = Math.Max(sabun, 1)
-        CountdownMenuItem.Checked = True
         CountupTimer.Stop()
         ClassTimer.Stop()
         BatteryTimer.Stop()
         KitchenTimer.Stop()
         CountdownTimer.Start()
+
     End Sub
     Private Sub KitchenTimer_Tick(sender As Object, e As EventArgs) Handles KitchenTimer.Tick
+
         countti -= 1
         Application.DoEvents()
+        '透明化処理
         If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
             OpacityTimer += 1
             If OpacityTimer > 30 And OpacityTimer < 80 Then
@@ -942,15 +997,19 @@ Public Class Main
             Me.Opacity = "1"
 
         End If
+        'タイマー終了で通知を送る
         If countti = 0 Then
             NotifyIcon.BalloonTipText = "タイマー終了"
             NotifyIcon.ShowBalloonTip(1000)
         End If
+        'バーマイナスにならないように
         If countti < 0 Then TimerBar.Value = 0 Else TimerBar.Value = TimerBar.Maximum - countti
+        '60秒以下で赤に変更
         If countti <= 600 Then
             TimerLabel.Text = Math.Max(Int(countti / 10), 0)
             TimerLabel.ForeColor = Color.Red
         Else
+            '文字溢れ処理
             If ShowSecSwitch = True Then
                 If countti > 99990 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = Int(countti / 10)
             Else
@@ -958,16 +1017,20 @@ Public Class Main
             End If
             TimerLabel.ForeColor = Color.Black
         End If
+        'タイトルタイマー
         If TitleShowTimerMenuItem.Checked = True Then Me.Text = Format(Int((countti) / 600), "00") & ":" & Format(Int((countti Mod 600) / 10), "00") Else If Me.Text <> "" Then Me.Text = ""
+        '通知アイコンタイトル
         If ShowSecSwitch = False Then
             NotifyIcon.Text = "キッチンタイマー : 残り " & TimerLabel.Text & " / " & Format(Int(TimerBar.Maximum / 600), "00") & ":" & Format(TimerBar.Maximum Mod 600 / 10, "00")
         Else
             NotifyIcon.Text = "キッチンタイマー : 残り " & TimerLabel.Text & " / " & TimerBar.Maximum / 10
         End If
+
     End Sub
     Private Sub CountupTimer_Tick(sender As Object, e As EventArgs) Handles CountupTimer.Tick
         countti += 1
         Application.DoEvents()
+        '透明化処理
         If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
             OpacityTimer += 1
             If OpacityTimer > 30 And OpacityTimer < 80 Then
@@ -981,18 +1044,23 @@ Public Class Main
         End If
         TimerBar.Maximum = 10
         TimerBar.Value = Math.Min(Math.Max(0, (countti Mod 10) * 2.5), 10)
-        'ProgressBar1.Style = ProgressBarStyle.Marquee
+        '文字溢れ処理
         If ShowSecSwitch = True Then
             If countti > 99990 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = Int(countti / 10)
         Else
             If countti > 59990 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int((countti) / 600), "00") & ":" & Format(Int((countti Mod 600) / 10), "00")
         End If
         TimerLabel.ForeColor = Color.Black
+        'タイトルタイマー
         If TitleShowTimerMenuItem.Checked = True Then Me.Text = Format(Int((countti) / 600), "00") & ":" & Format(Int((countti Mod 600) / 10), "00") Else If Me.Text <> "" Then Me.Text = ""
+        '通知アイコンタイトル
         NotifyIcon.Text = "カウントアップタイマー : " & TimerLabel.Text
     End Sub
 
     Private Sub NotifyRightMenuStrip_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles NotifyRightMenuStrip.Opening
+
+        '状態に応じて表示すると最小化するを切り替える
+
         If Me.WindowState = FormWindowState.Minimized Then
             ShowMenuItem.Visible = True
             MinimizeMenuItem.Visible = False
@@ -1000,17 +1068,23 @@ Public Class Main
             ShowMenuItem.Visible = False
             MinimizeMenuItem.Visible = True
         End If
+
     End Sub
 
     Private Sub MinimizeMenuItem_Click(sender As Object, e As EventArgs) Handles MinimizeMenuItem.Click
+
         Me.WindowState = FormWindowState.Minimized
+
     End Sub
 
     Private Sub ShowMenuItem_Click(sender As Object, e As EventArgs) Handles ShowMenuItem.Click
+
         Me.WindowState = FormWindowState.Normal
+
     End Sub
 
     Private Sub ExitMenuItemN_Click(sender As Object, e As EventArgs) Handles ExitMenuItemN.Click
+
         If Me.FormBorderStyle <> FormBorderStyle.None Then
         Else
             Call CanSizeChangeMenuItem_Click(Me, e)
@@ -1021,6 +1095,7 @@ Public Class Main
             LockSwitch = False
         End If
         Me.Close()
+
     End Sub
 
     Private Sub NTPTimeMenuItem_Click(sender As Object, e As EventArgs) Handles NTPTimeMenuItem.Click
@@ -1028,6 +1103,7 @@ Public Class Main
     End Sub
 
     Private Sub ChangeLockMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeLockMenuItem.Click
+
         If Me.FormBorderStyle <> FormBorderStyle.None Then
             Me.WindowState = FormWindowState.Normal
             Me.Height = Me.Height - 26
@@ -1047,9 +1123,11 @@ Public Class Main
             TimerBar.Top = TimerBar.Top + 26
             LockSwitch = False
         End If
+
     End Sub
 
     Private Sub ChangeSecMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeSecMenuItem.Click
+
         If ShowSecSwitch = False Then
             ShowSecSwitch = True
             ShowsecMenuItem.Checked = True
@@ -1057,8 +1135,10 @@ Public Class Main
             ShowSecSwitch = False
             ShowsecMenuItem.Checked = False
         End If
+
     End Sub
     Public Function CheckTerm() As Integer
+
         Dim ClassTime1 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 10, 45, 0)
         Dim ClassTime2 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 12, 30, 0)
         Dim ClassTime3 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 15, 0, 0)
@@ -1098,8 +1178,10 @@ Public Class Main
             Case Is < ClassTime6
                 Return 7
         End Select
+        Return 0
     End Function
     Private Sub NextTimeMenuItemN_Click(sender As Object, e As EventArgs) Handles NextTimeMenuItemN.Click
+
         If NextTimeMenuItem.ForeColor <> Color.Gray Then
             If Me.WindowState = FormWindowState.Minimized Then
                 Dim term = CheckTerm()
@@ -1132,6 +1214,7 @@ Public Class Main
             If r = vbYes Then WebTimer.Start() : WebTimer.Interval = 1500
             Call TopmostMenuItemMenuItem_Click(Me, e)
         End If
+
     End Sub
 
     Private Sub BatteryTimer_Tick(sender As Object, e As EventArgs) Handles BatteryTimer.Tick
@@ -1227,14 +1310,6 @@ Public Class Main
                 NotifyIcon.Text = "バッテリー : 状態不明"
                 Exit Select
         End Select
-
-        'バッテリーがフル充電された時の持ち時間（バッテリー駆動時間）
-        'Dim bfl As Integer = SystemInformation.PowerStatus.BatteryFullLifetime
-        'If -1 < bfl Then
-        'Console.WriteLine("バッテリー駆動時間は、{0}秒です", bfl)
-        'Else
-        'Console.WriteLine("バッテリー駆動時間は、不明です")
-        'End If
     End Sub
 
     Private Sub NotifyIcon_Click(sender As Object, e As EventArgs) Handles NotifyIcon.DoubleClick
@@ -1251,11 +1326,13 @@ Public Class Main
     End Sub
 
     Private Sub ModeMenuItemN_DropDownOpened(sender As Object, e As EventArgs) Handles ModeMenuItemN.DropDownOpened
+
         ClassMenuItemN.Checked = ClassMenuItem.Checked
         CountupMenuItemN.Checked = CountupMenuItem.Checked
         KitchenMenuItemN.Checked = KitchenMenuItem.Checked
         CountdownMenuItemN.Checked = CountdownMenuItem.Checked
         BatteryMenuItemN.Checked = BatteryMenuItem.Checked
+
     End Sub
 
     Private Sub ExportMenuItem_Click(sender As Object, e As EventArgs) Handles ExportMenuItem.Click
