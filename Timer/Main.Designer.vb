@@ -52,7 +52,7 @@ Partial Class Main
         Me.TimerHeightMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerHeightToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.BarHeightMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BarHeightToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
+        Me.BarHeightToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.SpaceWidthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SpaceWidthToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.LeftSpaceMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -80,7 +80,7 @@ Partial Class Main
         Me.ChangeBatteryMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowNextTermMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IDPassMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.IDPassSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.ShowNotifyMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowPopUpMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NTPTimeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -109,7 +109,7 @@ Partial Class Main
         Me.NextTimeMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MinimizeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.RightSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
         Me.CountdownTimer = New System.Windows.Forms.Timer(Me.components)
         Me.BatteryTimer = New System.Windows.Forms.Timer(Me.components)
@@ -277,14 +277,14 @@ Partial Class Main
         '
         'BarHeightMenuItem
         '
-        Me.BarHeightMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarHeightToolStripTextBox2})
+        Me.BarHeightMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BarHeightToolStripTextBox})
         Me.BarHeightMenuItem.Name = "BarHeightMenuItem"
         resources.ApplyResources(Me.BarHeightMenuItem, "BarHeightMenuItem")
         '
-        'BarHeightToolStripTextBox2
+        'BarHeightToolStripTextBox
         '
-        Me.BarHeightToolStripTextBox2.Name = "BarHeightToolStripTextBox2"
-        resources.ApplyResources(Me.BarHeightToolStripTextBox2, "BarHeightToolStripTextBox2")
+        Me.BarHeightToolStripTextBox.Name = "BarHeightToolStripTextBox"
+        resources.ApplyResources(Me.BarHeightToolStripTextBox, "BarHeightToolStripTextBox")
         '
         'SpaceWidthToolStripMenuItem
         '
@@ -432,7 +432,7 @@ Partial Class Main
         '
         'ShowNextTermMenuItem
         '
-        Me.ShowNextTermMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IDPassMenuItem, Me.ToolStripSeparator4, Me.ShowNotifyMenuItem, Me.ShowPopUpMenuItem})
+        Me.ShowNextTermMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IDPassMenuItem, Me.IDPassSeparator, Me.ShowNotifyMenuItem, Me.ShowPopUpMenuItem})
         Me.ShowNextTermMenuItem.Name = "ShowNextTermMenuItem"
         resources.ApplyResources(Me.ShowNextTermMenuItem, "ShowNextTermMenuItem")
         '
@@ -441,10 +441,10 @@ Partial Class Main
         Me.IDPassMenuItem.Name = "IDPassMenuItem"
         resources.ApplyResources(Me.IDPassMenuItem, "IDPassMenuItem")
         '
-        'ToolStripSeparator4
+        'IDPassSeparator
         '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        resources.ApplyResources(Me.ToolStripSeparator4, "ToolStripSeparator4")
+        Me.IDPassSeparator.Name = "IDPassSeparator"
+        resources.ApplyResources(Me.IDPassSeparator, "IDPassSeparator")
         '
         'ShowNotifyMenuItem
         '
@@ -521,7 +521,7 @@ Partial Class Main
         '
         'NotifyRightMenuStrip
         '
-        Me.NotifyRightMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItemN, Me.ChangeSecMenuItem, Me.ChangeLockMenuItem, Me.NextTimeMenuItemN, Me.ShowMenuItem, Me.MinimizeMenuItem, Me.ToolStripSeparator5, Me.ExitMenuItemN})
+        Me.NotifyRightMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItemN, Me.ChangeSecMenuItem, Me.ChangeLockMenuItem, Me.NextTimeMenuItemN, Me.ShowMenuItem, Me.MinimizeMenuItem, Me.RightSeparator, Me.ExitMenuItemN})
         Me.NotifyRightMenuStrip.Name = "ContextMenuStrip1"
         resources.ApplyResources(Me.NotifyRightMenuStrip, "NotifyRightMenuStrip")
         '
@@ -589,10 +589,10 @@ Partial Class Main
         Me.MinimizeMenuItem.Name = "MinimizeMenuItem"
         resources.ApplyResources(Me.MinimizeMenuItem, "MinimizeMenuItem")
         '
-        'ToolStripSeparator5
+        'RightSeparator
         '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        resources.ApplyResources(Me.ToolStripSeparator5, "ToolStripSeparator5")
+        Me.RightSeparator.Name = "RightSeparator"
+        resources.ApplyResources(Me.RightSeparator, "RightSeparator")
         '
         'ExitMenuItemN
         '
@@ -675,7 +675,7 @@ Partial Class Main
     Friend WithEvents TimerHeightToolStripTextBox As ToolStripTextBox
     Friend WithEvents AdvancedOffMenuItem As ToolStripMenuItem
     Friend WithEvents BarHeightMenuItem As ToolStripMenuItem
-    Friend WithEvents BarHeightToolStripTextBox2 As ToolStripTextBox
+    Friend WithEvents BarHeightToolStripTextBox As ToolStripTextBox
     Friend WithEvents AdvancedSeparator2 As ToolStripSeparator
     Friend WithEvents TitleShowTimerMenuItem As ToolStripMenuItem
     Friend WithEvents SelectFontDialog As FontDialog
@@ -698,14 +698,14 @@ Partial Class Main
     Friend WithEvents KitchenTimer As System.Windows.Forms.Timer
     Friend WithEvents NotifyIcon As NotifyIcon
     Friend WithEvents NTPTimeMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents IDPassSeparator As ToolStripSeparator
     Friend WithEvents ShowNotifyMenuItem As ToolStripMenuItem
     Friend WithEvents ShowPopUpMenuItem As ToolStripMenuItem
     Friend WithEvents CountdownTimer As System.Windows.Forms.Timer
     Friend WithEvents NotifyRightMenuStrip As ContextMenuStrip
     Friend WithEvents ShowMenuItem As ToolStripMenuItem
     Friend WithEvents MinimizeMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
+    Friend WithEvents RightSeparator As ToolStripSeparator
     Friend WithEvents ExitMenuItemN As ToolStripMenuItem
     Friend WithEvents ChangeLockMenuItem As ToolStripMenuItem
     Friend WithEvents ChangeSecMenuItem As ToolStripMenuItem
