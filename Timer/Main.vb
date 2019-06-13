@@ -1499,6 +1499,10 @@ Public Class Main
         plsm = pls
     End Sub
 
+    Private Sub MovePadMenuItem_Click(sender As Object, e As EventArgs) Handles MovePadMenuItem.Click
+        Movepad.Show()
+    End Sub
+
     Private Sub SettingMenuItem_Click(sender As Object, e As EventArgs) Handles SettingMenuItem.Click
         If Term5MenuItem.Checked = True And Term6MenuItem.Checked = True Then
             SpecialTimeMenuItem.Checked = True
