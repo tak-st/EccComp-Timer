@@ -959,21 +959,21 @@ Public Class Main
         'カウントダウンタイマー開始時の処理
 
         Me.TopMost = False
-        Dim h = InputBox("目標時間を入力してください（時）")
-        If IsNumeric(h) = False Or h < 0 Or h > 23 Then MessageBox.Show("0-23の数字である必要があります", "", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
-        Dim m = InputBox("目標時間を入力してください（分）")
-        If IsNumeric(m) = False Or m < 0 Or m > 59 Then MessageBox.Show("0-59の数字である必要があります", "", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
+        Dim TargetHour = InputBox("目標時間を入力してください（時）")
+        If IsNumeric(TargetHour) = False Or TargetHour < 0 Or TargetHour > 23 Then MessageBox.Show("0-23の数字である必要があります", "", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
+        Dim TargetMin = InputBox("目標時間を入力してください（分）")
+        If IsNumeric(TargetMin) = False Or TargetMin < 0 Or TargetMin > 59 Then MessageBox.Show("0-59の数字である必要があります", "", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
         Call TopmostMenuItemMenuItem_Click(Me, e)
-        counttm = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Int(h), Int(m), 0)
+        counttm = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Int(TargetHour), Int(TargetMin), 0)
         ClassMenuItem.Checked = False
         CountupMenuItem.Checked = False
         KitchenMenuItem.Checked = False
         BatteryMenuItem.Checked = False
         CountdownMenuItem.Checked = True
         TimerBar.Style = ProgressBarStyle.Blocks
-        Dim sabun = DateDiff("s", Now, counttm)
+        Dim TimeDiff = DateDiff("s", Now, counttm)
         TimerBar.Value = 0
-        TimerBar.Maximum = Math.Max(sabun, 1)
+        TimerBar.Maximum = Math.Max(TimeDiff, 1)
         CountupTimer.Stop()
         ClassTimer.Stop()
         BatteryTimer.Stop()
@@ -1514,9 +1514,9 @@ Public Class Main
     End Sub
 
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
-        Dim j = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Hour(counttm), Minute(counttm), 0)
-        Dim tss As New TimeSpan(0, 0, 0, DeviationToolStripTextBox.Text)
-        Dim sabun = DateDiff("s", Now + tss, j)
+        Dim TargetTime = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Hour(counttm), Minute(counttm), 0)
+        Dim Deviation As New TimeSpan(0, 0, 0, DeviationToolStripTextBox.Text)
+        Dim TimeDiff = DateDiff("s", Now + Deviation, TargetTime)
         Application.DoEvents()
         If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
             OpacityTimer += 1
@@ -1529,24 +1529,24 @@ Public Class Main
             Me.Opacity = "1"
 
         End If
-        If sabun < 0 Then TimerBar.Value = 0 Else TimerBar.Value = Math.Max(0, TimerBar.Maximum - sabun)
-        If sabun = 0 Then
+        If TimeDiff < 0 Then TimerBar.Value = 0 Else TimerBar.Value = Math.Max(0, TimerBar.Maximum - TimeDiff)
+        If TimeDiff = 0 Then
             NotifyIcon.BalloonTipTitle = ""
             NotifyIcon.BalloonTipText = "時間になりました"
             NotifyIcon.ShowBalloonTip(1000)
         End If
-        If sabun < 60 Then
-            TimerLabel.Text = Math.Max(Int(sabun), 0)
+        If TimeDiff < 60 Then
+            TimerLabel.Text = Math.Max(Int(TimeDiff), 0)
             TimerLabel.ForeColor = Color.Red
         Else
             If ShowSecSwitch = True Then
-                If sabun > 9999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = Int(sabun)
+                If TimeDiff > 9999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = Int(TimeDiff)
             Else
-                If sabun > 5999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int(sabun / 60), "00") & ":" & Format(Int((sabun Mod 60)), "00")
+                If TimeDiff > 5999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int(TimeDiff / 60), "00") & ":" & Format(Int((TimeDiff Mod 60)), "00")
             End If
             TimerLabel.ForeColor = Color.Black
         End If
-        If TitleShowTimerMenuItem.Checked = True Then Me.Text = Format(Int(sabun / 60), "00") & ":" & Format(Int((sabun Mod 60)), "00") Else If Me.Text <> "" Then Me.Text = ""
+        If TitleShowTimerMenuItem.Checked = True Then Me.Text = Format(Int(TimeDiff / 60), "00") & ":" & Format(Int((TimeDiff Mod 60)), "00") Else If Me.Text <> "" Then Me.Text = ""
         NotifyIcon.Text = "カウントダウンタイマー : 残り " & TimerLabel.Text & " (" & Format(Hour(counttm), "00") & ":" & Format(Minute(counttm), "00") & "まで)"
     End Sub
     Private Sub Size3MenuItem_Click(sender As Object, e As EventArgs) Handles Size3MenuItem.Click
