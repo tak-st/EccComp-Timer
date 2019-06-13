@@ -116,6 +116,7 @@ Partial Class Main
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.MovePadMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -521,7 +522,7 @@ Partial Class Main
         '
         'NotifyRightMenuStrip
         '
-        Me.NotifyRightMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItemN, Me.ChangeSecMenuItem, Me.ChangeLockMenuItem, Me.NextTimeMenuItemN, Me.ShowMenuItem, Me.MinimizeMenuItem, Me.RightSeparator, Me.ExitMenuItemN})
+        Me.NotifyRightMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItemN, Me.ChangeSecMenuItem, Me.ChangeLockMenuItem, Me.MovePadMenuItem, Me.NextTimeMenuItemN, Me.ShowMenuItem, Me.MinimizeMenuItem, Me.RightSeparator, Me.ExitMenuItemN})
         Me.NotifyRightMenuStrip.Name = "ContextMenuStrip1"
         resources.ApplyResources(Me.NotifyRightMenuStrip, "NotifyRightMenuStrip")
         '
@@ -617,6 +618,11 @@ Partial Class Main
         'BatteryMonitorTimer
         '
         Me.BatteryMonitorTimer.Interval = 250
+        '
+        'MovePadMenuItem
+        '
+        Me.MovePadMenuItem.Name = "MovePadMenuItem"
+        resources.ApplyResources(Me.MovePadMenuItem, "MovePadMenuItem")
         '
         'Main
         '
@@ -730,4 +736,5 @@ Partial Class Main
     Friend WithEvents Term6MenuItem As ToolStripMenuItem
     Friend WithEvents ChangeBatteryMenuItem As ToolStripMenuItem
     Friend WithEvents BatteryMonitorTimer As System.Windows.Forms.Timer
+    Friend WithEvents MovePadMenuItem As ToolStripMenuItem
 End Class

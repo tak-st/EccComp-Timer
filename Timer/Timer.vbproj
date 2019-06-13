@@ -88,6 +88,12 @@
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Movepad.Designer.vb">
+      <DependentUpon>Movepad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movepad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NextTime.Designer.vb">
       <DependentUpon>NextTime.vb</DependentUpon>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IDInput.resx">
       <DependentUpon>IDInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movepad.resx">
+      <DependentUpon>Movepad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
