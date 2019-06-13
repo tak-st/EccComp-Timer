@@ -1555,7 +1555,7 @@ Public Class Main
             NotifyIcon.Text = "現在時刻 : " & TimerLabel.Text & ":" & Format(NowTime, "ss") & "." & (dtmNow.Millisecond \ 10)
         Else
             TimerBar.Maximum = 86400
-            TimerLabel.Text = Format(NowTime, "M/d")
+            TimerLabel.Text = Format(NowTime, "M / d")
             TimerBar.Value = Format(NowTime, "HH") * 3600 + Format(NowTime, "mm") * 60 + Format(NowTime, "ss")
             NotifyIcon.Text = "今日の日付 : " & TimerLabel.Text & " (" & Format((TimerBar.Value / TimerBar.Maximum) * 100, "0.00") & "%)"
         End If
