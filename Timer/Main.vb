@@ -1318,6 +1318,7 @@ Public Class Main
     End Sub
 
     Private Sub NotifyIcon_Click(sender As Object, e As EventArgs) Handles NotifyIcon.DoubleClick
+        NotifyIcon.BalloonTipTitle = ""
         NotifyIcon.BalloonTipText = NotifyIcon.Text
         NotifyIcon.ShowBalloonTip(1000)
     End Sub
