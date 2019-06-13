@@ -1512,6 +1512,7 @@ Public Class Main
 
         '現在時刻表示開始時の処理
 
+        TimerLabel.ForeColor = Color.Black
         ClassMenuItem.Checked = False
         CountupMenuItem.Checked = False
         KitchenMenuItem.Checked = False
@@ -1546,11 +1547,17 @@ Public Class Main
         Dim NowTime As DateTime = DateTime.Now() + Deviation
         Dim dtmNow As DateTime
         dtmNow = DateTime.Now() + Deviation
-        Static Maesec = 0
-        TimerLabel.Text = Format(NowTime, "HH:mm")
-        TimerBar.Value = Format(NowTime, "ss") * 100 + (dtmNow.Millisecond \ 10)
-        Maesec = TimerLabel.Text
-        NotifyIcon.Text = "現在時刻 : " & TimerLabel.Text & ":" & Format(NowTime, "ss") & "." & (dtmNow.Millisecond \ 10)
+        If ShowSecSwitch = False Then
+            TimerBar.Maximum = 6000
+            TimerLabel.Text = Format(NowTime, "HH:mm")
+            TimerBar.Value = Format(NowTime, "ss") * 100 + (dtmNow.Millisecond \ 10)
+            NotifyIcon.Text = "現在時刻 : " & TimerLabel.Text & ":" & Format(NowTime, "ss") & "." & (dtmNow.Millisecond \ 10)
+        Else
+            TimerBar.Maximum = 86400
+            TimerLabel.Text = Format(NowTime, "M/d")
+            TimerBar.Value = Format(NowTime, "HH") * 3600 + Format(NowTime, "mm") * 60 + Format(NowTime, "ss")
+            NotifyIcon.Text = "今日の日付 : " & TimerLabel.Text & " (" & Format((TimerBar.Value / TimerBar.Maximum) * 100, "0.00") & "%)"
+        End If
 
     End Sub
 
