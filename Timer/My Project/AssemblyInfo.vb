@@ -1,4 +1,5 @@
-﻿Imports System
+﻿Imports System.Resources
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -10,7 +11,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Timer (Ecccomp)")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("HP Inc.")>
+<Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("Timer (Ecccomp)")>
 <Assembly: AssemblyCopyright("Copyright © Takuya Shintani 2018-2019")>
 <Assembly: AssemblyTrademark("")>
@@ -33,3 +34,4 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.0.1.0")>
 <Assembly: AssemblyFileVersion("1.8.1")>
+<Assembly: NeutralResourcesLanguage("ja-JP")>

@@ -22,81 +22,82 @@ Partial Class IDInput
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.InputIDTextBox = New System.Windows.Forms.TextBox()
+        Me.IDLabel = New System.Windows.Forms.Label()
+        Me.PassLabel = New System.Windows.Forms.Label()
+        Me.InputPassTextBox = New System.Windows.Forms.TextBox()
+        Me.OKButton = New System.Windows.Forms.Button()
+        Me.ShowPassButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'InputIDTextBox
         '
-        Me.TextBox1.Font = New System.Drawing.Font("UD デジタル 教科書体 NP-B", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(79, 16)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(193, 23)
-        Me.TextBox1.TabIndex = 0
+        Me.InputIDTextBox.Font = New System.Drawing.Font("UD デジタル 教科書体 NP-B", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.InputIDTextBox.Location = New System.Drawing.Point(79, 16)
+        Me.InputIDTextBox.Name = "InputIDTextBox"
+        Me.InputIDTextBox.Size = New System.Drawing.Size(193, 23)
+        Me.InputIDTextBox.TabIndex = 0
         '
-        'Label1
+        'IDLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("UD デジタル 教科書体 NK-B", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(29, 16)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "ID"
+        Me.IDLabel.AutoSize = True
+        Me.IDLabel.Font = New System.Drawing.Font("UD デジタル 教科書体 NK-B", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.IDLabel.Location = New System.Drawing.Point(13, 19)
+        Me.IDLabel.Name = "IDLabel"
+        Me.IDLabel.Size = New System.Drawing.Size(29, 16)
+        Me.IDLabel.TabIndex = 1
+        Me.IDLabel.Text = "ID"
         '
-        'Label2
+        'PassLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("UD デジタル 教科書体 NK-B", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label2.Location = New System.Drawing.Point(13, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 16)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "PASS"
+        Me.PassLabel.AutoSize = True
+        Me.PassLabel.Font = New System.Drawing.Font("UD デジタル 教科書体 NK-B", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.PassLabel.Location = New System.Drawing.Point(13, 48)
+        Me.PassLabel.Name = "PassLabel"
+        Me.PassLabel.Size = New System.Drawing.Size(53, 16)
+        Me.PassLabel.TabIndex = 3
+        Me.PassLabel.Text = "PASS"
         '
-        'TextBox2
+        'InputPassTextBox
         '
-        Me.TextBox2.Font = New System.Drawing.Font("UD デジタル 教科書体 NP-B", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(79, 45)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(163, 23)
-        Me.TextBox2.TabIndex = 2
+        Me.InputPassTextBox.Font = New System.Drawing.Font("UD デジタル 教科書体 NP-B", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.InputPassTextBox.Location = New System.Drawing.Point(79, 45)
+        Me.InputPassTextBox.Name = "InputPassTextBox"
+        Me.InputPassTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.InputPassTextBox.Size = New System.Drawing.Size(163, 23)
+        Me.InputPassTextBox.TabIndex = 2
         '
-        'Button1
+        'OKButton
         '
-        Me.Button1.Location = New System.Drawing.Point(172, 74)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 24)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.OKButton.Location = New System.Drawing.Point(172, 74)
+        Me.OKButton.Name = "OKButton"
+        Me.OKButton.Size = New System.Drawing.Size(100, 24)
+        Me.OKButton.TabIndex = 4
+        Me.OKButton.Text = "OK"
+        Me.OKButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ShowPassButton
         '
-        Me.Button2.Font = New System.Drawing.Font("UD デジタル 教科書体 NK-B", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(248, 45)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(24, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "*"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ShowPassButton.Font = New System.Drawing.Font("UD デジタル 教科書体 NK-B", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.ShowPassButton.Location = New System.Drawing.Point(248, 45)
+        Me.ShowPassButton.Name = "ShowPassButton"
+        Me.ShowPassButton.Size = New System.Drawing.Size(24, 23)
+        Me.ShowPassButton.TabIndex = 5
+        Me.ShowPassButton.Text = "*"
+        Me.ShowPassButton.UseVisualStyleBackColor = True
         '
         'IDInput
         '
+        Me.AcceptButton = Me.OKButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 105)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ShowPassButton)
+        Me.Controls.Add(Me.OKButton)
+        Me.Controls.Add(Me.PassLabel)
+        Me.Controls.Add(Me.InputPassTextBox)
+        Me.Controls.Add(Me.IDLabel)
+        Me.Controls.Add(Me.InputIDTextBox)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(300, 144)
         Me.MinimizeBox = False
@@ -109,10 +110,10 @@ Partial Class IDInput
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents InputIDTextBox As TextBox
+    Friend WithEvents IDLabel As Label
+    Friend WithEvents PassLabel As Label
+    Friend WithEvents InputPassTextBox As TextBox
+    Friend WithEvents OKButton As Button
+    Friend WithEvents ShowPassButton As Button
 End Class

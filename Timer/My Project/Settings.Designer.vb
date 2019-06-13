@@ -57,108 +57,108 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("3")>  _
-        Public Property Size() As Integer
+        Public Property SizeSet() As Integer
             Get
-                Return CType(Me("Size"),Integer)
+                Return CType(Me("SizeSet"),Integer)
             End Get
             Set
-                Me("Size") = value
+                Me("SizeSet") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property Top() As Boolean
+        Public Property TopMost() As Boolean
             Get
-                Return CType(Me("Top"),Boolean)
+                Return CType(Me("TopMost"),Boolean)
             End Get
             Set
-                Me("Top") = value
+                Me("TopMost") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property Bar() As Boolean
+        Public Property ShowBar() As Boolean
             Get
-                Return CType(Me("Bar"),Boolean)
+                Return CType(Me("ShowBar"),Boolean)
             End Get
             Set
-                Me("Bar") = value
+                Me("ShowBar") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property Second() As Boolean
+        Public Property ShowSec() As Boolean
             Get
-                Return CType(Me("Second"),Boolean)
+                Return CType(Me("ShowSec"),Boolean)
             End Get
             Set
-                Me("Second") = value
+                Me("ShowSec") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property Hide() As Boolean
+        Public Property Transparent() As Boolean
             Get
-                Return CType(Me("Hide"),Boolean)
+                Return CType(Me("Transparent"),Boolean)
             End Get
             Set
-                Me("Hide") = value
+                Me("Transparent") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property SC() As Boolean
+        Public Property CanSizeChange() As Boolean
             Get
-                Return CType(Me("SC"),Boolean)
+                Return CType(Me("CanSizeChange"),Boolean)
             End Get
             Set
-                Me("SC") = value
+                Me("CanSizeChange") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("-1")>  _
-        Public Property posX() As Integer
+        Public Property SavePosX() As Integer
             Get
-                Return CType(Me("posX"),Integer)
+                Return CType(Me("SavePosX"),Integer)
             End Get
             Set
-                Me("posX") = value
+                Me("SavePosX") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("-1")>  _
-        Public Property posY() As Integer
+        Public Property SavePosY() As Integer
             Get
-                Return CType(Me("posY"),Integer)
+                Return CType(Me("SavePosY"),Integer)
             End Get
             Set
-                Me("posY") = value
+                Me("SavePosY") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property kotei() As Boolean
+        Public Property Lock() As Boolean
             Get
-                Return CType(Me("kotei"),Boolean)
+                Return CType(Me("Lock"),Boolean)
             End Get
             Set
-                Me("kotei") = value
+                Me("Lock") = value
             End Set
         End Property
         
@@ -189,225 +189,225 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property TIME() As String
+        Public Property TimeTable() As String
             Get
-                Return CType(Me("TIME"),String)
+                Return CType(Me("TimeTable"),String)
             End Get
             Set
-                Me("TIME") = value
+                Me("TimeTable") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("-1")>  _
-        Public Property sizeX() As Integer
+        Public Property SaveSizeX() As Integer
             Get
-                Return CType(Me("sizeX"),Integer)
+                Return CType(Me("SaveSizeX"),Integer)
             End Get
             Set
-                Me("sizeX") = value
+                Me("SaveSizeX") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("-1")>  _
-        Public Property sizeY() As Integer
+        Public Property SaveSizeY() As Integer
             Get
-                Return CType(Me("sizeY"),Integer)
+                Return CType(Me("SaveSizeY"),Integer)
             End Get
             Set
-                Me("sizeY") = value
+                Me("SaveSizeY") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property FontT() As Global.System.Drawing.Font
+        Public Property SaveFont() As Global.System.Drawing.Font
             Get
-                Return CType(Me("FontT"),Global.System.Drawing.Font)
+                Return CType(Me("SaveFont"),Global.System.Drawing.Font)
             End Get
             Set
-                Me("FontT") = value
+                Me("SaveFont") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property heightT() As Integer
+        Public Property LabelHeight() As Integer
             Get
-                Return CType(Me("heightT"),Integer)
+                Return CType(Me("LabelHeight"),Integer)
             End Get
             Set
-                Me("heightT") = value
+                Me("LabelHeight") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property heightB() As Integer
+        Public Property BarHeight() As Integer
             Get
-                Return CType(Me("heightB"),Integer)
+                Return CType(Me("BarHeight"),Integer)
             End Get
             Set
-                Me("heightB") = value
+                Me("BarHeight") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property TitleT() As Boolean
+        Public Property TitleTimer() As Boolean
             Get
-                Return CType(Me("TitleT"),Boolean)
+                Return CType(Me("TitleTimer"),Boolean)
             End Get
             Set
-                Me("TitleT") = value
+                Me("TitleTimer") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property widthTB() As Integer
+        Public Property TimerBarWidth() As Integer
             Get
-                Return CType(Me("widthTB"),Integer)
+                Return CType(Me("TimerBarWidth"),Integer)
             End Get
             Set
-                Me("widthTB") = value
+                Me("TimerBarWidth") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property LS() As Integer
+        Public Property LeftSpace() As Integer
             Get
-                Return CType(Me("LS"),Integer)
+                Return CType(Me("LeftSpace"),Integer)
             End Get
             Set
-                Me("LS") = value
+                Me("LeftSpace") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property RS() As Integer
+        Public Property RightSpace() As Integer
             Get
-                Return CType(Me("RS"),Integer)
+                Return CType(Me("RightSpace"),Integer)
             End Get
             Set
-                Me("RS") = value
+                Me("RightSpace") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property pad() As Integer
+        Public Property Padding() As Integer
             Get
-                Return CType(Me("pad"),Integer)
+                Return CType(Me("Padding"),Integer)
             End Get
             Set
-                Me("pad") = value
+                Me("Padding") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property PASS() As Integer
+        Public Property Password() As Integer
             Get
-                Return CType(Me("PASS"),Integer)
+                Return CType(Me("Password"),Integer)
             End Get
             Set
-                Me("PASS") = value
+                Me("Password") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property noti() As Boolean
+        Public Property Notify() As Boolean
             Get
-                Return CType(Me("noti"),Boolean)
+                Return CType(Me("Notify"),Boolean)
             End Get
             Set
-                Me("noti") = value
+                Me("Notify") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property popup() As Boolean
+        Public Property PopUp() As Boolean
             Get
-                Return CType(Me("popup"),Boolean)
+                Return CType(Me("PopUp"),Boolean)
             End Get
             Set
-                Me("popup") = value
+                Me("PopUp") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property bmode() As Boolean
+        Public Property BatteryMode() As Boolean
             Get
-                Return CType(Me("bmode"),Boolean)
+                Return CType(Me("BatteryMode"),Boolean)
             End Get
             Set
-                Me("bmode") = value
+                Me("BatteryMode") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property zure() As Integer
+        Public Property Deviation() As Integer
             Get
-                Return CType(Me("zure"),Integer)
+                Return CType(Me("Deviation"),Integer)
             End Get
             Set
-                Me("zure") = value
+                Me("Deviation") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property kirikae() As Boolean
+        Public Property ChangeBattery() As Boolean
             Get
-                Return CType(Me("kirikae"),Boolean)
+                Return CType(Me("ChangeBattery"),Boolean)
             End Get
             Set
-                Me("kirikae") = value
+                Me("ChangeBattery") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property t5() As Boolean
+        Public Property Term5() As Boolean
             Get
-                Return CType(Me("t5"),Boolean)
+                Return CType(Me("Term5"),Boolean)
             End Get
             Set
-                Me("t5") = value
+                Me("Term5") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property t6() As Boolean
+        Public Property Term6() As Boolean
             Get
-                Return CType(Me("t6"),Boolean)
+                Return CType(Me("Term6"),Boolean)
             End Get
             Set
-                Me("t6") = value
+                Me("Term6") = value
             End Set
         End Property
     End Class
