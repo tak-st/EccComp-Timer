@@ -639,6 +639,7 @@ Partial Class Main
         '
         'TimeTimer
         '
+        Me.TimeTimer.Interval = 25
         '
         'Main
         '

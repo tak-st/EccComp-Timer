@@ -609,60 +609,6 @@
   <metadata name="NotifyRightMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1070, 17</value>
   </metadata>
-  <data name="ModeMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="ModeMenuItemN.Text" xml:space="preserve">
-    <value>モード</value>
-  </data>
-  <data name="ChangeSecMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="ChangeSecMenuItem.Text" xml:space="preserve">
-    <value>秒数表示切替</value>
-  </data>
-  <data name="ChangeLockMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="ChangeLockMenuItem.Text" xml:space="preserve">
-    <value>固定状態切替</value>
-  </data>
-  <data name="MovePadMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="MovePadMenuItem.Text" xml:space="preserve">
-    <value>フォーム移動パッド</value>
-  </data>
-  <data name="NextTimeMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="NextTimeMenuItemN.Text" xml:space="preserve">
-    <value>次の時間表示</value>
-  </data>
-  <data name="NextTimeMenuItemN.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ShowMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="ShowMenuItem.Text" xml:space="preserve">
-    <value>表示する</value>
-  </data>
-  <data name="MinimizeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="MinimizeMenuItem.Text" xml:space="preserve">
-    <value>最小化する</value>
-  </data>
-  <data name="RightSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 6</value>
-  </data>
-  <data name="ExitMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="ExitMenuItemN.Text" xml:space="preserve">
-    <value>終了</value>
-  </data>
   <data name="NotifyRightMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 186</value>
   </data>
@@ -1396,6 +1342,12 @@
   <data name="NotifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="ModeMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="ModeMenuItemN.Text" xml:space="preserve">
+    <value>モード</value>
+  </data>
   <data name="ClassMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 22</value>
   </data>
@@ -1440,6 +1392,54 @@
   </data>
   <data name="BatteryMenuItemN.Text" xml:space="preserve">
     <value>バッテリー残量</value>
+  </data>
+  <data name="ChangeSecMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="ChangeSecMenuItem.Text" xml:space="preserve">
+    <value>秒数表示切替</value>
+  </data>
+  <data name="ChangeLockMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="ChangeLockMenuItem.Text" xml:space="preserve">
+    <value>固定状態切替</value>
+  </data>
+  <data name="MovePadMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="MovePadMenuItem.Text" xml:space="preserve">
+    <value>フォーム移動パッド</value>
+  </data>
+  <data name="NextTimeMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="NextTimeMenuItemN.Text" xml:space="preserve">
+    <value>次の時間表示</value>
+  </data>
+  <data name="NextTimeMenuItemN.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ShowMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="ShowMenuItem.Text" xml:space="preserve">
+    <value>表示する</value>
+  </data>
+  <data name="MinimizeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="MinimizeMenuItem.Text" xml:space="preserve">
+    <value>最小化する</value>
+  </data>
+  <data name="RightSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 6</value>
+  </data>
+  <data name="ExitMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="ExitMenuItemN.Text" xml:space="preserve">
+    <value>終了</value>
   </data>
   <metadata name="CountdownTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>924, 17</value>
