@@ -189,11 +189,53 @@
   <metadata name="TimerMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>106, 17</value>
   </metadata>
+  <data name="TimerMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TimerMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 23</value>
+  </data>
+  <data name="TimerMenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TimerMenuStrip.Text" xml:space="preserve">
+    <value>MenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;TimerMenuStrip.Name" xml:space="preserve">
+    <value>TimerMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;TimerMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TimerMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TimerMenuStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="FuncMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 19</value>
+  </data>
+  <data name="FuncMenuItem.Text" xml:space="preserve">
+    <value>機能(&amp;S)</value>
+  </data>
+  <data name="ModeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="ModeMenuItem.Text" xml:space="preserve">
+    <value>モード</value>
+  </data>
   <data name="ClassMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 22</value>
   </data>
   <data name="ClassMenuItem.Text" xml:space="preserve">
     <value>授業時間タイマー</value>
+  </data>
+  <data name="NowTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="NowTimeMenuItem.Text" xml:space="preserve">
+    <value>現在時刻表示</value>
   </data>
   <data name="CountupMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 22</value>
@@ -228,29 +270,29 @@
   <data name="BatteryMenuItem.Text" xml:space="preserve">
     <value>バッテリー残量</value>
   </data>
-  <data name="ModeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="ModeMenuItem.Text" xml:space="preserve">
-    <value>モード</value>
-  </data>
   <data name="TopmostMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="TopmostMenuItem.Text" xml:space="preserve">
     <value>常に最前面(&amp;T)</value>
   </data>
   <data name="ShowBarMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="ShowBarMenuItem.Text" xml:space="preserve">
     <value>バー表示(&amp;B)</value>
   </data>
   <data name="ShowsecMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="ShowsecMenuItem.Text" xml:space="preserve">
     <value>残秒数表示(&amp;A)</value>
+  </data>
+  <data name="SizeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="SizeMenuItem.Text" xml:space="preserve">
+    <value>大きさ(&amp;S)</value>
   </data>
   <data name="Size1MenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
@@ -276,14 +318,8 @@
   <data name="Size4MenuItem.Text" xml:space="preserve">
     <value>ミニ(&amp;M)</value>
   </data>
-  <data name="SizeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="SizeMenuItem.Text" xml:space="preserve">
-    <value>大きさ(&amp;S)</value>
-  </data>
   <data name="NextTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="NextTimeMenuItem.Text" xml:space="preserve">
     <value>次の時間(&amp;N)</value>
@@ -292,19 +328,22 @@
     <value>False</value>
   </data>
   <data name="FuncSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
+    <value>147, 6</value>
   </data>
   <data name="ExitMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>150, 22</value>
   </data>
   <data name="ExitMenuItem.Text" xml:space="preserve">
     <value>終了(&amp;X)</value>
   </data>
-  <data name="FuncMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 19</value>
+  <data name="AdvancedMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
   </data>
-  <data name="FuncMenuItem.Text" xml:space="preserve">
-    <value>機能(&amp;S)</value>
+  <data name="AdvancedMenuItem.Text" xml:space="preserve">
+    <value>高度な設定</value>
+  </data>
+  <data name="AdvancedMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="ChangeFontMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -312,23 +351,17 @@
   <data name="ChangeFontMenuItem.Text" xml:space="preserve">
     <value>フォントの変更...</value>
   </data>
-  <data name="TimerHeightToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="TimerHeightToolStripTextBox.Text" xml:space="preserve">
-    <value>65</value>
-  </data>
   <data name="TimerHeightMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
   </data>
   <data name="TimerHeightMenuItem.Text" xml:space="preserve">
     <value>タイマー文字欄の縦幅</value>
   </data>
-  <data name="BarHeightToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="TimerHeightToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="BarHeightToolStripTextBox.Text" xml:space="preserve">
-    <value>19</value>
+  <data name="TimerHeightToolStripTextBox.Text" xml:space="preserve">
+    <value>65</value>
   </data>
   <data name="BarHeightMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -336,11 +369,11 @@
   <data name="BarHeightMenuItem.Text" xml:space="preserve">
     <value>バーの縦幅</value>
   </data>
-  <data name="SpaceWidthToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BarHeightToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="SpaceWidthToolStripTextBox.Text" xml:space="preserve">
-    <value>3</value>
+  <data name="BarHeightToolStripTextBox.Text" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="SpaceWidthToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -348,11 +381,11 @@
   <data name="SpaceWidthToolStripMenuItem.Text" xml:space="preserve">
     <value>タイマーとバーの間の幅</value>
   </data>
-  <data name="LeftSpaceToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="SpaceWidthToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="LeftSpaceToolStripTextBox.Text" xml:space="preserve">
-    <value>12</value>
+  <data name="SpaceWidthToolStripTextBox.Text" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="LeftSpaceMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -360,11 +393,11 @@
   <data name="LeftSpaceMenuItem.Text" xml:space="preserve">
     <value>タイマーとバーの左のスペースの幅</value>
   </data>
-  <data name="RightSpaceToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LeftSpaceToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="RightSpaceToolStripTextBox.Text" xml:space="preserve">
-    <value>26</value>
+  <data name="LeftSpaceToolStripTextBox.Text" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="RightSpaceMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -372,17 +405,23 @@
   <data name="RightSpaceMenuItem.Text" xml:space="preserve">
     <value>タイマーとバーの右のスペースの幅</value>
   </data>
-  <data name="MarginToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RightSpaceToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="MarginToolStripTextBox.Text" xml:space="preserve">
-    <value>0</value>
+  <data name="RightSpaceToolStripTextBox.Text" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="MarginMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
   </data>
   <data name="MarginMenuItem.Text" xml:space="preserve">
     <value>文字の場所を上下にずらす</value>
+  </data>
+  <data name="MarginToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="MarginToolStripTextBox.Text" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="TitleShowTimerMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -414,14 +453,17 @@
   <data name="AdvancedOffMenuItem.Text" xml:space="preserve">
     <value>高度なデザイン設定をOFFにする</value>
   </data>
-  <data name="AdvancedMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 19</value>
+  <data name="SettingMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 19</value>
   </data>
-  <data name="AdvancedMenuItem.Text" xml:space="preserve">
-    <value>高度な設定</value>
+  <data name="SettingMenuItem.Text" xml:space="preserve">
+    <value>設定(&amp;O)</value>
   </data>
-  <data name="AdvancedMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="SpecialTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="SpecialTimeMenuItem.Text" xml:space="preserve">
+    <value>特殊な時限を使用する</value>
   </data>
   <data name="Term5MenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 22</value>
@@ -437,12 +479,6 @@
   </data>
   <data name="Term6MenuItem.Text" xml:space="preserve">
     <value>6時限目</value>
-  </data>
-  <data name="SpecialTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="SpecialTimeMenuItem.Text" xml:space="preserve">
-    <value>特殊な時限を使用する</value>
   </data>
   <data name="TransparentMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 22</value>
@@ -486,6 +522,12 @@
   <data name="ChangeBatteryMenuItem.Text" xml:space="preserve">
     <value>充電停止時、バッテリー表示に切り替える</value>
   </data>
+  <data name="ShowNextTermMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="ShowNextTermMenuItem.Text" xml:space="preserve">
+    <value>休み時間時次の授業情報表示(&amp;I)</value>
+  </data>
   <data name="IDPassMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 22</value>
   </data>
@@ -507,29 +549,23 @@
   <data name="ShowPopUpMenuItem.Text" xml:space="preserve">
     <value>ポップアップを表示</value>
   </data>
-  <data name="ShowNextTermMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="ShowNextTermMenuItem.Text" xml:space="preserve">
-    <value>休み時間時次の授業情報表示(&amp;I)</value>
-  </data>
   <data name="NTPTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 22</value>
   </data>
   <data name="NTPTimeMenuItem.Text" xml:space="preserve">
     <value>ネットワークでシステム時刻を補正する</value>
   </data>
-  <data name="DeviationToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="DeviationToolStripTextBox.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="DeviationMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 22</value>
   </data>
   <data name="DeviationMenuItem.Text" xml:space="preserve">
     <value>タイマーの時間をずらす (秒)</value>
+  </data>
+  <data name="DeviationToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="DeviationToolStripTextBox.Text" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="SettingSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>279, 6</value>
@@ -540,50 +576,20 @@
   <data name="AdvancedOnMenuItem.Text" xml:space="preserve">
     <value>高度なデザイン設定をONにする</value>
   </data>
-  <data name="SettingMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 19</value>
-  </data>
-  <data name="SettingMenuItem.Text" xml:space="preserve">
-    <value>設定(&amp;O)</value>
-  </data>
   <data name="HelpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 19</value>
   </data>
   <data name="HelpMenuItem.Text" xml:space="preserve">
     <value>操作方法(&amp;H)</value>
   </data>
+  <data name="AboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 4</value>
+  </data>
   <data name="ShowAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>
   </data>
   <data name="ShowAboutMenuItem.Text" xml:space="preserve">
     <value>about...</value>
-  </data>
-  <data name="AboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 4</value>
-  </data>
-  <data name="TimerMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TimerMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 23</value>
-  </data>
-  <data name="TimerMenuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TimerMenuStrip.Text" xml:space="preserve">
-    <value>MenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;TimerMenuStrip.Name" xml:space="preserve">
-    <value>TimerMenuStrip</value>
-  </data>
-  <data name="&gt;&gt;TimerMenuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TimerMenuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TimerMenuStrip.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <metadata name="WebTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>221, 17</value>
@@ -603,45 +609,6 @@
   <metadata name="NotifyRightMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1070, 17</value>
   </metadata>
-  <data name="ClassMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="ClassMenuItemN.Text" xml:space="preserve">
-    <value>授業時間タイマー</value>
-  </data>
-  <data name="CountupMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="CountupMenuItemN.Text" xml:space="preserve">
-    <value>カウントアップタイマー</value>
-  </data>
-  <data name="KitchenMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="KitchenMenuItemN.Text" xml:space="preserve">
-    <value>キッチンタイマー</value>
-  </data>
-  <data name="CountdownMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="CountdownMenuItemN.Text" xml:space="preserve">
-    <value>カウントダウンタイマー</value>
-  </data>
-  <data name="PomodoroMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="PomodoroMenuItemN.Text" xml:space="preserve">
-    <value>ポモドーロタイマー</value>
-  </data>
-  <data name="PomodoroMenuItemN.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="BatteryMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="BatteryMenuItemN.Text" xml:space="preserve">
-    <value>バッテリー残量</value>
-  </data>
   <data name="ModeMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
   </data>
@@ -697,7 +664,7 @@
     <value>終了</value>
   </data>
   <data name="NotifyRightMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 208</value>
+    <value>158, 186</value>
   </data>
   <data name="&gt;&gt;NotifyRightMenuStrip.Name" xml:space="preserve">
     <value>NotifyRightMenuStrip</value>
@@ -1429,6 +1396,51 @@
   <data name="NotifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="ClassMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="ClassMenuItemN.Text" xml:space="preserve">
+    <value>授業時間タイマー</value>
+  </data>
+  <data name="NowTimeMenuStripN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="NowTimeMenuStripN.Text" xml:space="preserve">
+    <value>現在時刻表示</value>
+  </data>
+  <data name="CountupMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="CountupMenuItemN.Text" xml:space="preserve">
+    <value>カウントアップタイマー</value>
+  </data>
+  <data name="KitchenMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="KitchenMenuItemN.Text" xml:space="preserve">
+    <value>キッチンタイマー</value>
+  </data>
+  <data name="CountdownMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="CountdownMenuItemN.Text" xml:space="preserve">
+    <value>カウントダウンタイマー</value>
+  </data>
+  <data name="PomodoroMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="PomodoroMenuItemN.Text" xml:space="preserve">
+    <value>ポモドーロタイマー</value>
+  </data>
+  <data name="PomodoroMenuItemN.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BatteryMenuItemN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="BatteryMenuItemN.Text" xml:space="preserve">
+    <value>バッテリー残量</value>
+  </data>
   <metadata name="CountdownTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>924, 17</value>
   </metadata>
@@ -1449,6 +1461,9 @@
   </data>
   <metadata name="BatteryMonitorTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>296, 56</value>
+  </metadata>
+  <metadata name="TimeTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>318, 18</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2213,6 +2228,12 @@
   <data name="&gt;&gt;ClassMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;NowTimeMenuItem.Name" xml:space="preserve">
+    <value>NowTimeMenuItem</value>
+  </data>
+  <data name="&gt;&gt;NowTimeMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;CountupMenuItem.Name" xml:space="preserve">
     <value>CountupMenuItem</value>
   </data>
@@ -2615,6 +2636,12 @@
   <data name="&gt;&gt;ClassMenuItemN.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;NowTimeMenuStripN.Name" xml:space="preserve">
+    <value>NowTimeMenuStripN</value>
+  </data>
+  <data name="&gt;&gt;NowTimeMenuStripN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;CountupMenuItemN.Name" xml:space="preserve">
     <value>CountupMenuItemN</value>
   </data>
@@ -2655,6 +2682,12 @@
     <value>ChangeLockMenuItem</value>
   </data>
   <data name="&gt;&gt;ChangeLockMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MovePadMenuItem.Name" xml:space="preserve">
+    <value>MovePadMenuItem</value>
+  </data>
+  <data name="&gt;&gt;MovePadMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;NextTimeMenuItemN.Name" xml:space="preserve">
@@ -2717,11 +2750,11 @@
   <data name="&gt;&gt;BatteryMonitorTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovePadMenuItem.Name" xml:space="preserve">
-    <value>MovePadMenuItem</value>
+  <data name="&gt;&gt;TimeTimer.Name" xml:space="preserve">
+    <value>TimeTimer</value>
   </data>
-  <data name="&gt;&gt;MovePadMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;TimeTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

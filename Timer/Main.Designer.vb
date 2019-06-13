@@ -31,6 +31,7 @@ Partial Class Main
         Me.FuncMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClassMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NowTimeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CountupMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KitchenMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CountdownMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -99,6 +100,7 @@ Partial Class Main
         Me.NotifyRightMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ModeMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClassMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NowTimeMenuStripN = New System.Windows.Forms.ToolStripMenuItem()
         Me.CountupMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
         Me.KitchenMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
         Me.CountdownMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
@@ -106,6 +108,7 @@ Partial Class Main
         Me.BatteryMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeSecMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeLockMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MovePadMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NextTimeMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MinimizeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -116,7 +119,7 @@ Partial Class Main
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.MovePadMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -152,7 +155,7 @@ Partial Class Main
         '
         'ModeMenuItem
         '
-        Me.ModeMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClassMenuItem, Me.CountupMenuItem, Me.KitchenMenuItem, Me.CountdownMenuItem, Me.PomodoroMenuItem, Me.BatteryMenuItem})
+        Me.ModeMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClassMenuItem, Me.NowTimeMenuItem, Me.CountupMenuItem, Me.KitchenMenuItem, Me.CountdownMenuItem, Me.PomodoroMenuItem, Me.BatteryMenuItem})
         Me.ModeMenuItem.Name = "ModeMenuItem"
         resources.ApplyResources(Me.ModeMenuItem, "ModeMenuItem")
         '
@@ -162,6 +165,11 @@ Partial Class Main
         Me.ClassMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ClassMenuItem.Name = "ClassMenuItem"
         resources.ApplyResources(Me.ClassMenuItem, "ClassMenuItem")
+        '
+        'NowTimeMenuItem
+        '
+        Me.NowTimeMenuItem.Name = "NowTimeMenuItem"
+        resources.ApplyResources(Me.NowTimeMenuItem, "NowTimeMenuItem")
         '
         'CountupMenuItem
         '
@@ -528,7 +536,7 @@ Partial Class Main
         '
         'ModeMenuItemN
         '
-        Me.ModeMenuItemN.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClassMenuItemN, Me.CountupMenuItemN, Me.KitchenMenuItemN, Me.CountdownMenuItemN, Me.PomodoroMenuItemN, Me.BatteryMenuItemN})
+        Me.ModeMenuItemN.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClassMenuItemN, Me.NowTimeMenuStripN, Me.CountupMenuItemN, Me.KitchenMenuItemN, Me.CountdownMenuItemN, Me.PomodoroMenuItemN, Me.BatteryMenuItemN})
         Me.ModeMenuItemN.Name = "ModeMenuItemN"
         resources.ApplyResources(Me.ModeMenuItemN, "ModeMenuItemN")
         '
@@ -538,6 +546,11 @@ Partial Class Main
         Me.ClassMenuItemN.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ClassMenuItemN.Name = "ClassMenuItemN"
         resources.ApplyResources(Me.ClassMenuItemN, "ClassMenuItemN")
+        '
+        'NowTimeMenuStripN
+        '
+        Me.NowTimeMenuStripN.Name = "NowTimeMenuStripN"
+        resources.ApplyResources(Me.NowTimeMenuStripN, "NowTimeMenuStripN")
         '
         'CountupMenuItemN
         '
@@ -573,6 +586,11 @@ Partial Class Main
         '
         Me.ChangeLockMenuItem.Name = "ChangeLockMenuItem"
         resources.ApplyResources(Me.ChangeLockMenuItem, "ChangeLockMenuItem")
+        '
+        'MovePadMenuItem
+        '
+        Me.MovePadMenuItem.Name = "MovePadMenuItem"
+        resources.ApplyResources(Me.MovePadMenuItem, "MovePadMenuItem")
         '
         'NextTimeMenuItemN
         '
@@ -619,10 +637,8 @@ Partial Class Main
         '
         Me.BatteryMonitorTimer.Interval = 250
         '
-        'MovePadMenuItem
+        'TimeTimer
         '
-        Me.MovePadMenuItem.Name = "MovePadMenuItem"
-        resources.ApplyResources(Me.MovePadMenuItem, "MovePadMenuItem")
         '
         'Main
         '
@@ -737,4 +753,7 @@ Partial Class Main
     Friend WithEvents ChangeBatteryMenuItem As ToolStripMenuItem
     Friend WithEvents BatteryMonitorTimer As System.Windows.Forms.Timer
     Friend WithEvents MovePadMenuItem As ToolStripMenuItem
+    Friend WithEvents NowTimeMenuItem As ToolStripMenuItem
+    Friend WithEvents TimeTimer As System.Windows.Forms.Timer
+    Friend WithEvents NowTimeMenuStripN As ToolStripMenuItem
 End Class

@@ -884,6 +884,7 @@ Public Class Main
         CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = False
         CountupMenuItem.Checked = True
+        TimeTimer.Stop()
         CountdownTimer.Stop()
         ClassTimer.Stop()
         KitchenTimer.Stop()
@@ -902,6 +903,7 @@ Public Class Main
         CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = False
         ClassMenuItem.Checked = True
+        TimeTimer.Stop()
         CountdownTimer.Stop()
         CountupTimer.Stop()
         KitchenTimer.Stop()
@@ -922,6 +924,7 @@ Public Class Main
         BatteryMenuItem.Checked = True
         TimerBar.Value = 0
         TimerBar.Maximum = 100
+        TimeTimer.Stop()
         CountdownTimer.Stop()
         CountupTimer.Stop()
         KitchenTimer.Stop()
@@ -946,6 +949,7 @@ Public Class Main
         TimerBar.Value = 0
         TimerBar.Maximum = countti
         KitchenMenuItem.Checked = True
+        TimeTimer.Stop()
         CountdownTimer.Stop()
         CountupTimer.Stop()
         ClassTimer.Stop()
@@ -974,6 +978,7 @@ Public Class Main
         Dim TimeDiff = DateDiff("s", Now, counttm)
         TimerBar.Value = 0
         TimerBar.Maximum = Math.Max(TimeDiff, 1)
+        TimeTimer.Stop()
         CountupTimer.Stop()
         ClassTimer.Stop()
         BatteryTimer.Stop()
@@ -1501,6 +1506,52 @@ Public Class Main
 
     Private Sub MovePadMenuItem_Click(sender As Object, e As EventArgs) Handles MovePadMenuItem.Click
         Movepad.Show()
+    End Sub
+
+    Private Sub NowTimeMenuItem_Click(sender As Object, e As EventArgs) Handles NowTimeMenuItem.Click, NowTimeMenuStripN.Click
+
+        '現在時刻表示開始時の処理
+
+        ClassMenuItem.Checked = False
+        CountupMenuItem.Checked = False
+        KitchenMenuItem.Checked = False
+        BatteryMenuItem.Checked = False
+        CountdownMenuItem.Checked = True
+        TimerBar.Style = ProgressBarStyle.Blocks
+        TimerBar.Maximum = 6000
+        TimeTimer.Stop()
+        CountupTimer.Stop()
+        ClassTimer.Stop()
+        BatteryTimer.Stop()
+        KitchenTimer.Stop()
+        TimerBar.Value = 0
+        TimeTimer.Start()
+
+    End Sub
+
+    Private Sub TimeTimer_Tick(sender As Object, e As EventArgs) Handles TimeTimer.Tick
+
+        If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
+            OpacityTimer += 1
+            If OpacityTimer > 30 And OpacityTimer < 80 Then
+                Me.Opacity = ((OpacityTimer - 30) * 2) / 100
+            End If
+        Else
+            OpacitySwitch = False
+            If OpacityTimer >= 0 Then OpacityTimer = 0
+            Me.Opacity = "1"
+        End If
+
+        Dim Deviation As New TimeSpan(0, 0, 0, DeviationToolStripTextBox.Text)
+        Dim NowTime As DateTime = DateTime.Now() + Deviation
+        Dim dtmNow As DateTime
+        dtmNow = DateTime.Now() + Deviation
+        Static Maesec = 0
+        TimerLabel.Text = Format(NowTime, "HH:mm")
+        TimerBar.Value = Format(NowTime, "ss") * 100 + (dtmNow.Millisecond \ 10)
+        Maesec = TimerLabel.Text
+        NotifyIcon.Text = "現在時刻 : " & TimerLabel.Text & ":" & Format(NowTime, "ss") & "." & (dtmNow.Millisecond \ 10)
+
     End Sub
 
     Private Sub SettingMenuItem_Click(sender As Object, e As EventArgs) Handles SettingMenuItem.Click
