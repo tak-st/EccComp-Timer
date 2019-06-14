@@ -120,6 +120,7 @@ Partial Class Main
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.PerfectTransparentMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -264,7 +265,7 @@ Partial Class Main
         '
         'AdvancedMenuItem
         '
-        Me.AdvancedMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeFontMenuItem, Me.TimerHeightMenuItem, Me.BarHeightMenuItem, Me.SpaceWidthToolStripMenuItem, Me.LeftSpaceMenuItem, Me.RightSpaceMenuItem, Me.MarginMenuItem, Me.TitleShowTimerMenuItem, Me.AdvancedSeparator1, Me.ImportMenuItem, Me.ExportMenuItem, Me.AdvancedSeparator2, Me.AdvancedOffMenuItem})
+        Me.AdvancedMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeFontMenuItem, Me.TimerHeightMenuItem, Me.BarHeightMenuItem, Me.SpaceWidthToolStripMenuItem, Me.LeftSpaceMenuItem, Me.RightSpaceMenuItem, Me.MarginMenuItem, Me.TitleShowTimerMenuItem, Me.PerfectTransparentMenuItem, Me.AdvancedSeparator1, Me.ImportMenuItem, Me.ExportMenuItem, Me.AdvancedSeparator2, Me.AdvancedOffMenuItem})
         Me.AdvancedMenuItem.Name = "AdvancedMenuItem"
         resources.ApplyResources(Me.AdvancedMenuItem, "AdvancedMenuItem")
         '
@@ -641,6 +642,12 @@ Partial Class Main
         '
         Me.TimeTimer.Interval = 25
         '
+        'PerfectTransparentMenuItem
+        '
+        Me.PerfectTransparentMenuItem.CheckOnClick = True
+        Me.PerfectTransparentMenuItem.Name = "PerfectTransparentMenuItem"
+        resources.ApplyResources(Me.PerfectTransparentMenuItem, "PerfectTransparentMenuItem")
+        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -757,4 +764,5 @@ Partial Class Main
     Friend WithEvents NowTimeMenuItem As ToolStripMenuItem
     Friend WithEvents TimeTimer As System.Windows.Forms.Timer
     Friend WithEvents NowTimeMenuStripN As ToolStripMenuItem
+    Friend WithEvents PerfectTransparentMenuItem As ToolStripMenuItem
 End Class

@@ -128,7 +128,7 @@ Public Class Main
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '起動時の処理です
         '設定ファイルから各種データを読み込みます
-
+        PerfectTransparentMenuItem.Checked = My.Settings.PerfectTrans
         Term5MenuItem.Checked = My.Settings.Term5
         Term6MenuItem.Checked = My.Settings.Term6
         DeviationToolStripTextBox.Text = My.Settings.Deviation
@@ -872,6 +872,7 @@ Public Class Main
         My.Settings.ChangeBattery = ChangeBatteryMenuItem.Checked
         My.Settings.Term5 = Term5MenuItem.Checked
         My.Settings.Term6 = Term6MenuItem.Checked
+        My.Settings.PerfectTrans = PerfectTransparentMenuItem.Checked
         'End
     End Sub
     Private Sub CountupMenuItem_Click(sender As Object, e As EventArgs) Handles CountupMenuItem.Click, CountupMenuItemN.Click
@@ -1569,8 +1570,14 @@ Public Class Main
 
     End Sub
 
-    Private Sub ModeMenuItemN_Click(sender As Object, e As EventArgs) Handles ModeMenuItemN.Click
+    Private Sub ModeMenuItemN_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub PerfectTransparentMenuItem_Click(sender As Object, e As EventArgs) Handles PerfectTransparentMenuItem.Click
+        If sender.checked Then
+            MessageBox.Show("固定状態を解除したいときは、通知領域のアイコン右クリックの" & vbNewLine & "固定状態解除で固定状態を解除してください。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
     End Sub
 
     Private Sub SettingMenuItem_Click(sender As Object, e As EventArgs) Handles SettingMenuItem.Click
@@ -1637,10 +1644,18 @@ Public Class Main
     End Sub
 
     Private Sub Main_MouseEnter(sender As Object, e As EventArgs) Handles TimerBar.MouseEnter, MyBase.MouseEnter, TimerLabel.MouseEnter
-        If OpacityTimer < 40 And Me.FormBorderStyle = FormBorderStyle.None And OpacityTimer >= 0 Then
-            OpacitySwitch = True
-            OpacityTimer = 0
-            Me.Opacity = "0"
+        If PerfectTransparentMenuItem.Checked = True Then
+            If OpacityTimer < 120 And Me.FormBorderStyle = FormBorderStyle.None And OpacityTimer >= 0 Then
+                OpacitySwitch = True
+                OpacityTimer = 0
+                Me.Opacity = "0"
+            End If
+        Else
+            If OpacityTimer < 40 And Me.FormBorderStyle = FormBorderStyle.None And OpacityTimer >= 0 Then
+                OpacitySwitch = True
+                OpacityTimer = 0
+                Me.Opacity = "0"
+            End If
         End If
     End Sub
 
