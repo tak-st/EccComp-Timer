@@ -63,6 +63,7 @@ Partial Class Main
         Me.MarginMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MarginToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.TitleShowTimerMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PerfectTransparentMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdvancedSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ImportMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExportMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -120,7 +121,6 @@ Partial Class Main
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.PerfectTransparentMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -345,6 +345,12 @@ Partial Class Main
         Me.TitleShowTimerMenuItem.CheckOnClick = True
         Me.TitleShowTimerMenuItem.Name = "TitleShowTimerMenuItem"
         resources.ApplyResources(Me.TitleShowTimerMenuItem, "TitleShowTimerMenuItem")
+        '
+        'PerfectTransparentMenuItem
+        '
+        Me.PerfectTransparentMenuItem.CheckOnClick = True
+        Me.PerfectTransparentMenuItem.Name = "PerfectTransparentMenuItem"
+        resources.ApplyResources(Me.PerfectTransparentMenuItem, "PerfectTransparentMenuItem")
         '
         'AdvancedSeparator1
         '
@@ -641,12 +647,6 @@ Partial Class Main
         'TimeTimer
         '
         Me.TimeTimer.Interval = 25
-        '
-        'PerfectTransparentMenuItem
-        '
-        Me.PerfectTransparentMenuItem.CheckOnClick = True
-        Me.PerfectTransparentMenuItem.Name = "PerfectTransparentMenuItem"
-        resources.ApplyResources(Me.PerfectTransparentMenuItem, "PerfectTransparentMenuItem")
         '
         'Main
         '

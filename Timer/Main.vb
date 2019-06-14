@@ -1068,7 +1068,12 @@ Public Class Main
         NotifyIcon.Text = "カウントアップタイマー : " & TimerLabel.Text
     End Sub
 
-    Private Sub NotifyRightMenuStrip_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles NotifyRightMenuStrip.Opening
+    Private Sub NotifyRightMenuStrip_Opened(sender As Object, e As EventArgs) Handles NotifyRightMenuStrip.Opened
+
+        ChangeSecMenuItem.Text = "表示切替"
+        If ClassTimer.Enabled Or CountupTimer.Enabled Or CountdownTimer.Enabled Or KitchenMenuItem.Enabled Then ChangeSecMenuItem.Text = "秒数表示切替"
+        If BatteryTimer.Enabled Then ChangeSecMenuItem.Text = "残り時間表示切替"
+        If TimeTimer.Enabled Then ChangeSecMenuItem.Text = "日付表示切替"
 
         '状態に応じて表示すると最小化するを切り替える
 
@@ -1563,7 +1568,7 @@ Public Class Main
             NotifyIcon.Text = "現在時刻 : " & TimerLabel.Text & ":" & Format(NowTime, "ss") & "." & (dtmNow.Millisecond \ 10)
         Else
             TimerBar.Maximum = 86400
-            TimerLabel.Text = Format(NowTime, "M / d")
+            TimerLabel.Text = Format(NowTime, "M/d")
             TimerBar.Value = Format(NowTime, "HH") * 3600 + Format(NowTime, "mm") * 60 + Format(NowTime, "ss")
             NotifyIcon.Text = "今日の日付 : " & TimerLabel.Text & " (" & Format((TimerBar.Value / TimerBar.Maximum) * 100, "0.00") & "%)"
         End If
@@ -1580,8 +1585,16 @@ Public Class Main
         End If
     End Sub
 
+    Private Sub FuncMenuItem_DropDownOpened(sender As Object, e As EventArgs) Handles FuncMenuItem.DropDownOpened
+        ShowsecMenuItem.Text = "表示切替"
+        If ClassTimer.Enabled Or CountupTimer.Enabled Or CountdownTimer.Enabled Or KitchenMenuItem.Enabled Then ShowsecMenuItem.Text = "秒数表示"
+        If BatteryTimer.Enabled Then ShowsecMenuItem.Text = "残り時間表示"
+        If TimeTimer.Enabled Then ShowsecMenuItem.Text = "日付表示"
+
+    End Sub
+
     Private Sub SettingMenuItem_Click(sender As Object, e As EventArgs) Handles SettingMenuItem.Click
-        If Term5MenuItem.Checked = True And Term6MenuItem.Checked = True Then
+        If Term5MenuItem.Checked = True Then
             SpecialTimeMenuItem.Checked = True
         Else
             SpecialTimeMenuItem.Checked = False
