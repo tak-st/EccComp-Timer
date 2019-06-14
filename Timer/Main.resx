@@ -235,25 +235,25 @@
     <value>バッテリー残量</value>
   </data>
   <data name="ModeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="ModeMenuItem.Text" xml:space="preserve">
     <value>モード</value>
   </data>
   <data name="TopmostMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="TopmostMenuItem.Text" xml:space="preserve">
     <value>常に最前面(&amp;T)</value>
   </data>
   <data name="ShowBarMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="ShowBarMenuItem.Text" xml:space="preserve">
     <value>バー表示(&amp;B)</value>
   </data>
   <data name="ShowsecMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="ShowsecMenuItem.Text" xml:space="preserve">
     <value>表示切替(&amp;A)</value>
@@ -283,13 +283,13 @@
     <value>ミニ(&amp;M)</value>
   </data>
   <data name="SizeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="SizeMenuItem.Text" xml:space="preserve">
     <value>大きさ(&amp;S)</value>
   </data>
   <data name="NextTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="NextTimeMenuItem.Text" xml:space="preserve">
     <value>次の時間(&amp;N)</value>
@@ -298,10 +298,10 @@
     <value>False</value>
   </data>
   <data name="FuncSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
+    <value>142, 6</value>
   </data>
   <data name="ExitMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="ExitMenuItem.Text" xml:space="preserve">
     <value>終了(&amp;X)</value>
@@ -715,7 +715,7 @@
     <value>終了</value>
   </data>
   <data name="NotifyRightMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 208</value>
+    <value>158, 186</value>
   </data>
   <data name="&gt;&gt;NotifyRightMenuStrip.Name" xml:space="preserve">
     <value>NotifyRightMenuStrip</value>
