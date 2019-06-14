@@ -884,6 +884,7 @@ Public Class Main
         CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = False
         CountupMenuItem.Checked = True
+        NowTimeMenuItem.Checked = False
         TimeTimer.Stop()
         CountdownTimer.Stop()
         ClassTimer.Stop()
@@ -903,6 +904,7 @@ Public Class Main
         CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = False
         ClassMenuItem.Checked = True
+        NowTimeMenuItem.Checked = False
         TimeTimer.Stop()
         CountdownTimer.Stop()
         CountupTimer.Stop()
@@ -922,6 +924,7 @@ Public Class Main
         CountupMenuItem.Checked = False
         CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = True
+        NowTimeMenuItem.Checked = False
         TimerBar.Value = 0
         TimerBar.Maximum = 100
         TimeTimer.Stop()
@@ -944,6 +947,7 @@ Public Class Main
         CountupMenuItem.Checked = False
         CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = False
+        NowTimeMenuItem.Checked = False
         TimerBar.Style = ProgressBarStyle.Blocks
         countti *= 600
         TimerBar.Value = 0
@@ -974,6 +978,7 @@ Public Class Main
         KitchenMenuItem.Checked = False
         BatteryMenuItem.Checked = False
         CountdownMenuItem.Checked = True
+        NowTimeMenuItem.Checked = False
         TimerBar.Style = ProgressBarStyle.Blocks
         Dim TimeDiff = DateDiff("s", Now, counttm)
         TimerBar.Value = 0
@@ -1338,6 +1343,7 @@ Public Class Main
         KitchenMenuItemN.Checked = KitchenMenuItem.Checked
         CountdownMenuItemN.Checked = CountdownMenuItem.Checked
         BatteryMenuItemN.Checked = BatteryMenuItem.Checked
+        NowTimeMenuStripN.Checked = NowTimeMenuItem.Checked
 
     End Sub
 
@@ -1518,7 +1524,8 @@ Public Class Main
         CountupMenuItem.Checked = False
         KitchenMenuItem.Checked = False
         BatteryMenuItem.Checked = False
-        CountdownMenuItem.Checked = True
+        CountdownMenuItem.Checked = False
+        NowTimeMenuItem.Checked = True
         TimerBar.Style = ProgressBarStyle.Blocks
         TimerBar.Maximum = 6000
         TimeTimer.Stop()
@@ -1559,6 +1566,10 @@ Public Class Main
             TimerBar.Value = Format(NowTime, "HH") * 3600 + Format(NowTime, "mm") * 60 + Format(NowTime, "ss")
             NotifyIcon.Text = "今日の日付 : " & TimerLabel.Text & " (" & Format((TimerBar.Value / TimerBar.Maximum) * 100, "0.00") & "%)"
         End If
+
+    End Sub
+
+    Private Sub ModeMenuItemN_Click(sender As Object, e As EventArgs) Handles ModeMenuItemN.Click
 
     End Sub
 
