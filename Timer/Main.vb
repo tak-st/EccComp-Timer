@@ -1432,16 +1432,37 @@ Public Class Main
             BatteryMonitorTimer.Stop()
         End If
     End Sub
+    Private Function statid() As Integer
+
+        If ClassMenuItem.Checked Then Return 1
+        If NowTimeMenuItem.Checked Then Return 2
+        If CountupMenuItem.Checked Then Return 3
+        If KitchenMenuItem.Checked Then Return 4
+        If CountdownMenuItem.Checked Then Return 5
+        If BatteryMenuItem.Checked Then Return 6
+
+    End Function
 
     Private Sub BatteryMonitorTimer_Tick(sender As Object, e As EventArgs) Handles BatteryMonitorTimer.Tick
         Dim pls As PowerLineStatus = SystemInformation.PowerStatus.PowerLineStatus
         Static plsm As PowerLineStatus
+        Static PrevStat As Integer = 0
         If plsm <> pls Then
             Select Case pls
                 Case PowerLineStatus.Offline
+                    PrevStat = statid()
+                    If PrevStat >= 3 And PrevStat <= 5 Then Exit Sub
                     Call BatteryMenuItem_Click(sender, e)
                 Case PowerLineStatus.Online
-                    Call ClassMenuItem_Click(sender, e)
+                    Select Case PrevStat
+                        Case 0, 3, 4, 5
+                        Case 1
+                            Call ClassMenuItem_Click(sender, e)
+                        Case 2
+                            Call NowTimeMenuItem_Click(sender, e)
+                        Case 6
+                            Call BatteryMenuItem_Click(sender, e)
+                    End Select
                 Case PowerLineStatus.Unknown
             End Select
         End If
