@@ -1,6 +1,6 @@
 ﻿Imports System.ComponentModel
 
-Public Class IDInput
+Public Class IdInput
 
     Private Sub IDInput_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If IsNumeric(InputIDTextBox.Text) Then

@@ -121,6 +121,7 @@ Partial Class Main
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.Opacity100MenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -537,7 +538,7 @@ Partial Class Main
         '
         'NotifyRightMenuStrip
         '
-        Me.NotifyRightMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItemN, Me.ChangeSecMenuItem, Me.ChangeLockMenuItem, Me.MovePadMenuItem, Me.NextTimeMenuItemN, Me.ShowMenuItem, Me.MinimizeMenuItem, Me.RightSeparator, Me.ExitMenuItemN})
+        Me.NotifyRightMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItemN, Me.ChangeSecMenuItem, Me.ChangeLockMenuItem, Me.MovePadMenuItem, Me.NextTimeMenuItemN, Me.Opacity100MenuItem, Me.ShowMenuItem, Me.MinimizeMenuItem, Me.RightSeparator, Me.ExitMenuItemN})
         Me.NotifyRightMenuStrip.Name = "ContextMenuStrip1"
         resources.ApplyResources(Me.NotifyRightMenuStrip, "NotifyRightMenuStrip")
         '
@@ -647,6 +648,12 @@ Partial Class Main
         'TimeTimer
         '
         Me.TimeTimer.Interval = 25
+        '
+        'Opacity100MenuItem
+        '
+        Me.Opacity100MenuItem.ForeColor = System.Drawing.Color.Black
+        Me.Opacity100MenuItem.Name = "Opacity100MenuItem"
+        resources.ApplyResources(Me.Opacity100MenuItem, "Opacity100MenuItem")
         '
         'Main
         '
@@ -765,4 +772,5 @@ Partial Class Main
     Friend WithEvents TimeTimer As System.Windows.Forms.Timer
     Friend WithEvents NowTimeMenuStripN As ToolStripMenuItem
     Friend WithEvents PerfectTransparentMenuItem As ToolStripMenuItem
+    Friend WithEvents Opacity100MenuItem As ToolStripMenuItem
 End Class
