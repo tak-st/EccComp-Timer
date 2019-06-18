@@ -2,18 +2,18 @@
 Imports System.Net
 Imports Newtonsoft.Json
 Public Class Main
-    Public ShowSecSwitch, OpacitySwitch, OpacityTimer, LockSwitch, manual, NotifySwitch, TimeTableGetOK, countti
-    Public counttm As DateTime
+    Private ShowSecSwitch, OpacitySwitch, OpacityTimer, manual, NotifySwitch, TimeTableGetOK, countti
+    Private counttm As DateTime
     Private Sub ShowNotify()
         '通知表示用の関数です。
         Dim term = CheckTerm()
         Dim lessonname = "", Room = ""
         '取得しているjsonから検索
         Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TimeTable)
-        For i As Integer = 0 To TimeTable.timetable.Count - 1
-            If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
-                lessonname = TimeTable.timetable(i).lesson_name
-                Room = TimeTable.timetable(i).room
+        For i As Integer = 0 To TimeTable.Timetable.Count - 1
+            If TimeTable.Timetable(i).Week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.Timetable(i).Term = term Then
+                lessonname = TimeTable.Timetable(i).LessonName
+                Room = TimeTable.Timetable(i).Room
             End If
         Next
 
@@ -222,7 +222,6 @@ Public Class Main
             TimerBar.Top = TimerBar.Top - 26
             If OpacityTimer >= 0 Then OpacityTimer = Math.Max(80, OpacityTimer)
             OpacitySwitch = True
-            LockSwitch = True
             LockStartMenuItem.Checked = True
         End If
 
@@ -293,6 +292,7 @@ Public Class Main
         End While
         '閉じる
         sr.Close()
+        sr.Dispose()
     End Sub
 
     Private Sub TimerLabel_DoubleClick(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles TimerLabel.DoubleClick
@@ -305,14 +305,12 @@ Public Class Main
                 TimerBar.Top = TimerBar.Top - 26
                 If OpacityTimer >= 0 Then OpacityTimer = Math.Max(80, OpacityTimer)
                 OpacitySwitch = True
-                LockSwitch = True
             Else
                 Call CanSizeChangeMenuItem_Click(Me, e)
                 Me.Height = Me.Height + 26
                 TimerMenuStrip.Visible = True
                 TimerLabel.Top = TimerLabel.Top + 26
                 TimerBar.Top = TimerBar.Top + 26
-                LockSwitch = False
             End If
         End If
         If e.Button = MouseButtons.Left Then
@@ -672,7 +670,7 @@ Public Class Main
         Dim Token = JsonConvert.DeserializeObject(Of Token)(TokenJson)
 
         '時間割テーブルを返してくれるURL(code?以下にcode=学籍番号&token=取得したトークン、をGETで)
-        Dim TableURL As String = "http://comp2.ecc.ac.jp/monster/v1/timetable/find_by_code?code=" & username & "&token=" & Token.token
+        Dim TableURL As String = "http://comp2.ecc.ac.jp/monster/v1/timetable/find_by_code?code=" & username & "&token=" & Token.Token
 
         'TableURLをたたいて時間割データを取得(Json形式)
         Dim req As WebRequest = WebRequest.Create(TableURL)
@@ -684,7 +682,6 @@ Public Class Main
         Dim TableJson As String = sr.ReadToEnd()
         My.Settings.TimeTable = TableJson
         sr.Close()
-        st.Close()
         TimeTableGetOK = True
         NextTimeMenuItem.Enabled = True
         NextTimeMenuItem.ForeColor = Color.Black
@@ -808,7 +805,6 @@ Public Class Main
             TimerMenuStrip.Visible = True
             TimerLabel.Top = TimerLabel.Top + 26
             TimerBar.Top = TimerBar.Top + 26
-            LockSwitch = False
         End If
         If My.Settings.SizeSet <> 0 Then
             If Size4MenuItem.Checked Then My.Settings.SizeSet = 1
@@ -1048,7 +1044,6 @@ Public Class Main
             TimerMenuStrip.Visible = True
             TimerLabel.Top = TimerLabel.Top + 26
             TimerBar.Top = TimerBar.Top + 26
-            LockSwitch = False
         End If
         Me.Close()
 
@@ -1069,7 +1064,6 @@ Public Class Main
             TimerBar.Top = TimerBar.Top - 26
             If OpacityTimer >= 0 Then OpacityTimer = Math.Max(80, OpacityTimer)
             OpacitySwitch = True
-            LockSwitch = True
         Else
             Me.WindowState = FormWindowState.Normal
             Call CanSizeChangeMenuItem_Click(Me, e)
@@ -1077,7 +1071,6 @@ Public Class Main
             TimerMenuStrip.Visible = True
             TimerLabel.Top = TimerLabel.Top + 26
             TimerBar.Top = TimerBar.Top + 26
-            LockSwitch = False
         End If
 
     End Sub
@@ -1624,7 +1617,7 @@ End Class
 'tokenのJsonファイルのデシリアライズ用クラス
 Public Class Token
     'code, expireはいまのところ使い道なし(なんとなく残してる)
-    Public Property code As String          'CD00001なら受信成功
-    Public Property token As String
-    Public Property expire As DateTimeOffset       'トークンの有効期限
+    Public Property Code As String          'CD00001なら受信成功
+    Public Property Token As String
+    Public Property Expire As DateTimeOffset       'トークンの有効期限
 End Class

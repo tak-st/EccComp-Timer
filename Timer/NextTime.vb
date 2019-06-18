@@ -7,29 +7,29 @@ Public Class NextTimeForm
         Me.Top = Main.Top + Main.Height + 2
         Dim term = Main.CheckTerm()
         Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TimeTable)
-        For i As Integer = 0 To TimeTable.timetable.Count - 1
-            If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
-                ShowNextTimeLabel.Text = TimeTable.timetable(i).lesson_name
-                RoomLabel.Text = TimeTable.timetable(i).room
+        For i As Integer = 0 To TimeTable.Timetable.Count - 1
+            If TimeTable.Timetable(i).Week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.Timetable(i).Term = term Then
+                ShowNextTimeLabel.Text = TimeTable.Timetable(i).LessonName
+                RoomLabel.Text = TimeTable.Timetable(i).Room
             End If
         Next
         Me.Text = "次の時間 (Week : " & Weekday(Today, FirstDayOfWeek.Monday) & ",Term : " & term & ")"
     End Sub
 End Class
 Public Class RootTimeTable
-    Public Property timetable As TimeTable()
+    Public Property Timetable As TimeTable()
 End Class
 
 Public Class TimeTable
-    Public Property id As Integer
-    Public Property week As Integer
-    Public Property term As Integer
-    Public Property lesson_name As String
-    Public Property room As String
-    Public Property teachers As Teachers()
+    Public Property Id As Integer
+    Public Property Week As Integer
+    Public Property Term As Integer
+    Public Property LessonName As String
+    Public Property Room As String
+    Public Property Teachers As Teachers()
 End Class
 
 Public Class Teachers
-    Public Property first_name As String
-    Public Property family_name As String
+    Public Property FirstName As String
+    Public Property FamilyName As String
 End Class
