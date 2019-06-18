@@ -1,5 +1,5 @@
-﻿Imports System.Net
-Imports System.IO
+﻿Imports System.IO
+Imports System.Net
 Imports Newtonsoft.Json
 Public Class Main
     Public ShowSecSwitch, OpacitySwitch, OpacityTimer, LockSwitch, manual, NotifySwitch, TimeTableGetOK, countti
@@ -22,7 +22,6 @@ Public Class Main
             NotifyIcon.BalloonTipTitle = "お疲れ様です。"
             NotifyIcon.BalloonTipText = "次の時間は授業がないようです。"
             If ShowNotifyMenuItem.Checked Then NotifyIcon.ShowBalloonTip(1000)
-            Me.Visible = False
         Else
             NotifyIcon.BalloonTipTitle = "お疲れ様です。"
             NotifyIcon.BalloonTipText = "次の時間は " & Room & " 教室で、 " & lessonname & " です。"
@@ -1141,25 +1140,7 @@ Public Class Main
 
         If NextTimeMenuItem.ForeColor <> Color.Gray Then
             If Me.WindowState = FormWindowState.Minimized Then
-                Dim term = CheckTerm()
-                Dim lessonname = "", Room = ""
-                Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TimeTable)
-                For i As Integer = 0 To TimeTable.timetable.Count - 1
-                    If TimeTable.timetable(i).week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.timetable(i).term = term Then
-                        lessonname = TimeTable.timetable(i).lesson_name
-                        Room = TimeTable.timetable(i).room
-                    End If
-                Next
-                If lessonname = "" Then
-                    NotifyIcon.BalloonTipTitle = ""
-                    NotifyIcon.BalloonTipText = "次の時間は授業がないようです。"
-                    If ShowNotifyMenuItem.Checked Then NotifyIcon.ShowBalloonTip(1000)
-                    Me.Visible = False
-                Else
-                    NotifyIcon.BalloonTipTitle = ""
-                    NotifyIcon.BalloonTipText = "次の時間は " & Room & " 教室で、 " & lessonname & " です。"
-                    If ShowNotifyMenuItem.Checked Then NotifyIcon.ShowBalloonTip(1000)
-                End If
+                ShowNotify()
             Else
                 NextTimeForm.Show()
             End If
