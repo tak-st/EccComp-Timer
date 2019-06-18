@@ -4,6 +4,7 @@ Imports Newtonsoft.Json
 Public Class Main
     Public ShowSecSwitch, OpacitySwitch, OpacityTimer, LockSwitch, manual, NotifySwitch, TimeTableGetOK, countti
     Public counttm As DateTime
+    Private pfc As New System.Drawing.Text.PrivateFontCollection()
     Private Sub ShowNotify()
         '通知表示用の関数です。
         Dim term = CheckTerm()
@@ -126,18 +127,15 @@ Public Class Main
         End Try
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim pfc As New System.Drawing.Text.PrivateFontCollection()
         'PrivateFontCollectionにフォントを追加する
         pfc.AddFontFile(My.Application.Info.DirectoryPath & "\Resources\Roboto-Bold.ttf")
 
         'PrivateFontCollectionの先頭のフォントのFontオブジェクトを作成する
-        Dim f As New System.Drawing.Font(pfc.Families(0), 12)
+        Dim f As New System.Drawing.Font(pfc.Families(0), 12, FontStyle.Bold)
 
         'Labelコントロールのフォントに設定する
         TimerLabel.Font = f
 
-        '後始末
-        pfc.Dispose()
         '起動時の処理です
         '設定ファイルから各種データを読み込みます
         PerfectTransparentMenuItem.Checked = My.Settings.PerfectTrans
@@ -512,16 +510,17 @@ Public Class Main
     End Sub
     Private Sub Size4MenuItem_Click(sender As Object, e As EventArgs) Handles Size4MenuItem.Click
 
-        TimerLabel.Font = New Font("UD デジタル 教科書体 NK-B", 24, FontStyle.Bold)
+        TimerLabel.Font = New Font(pfc.Families(0), 24, FontStyle.Bold)
         Me.Width = 153
         Me.Height = 113
         TimerLabel.Width = 125
         TimerLabel.Height = 105
+        TimerLabel.Top = 24
         TimerLabel.Left = 6
-        TimerBar.Top = 59
+        TimerBar.Top = 60
         TimerBar.Left = 6
         TimerBar.Width = TimerLabel.Width
-        TimerBar.Height = 9
+        TimerBar.Height = 8
         Size4MenuItem.Checked = True
         Size3MenuItem.Checked = False
         Size2MenuItem.Checked = False
@@ -530,16 +529,16 @@ Public Class Main
     End Sub
 
     Private Sub Size2MenuItem_Click(sender As Object, e As EventArgs) Handles Size2MenuItem.Click
-        TimerLabel.Font = New Font("UD デジタル 教科書体 NK-B", 48, FontStyle.Bold)
+        TimerLabel.Font = New Font(pfc.Families(0), 48, FontStyle.Bold)
         Me.Width = 267
         Me.Height = 159
         TimerLabel.Width = 234
         TimerLabel.Height = 91
         TimerLabel.Left = 12
         TimerBar.Left = 12
-        TimerBar.Top = 94
+        TimerBar.Top = 99
         TimerBar.Width = TimerLabel.Width
-        TimerBar.Height = 19
+        TimerBar.Height = 14
         Size4MenuItem.Checked = False
         Size3MenuItem.Checked = False
         Size2MenuItem.Checked = True
@@ -558,14 +557,15 @@ Public Class Main
 
     Private Sub Size1MenuItem_Click(sender As Object, e As EventArgs) Handles Size1MenuItem.Click
 
-        TimerLabel.Font = New Font("UD デジタル 教科書体 NK-B", 64, FontStyle.Bold)
+        TimerLabel.Font = New Font(pfc.Families(0), 64, FontStyle.Bold)
         Me.Width = 355
         Me.Height = 191
         TimerLabel.Width = 315
         TimerLabel.Height = 114
         TimerLabel.Left = 15
+        TimerLabel.Top = 23
         TimerBar.Left = TimerLabel.Left
-        TimerBar.Top = 118
+        TimerBar.Top = 122
         TimerBar.Width = TimerLabel.Width
         TimerBar.Height = 24
         Size4MenuItem.Checked = False
@@ -1652,16 +1652,17 @@ Public Class Main
         NotifyIcon.Text = "カウントダウンタイマー : 残り " & TimerLabel.Text & " (" & Format(Hour(counttm), "00") & ":" & Format(Minute(counttm), "00") & "まで)"
     End Sub
     Private Sub Size3MenuItem_Click(sender As Object, e As EventArgs) Handles Size3MenuItem.Click
-        TimerLabel.Font = New Font("UD デジタル 教科書体 NK-B", 36, FontStyle.Bold)
+        TimerLabel.Font = New Font(pfc.Families(0), 36, FontStyle.Bold)
         Me.Width = 210
         Me.Height = 133
         TimerLabel.Width = 178
         TimerLabel.Height = 98
+        TimerLabel.Top = 23
         TimerLabel.Left = 9
-        TimerBar.Left = 9
-        TimerBar.Top = 73
+        TimerBar.Left = 8
+        TimerBar.Top = 77
         TimerBar.Width = TimerLabel.Width
-        TimerBar.Height = 14
+        TimerBar.Height = 12
         Size4MenuItem.Checked = False
         Size3MenuItem.Checked = True
         Size2MenuItem.Checked = False
