@@ -126,6 +126,18 @@ Public Class Main
         End Try
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim pfc As New System.Drawing.Text.PrivateFontCollection()
+        'PrivateFontCollectionにフォントを追加する
+        pfc.AddFontFile(My.Application.Info.DirectoryPath & "\Resources\Roboto-Bold.ttf")
+
+        'PrivateFontCollectionの先頭のフォントのFontオブジェクトを作成する
+        Dim f As New System.Drawing.Font(pfc.Families(0), 12)
+
+        'Labelコントロールのフォントに設定する
+        TimerLabel.Font = f
+
+        '後始末
+        pfc.Dispose()
         '起動時の処理です
         '設定ファイルから各種データを読み込みます
         PerfectTransparentMenuItem.Checked = My.Settings.PerfectTrans
