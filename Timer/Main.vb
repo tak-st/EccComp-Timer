@@ -1010,7 +1010,7 @@ Public Class Main
     End Sub
 
     Private Sub NotifyRightMenuStrip_Opened(sender As Object, e As EventArgs) Handles NotifyRightMenuStrip.Opened
-
+        If Me.Opacity < 0.95 Then Opacity100MenuItem.Visible = True Else Opacity100MenuItem.Visible = False
         ChangeSecMenuItem.Text = "表示切替"
         If ClassTimer.Enabled Or CountupTimer.Enabled Or CountdownTimer.Enabled Or KitchenMenuItem.Enabled Then ChangeSecMenuItem.Text = "秒数表示切替"
         If BatteryTimer.Enabled Then ChangeSecMenuItem.Text = "残り時間表示切替"
@@ -1440,7 +1440,7 @@ Public Class Main
         If KitchenMenuItem.Checked Then Return 4
         If CountdownMenuItem.Checked Then Return 5
         If BatteryMenuItem.Checked Then Return 6
-
+        Return -1
     End Function
 
     Private Sub BatteryMonitorTimer_Tick(sender As Object, e As EventArgs) Handles BatteryMonitorTimer.Tick
@@ -1535,6 +1535,11 @@ Public Class Main
         End If
         ShowNextTermMenuItem.Checked = IDPassMenuItem.Checked
         If DeviationToolStripTextBox.Text <> 0 Then DeviationMenuItem.Checked = True Else DeviationMenuItem.Checked = False
+    End Sub
+
+    Private Sub Opacity100MenuItem_Click(sender As Object, e As EventArgs) Handles Opacity100MenuItem.Click
+        OpacityTimer = 80
+        Me.Opacity = 1
     End Sub
 
     Private Sub CountdownTimer_Tick(sender As Object, e As EventArgs) Handles CountdownTimer.Tick
