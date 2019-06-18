@@ -347,18 +347,7 @@ Public Class Main
         Dim Deviation As New TimeSpan(0, 0, 0, DeviationToolStripTextBox.Text)
         Dim NowTime As DateTime = DateTime.Now() + Deviation
         Application.DoEvents()
-        If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
-            OpacityTimer += 1
-            If OpacityTimer > 30 And OpacityTimer < 80 Then
-                Me.Opacity = ((OpacityTimer - 30) * 2) / 100
-            End If
-        Else
-            OpacitySwitch = False
-            If OpacityTimer >= 0 Then OpacityTimer = 0
-            Me.Opacity = "1"
-
-        End If
-
+        Call OpacityProcess()
         Select Case NowTime
             Case Is < BreakTime1
                 If NotifySwitch And NotifyShowFlag Then NotifySwitch = False : Call ShowNotify()
@@ -510,10 +499,7 @@ Public Class Main
         TimerBar.Left = 6
         TimerBar.Width = TimerLabel.Width
         TimerBar.Height = 9
-        Size4MenuItem.Checked = True
-        Size3MenuItem.Checked = False
-        Size2MenuItem.Checked = False
-        Size1MenuItem.Checked = False
+        Call sizeon(4)
 
     End Sub
 
@@ -528,10 +514,7 @@ Public Class Main
         TimerBar.Top = 94
         TimerBar.Width = TimerLabel.Width
         TimerBar.Height = 19
-        Size4MenuItem.Checked = False
-        Size3MenuItem.Checked = False
-        Size2MenuItem.Checked = True
-        Size1MenuItem.Checked = False
+        Call sizeon(2)
     End Sub
 
     Private Sub CanSizeChangeMenuItem_Click(sender As Object, e As EventArgs) Handles CanSizeChangeMenuItem.Click
@@ -556,10 +539,7 @@ Public Class Main
         TimerBar.Top = 118
         TimerBar.Width = TimerLabel.Width
         TimerBar.Height = 24
-        Size4MenuItem.Checked = False
-        Size3MenuItem.Checked = False
-        Size2MenuItem.Checked = False
-        Size1MenuItem.Checked = True
+        Call sizeon(1)
 
     End Sub
     Private Sub AutorunMenuItemMenuItem_Click(sender As Object, e As EventArgs) Handles AutorunMenuItem.Click
@@ -875,22 +855,26 @@ Public Class Main
         My.Settings.PerfectTrans = PerfectTransparentMenuItem.Checked
         'End
     End Sub
-    Private Sub CountupMenuItem_Click(sender As Object, e As EventArgs) Handles CountupMenuItem.Click, CountupMenuItemN.Click
-
-        'カウントアップ開始時の処理
-
-        countti = 0
+    Private Sub alltimeroff()
         KitchenMenuItem.Checked = False
         ClassMenuItem.Checked = False
         CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = False
-        CountupMenuItem.Checked = True
+        CountupMenuItem.Checked = False
         NowTimeMenuItem.Checked = False
+        ClassTimer.Stop()
         TimeTimer.Stop()
         CountdownTimer.Stop()
-        ClassTimer.Stop()
+        CountupTimer.Stop()
         KitchenTimer.Stop()
         BatteryTimer.Stop()
+    End Sub
+    Private Sub CountupMenuItem_Click(sender As Object, e As EventArgs) Handles CountupMenuItem.Click, CountupMenuItemN.Click
+
+        'カウントアップ開始時の処理
+        Call alltimeroff()
+        CountupMenuItem.Checked = True
+        countti = 0
         CountupTimer.Start()
 
     End Sub
@@ -900,17 +884,8 @@ Public Class Main
         '授業タイマー開始時の処理
 
         TimerBar.Style = ProgressBarStyle.Blocks
-        KitchenMenuItem.Checked = False
-        CountupMenuItem.Checked = False
-        CountdownMenuItem.Checked = False
-        BatteryMenuItem.Checked = False
+        Call alltimeroff()
         ClassMenuItem.Checked = True
-        NowTimeMenuItem.Checked = False
-        TimeTimer.Stop()
-        CountdownTimer.Stop()
-        CountupTimer.Stop()
-        KitchenTimer.Stop()
-        BatteryTimer.Stop()
         ClassTimer.Start()
 
     End Sub
@@ -919,20 +894,11 @@ Public Class Main
 
         'バッテリータイマー開始時の処理
 
+        Call alltimeroff()
         TimerBar.Style = ProgressBarStyle.Blocks
-        ClassMenuItem.Checked = False
-        KitchenMenuItem.Checked = False
-        CountupMenuItem.Checked = False
-        CountdownMenuItem.Checked = False
         BatteryMenuItem.Checked = True
-        NowTimeMenuItem.Checked = False
         TimerBar.Value = 0
         TimerBar.Maximum = 100
-        TimeTimer.Stop()
-        CountdownTimer.Stop()
-        CountupTimer.Stop()
-        KitchenTimer.Stop()
-        ClassTimer.Stop()
         BatteryTimer.Start()
 
     End Sub
@@ -944,21 +910,12 @@ Public Class Main
         countti = InputBox("測る時間を入力してください（分）")
         Call TopmostMenuItemMenuItem_Click(Me, e)
         If IsNumeric(countti) = False Then Exit Sub
-        ClassMenuItem.Checked = False
-        CountupMenuItem.Checked = False
-        CountdownMenuItem.Checked = False
-        BatteryMenuItem.Checked = False
-        NowTimeMenuItem.Checked = False
+        Call alltimeroff()
         TimerBar.Style = ProgressBarStyle.Blocks
         countti *= 600
         TimerBar.Value = 0
         TimerBar.Maximum = countti
         KitchenMenuItem.Checked = True
-        TimeTimer.Stop()
-        CountdownTimer.Stop()
-        CountupTimer.Stop()
-        ClassTimer.Stop()
-        BatteryTimer.Stop()
         KitchenTimer.Start()
 
     End Sub
@@ -974,29 +931,16 @@ Public Class Main
         If IsNumeric(TargetMin) = False Or TargetMin < 0 Or TargetMin > 59 Then MessageBox.Show("0-59の数字である必要があります", "", MessageBoxButtons.OK, MessageBoxIcon.Error) : Exit Sub
         Call TopmostMenuItemMenuItem_Click(Me, e)
         counttm = New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, Int(TargetHour), Int(TargetMin), 0)
-        ClassMenuItem.Checked = False
-        CountupMenuItem.Checked = False
-        KitchenMenuItem.Checked = False
-        BatteryMenuItem.Checked = False
+        Call alltimeroff()
         CountdownMenuItem.Checked = True
-        NowTimeMenuItem.Checked = False
         TimerBar.Style = ProgressBarStyle.Blocks
         Dim TimeDiff = DateDiff("s", Now, counttm)
         TimerBar.Value = 0
         TimerBar.Maximum = Math.Max(TimeDiff, 1)
-        TimeTimer.Stop()
-        CountupTimer.Stop()
-        ClassTimer.Stop()
-        BatteryTimer.Stop()
-        KitchenTimer.Stop()
         CountdownTimer.Start()
 
     End Sub
-    Private Sub KitchenTimer_Tick(sender As Object, e As EventArgs) Handles KitchenTimer.Tick
-
-        countti -= 1
-        Application.DoEvents()
-        '透明化処理
+    Private Sub OpacityProcess()
         If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
             OpacityTimer += 1
             If OpacityTimer > 30 And OpacityTimer < 80 Then
@@ -1008,6 +952,13 @@ Public Class Main
             Me.Opacity = "1"
 
         End If
+    End Sub
+    Private Sub KitchenTimer_Tick(sender As Object, e As EventArgs) Handles KitchenTimer.Tick
+
+        countti -= 1
+        Application.DoEvents()
+        '透明化処理
+        Call OpacityProcess()
         'タイマー終了で通知を送る
         If countti = 0 Then
             NotifyIcon.BalloonTipText = "タイマー終了"
@@ -1042,17 +993,7 @@ Public Class Main
         countti += 1
         Application.DoEvents()
         '透明化処理
-        If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
-            OpacityTimer += 1
-            If OpacityTimer > 30 And OpacityTimer < 80 Then
-                Me.Opacity = ((OpacityTimer - 30) * 2) / 100
-            End If
-        Else
-            OpacitySwitch = False
-            If OpacityTimer >= 0 Then OpacityTimer = 0
-            Me.Opacity = "1"
-
-        End If
+        Call OpacityProcess()
         TimerBar.Maximum = 10
         TimerBar.Value = Math.Min(Math.Max(0, (countti Mod 10) * 2.5), 10)
         '文字溢れ処理
@@ -1235,17 +1176,7 @@ Public Class Main
 
     Private Sub BatteryTimer_Tick(sender As Object, e As EventArgs) Handles BatteryTimer.Tick
         Application.DoEvents()
-        If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
-            OpacityTimer += 1
-            If OpacityTimer > 30 And OpacityTimer < 80 Then
-                Me.Opacity = ((OpacityTimer - 30) * 2) / 100
-            End If
-        Else
-            OpacitySwitch = False
-            If OpacityTimer >= 0 Then OpacityTimer = 0
-            Me.Opacity = "1"
-
-        End If
+        Call OpacityProcess()
         'AC電源の状態
         Dim pls As PowerLineStatus = SystemInformation.PowerStatus.PowerLineStatus
         Dim blp As Single = SystemInformation.PowerStatus.BatteryLifePercent
@@ -1525,20 +1456,11 @@ Public Class Main
 
         '現在時刻表示開始時の処理
 
+        Call alltimeroff()
         TimerLabel.ForeColor = Color.Black
-        ClassMenuItem.Checked = False
-        CountupMenuItem.Checked = False
-        KitchenMenuItem.Checked = False
-        BatteryMenuItem.Checked = False
-        CountdownMenuItem.Checked = False
         NowTimeMenuItem.Checked = True
         TimerBar.Style = ProgressBarStyle.Blocks
         TimerBar.Maximum = 6000
-        TimeTimer.Stop()
-        CountupTimer.Stop()
-        ClassTimer.Stop()
-        BatteryTimer.Stop()
-        KitchenTimer.Stop()
         TimerBar.Value = 0
         TimeTimer.Start()
 
@@ -1546,16 +1468,7 @@ Public Class Main
 
     Private Sub TimeTimer_Tick(sender As Object, e As EventArgs) Handles TimeTimer.Tick
 
-        If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
-            OpacityTimer += 1
-            If OpacityTimer > 30 And OpacityTimer < 80 Then
-                Me.Opacity = ((OpacityTimer - 30) * 2) / 100
-            End If
-        Else
-            OpacitySwitch = False
-            If OpacityTimer >= 0 Then OpacityTimer = 0
-            Me.Opacity = "1"
-        End If
+        Call OpacityProcess()
 
         Dim Deviation As New TimeSpan(0, 0, 0, DeviationToolStripTextBox.Text)
         Dim NowTime As DateTime = DateTime.Now() + Deviation
@@ -1608,17 +1521,7 @@ Public Class Main
         Dim Deviation As New TimeSpan(0, 0, 0, DeviationToolStripTextBox.Text)
         Dim TimeDiff = DateDiff("s", Now + Deviation, TargetTime)
         Application.DoEvents()
-        If OpacitySwitch = True And OpacityTimer < 120 And OpacityTimer >= 0 Then
-            OpacityTimer += 1
-            If OpacityTimer > 30 And OpacityTimer < 80 Then
-                Me.Opacity = ((OpacityTimer - 30) * 2) / 100
-            End If
-        Else
-            OpacitySwitch = False
-            If OpacityTimer >= 0 Then OpacityTimer = 0
-            Me.Opacity = "1"
-
-        End If
+        Call OpacityProcess()
         If TimeDiff < 0 Then TimerBar.Value = 0 Else TimerBar.Value = Math.Max(0, TimerBar.Maximum - TimeDiff)
         If TimeDiff = 0 Then
             NotifyIcon.BalloonTipTitle = ""
@@ -1650,12 +1553,25 @@ Public Class Main
         TimerBar.Top = 73
         TimerBar.Width = TimerLabel.Width
         TimerBar.Height = 14
+        Call sizeon(3)
+    End Sub
+    Private Sub sizeon(no As Integer)
         Size4MenuItem.Checked = False
-        Size3MenuItem.Checked = True
+        Size3MenuItem.Checked = False
         Size2MenuItem.Checked = False
         Size1MenuItem.Checked = False
+        Select Case no
+            Case 1
+                Size1MenuItem.Checked = True
+            Case 2
+                Size2MenuItem.Checked = True
+            Case 3
+                Size3MenuItem.Checked = True
+            Case 4
+                Size4MenuItem.Checked = True
+            Case Else
+        End Select
     End Sub
-
     Private Sub Main_MouseEnter(sender As Object, e As EventArgs) Handles TimerBar.MouseEnter, MyBase.MouseEnter, TimerLabel.MouseEnter
         If PerfectTransparentMenuItem.Checked = True Then
             If OpacityTimer < 120 And Me.FormBorderStyle = FormBorderStyle.None And OpacityTimer >= 0 Then
