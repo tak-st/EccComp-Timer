@@ -126,14 +126,21 @@ Public Class Main
         End Try
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'PrivateFontCollectionにフォントを追加する
-        pfc.AddFontFile(My.Application.Info.DirectoryPath & "\Resources\Roboto-Bold.ttf")
 
-        'PrivateFontCollectionの先頭のフォントのFontオブジェクトを作成する
-        Dim f As New System.Drawing.Font(pfc.Families(0), 12, FontStyle.Bold)
+        Try
+            'PrivateFontCollectionにフォントを追加する
+            pfc.AddFontFile(My.Application.Info.DirectoryPath & "\Resources\Roboto-Bold.ttf")
 
-        'Labelコントロールのフォントに設定する
-        TimerLabel.Font = f
+            'PrivateFontCollectionの先頭のフォントのFontオブジェクトを作成する
+            Dim f As New System.Drawing.Font(pfc.Families(0), 12, FontStyle.Bold)
+
+            'Labelコントロールのフォントに設定する
+            TimerLabel.Font = f
+        Catch ex As System.IO.FileNotFoundException
+            Me.Visible = False
+            MessageBox.Show("起動に必要なファイルが見つかりません。終了します。", "System.IO.FileNotFoundException", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End
+        End Try
 
         '起動時の処理です
         '設定ファイルから各種データを読み込みます
@@ -244,6 +251,7 @@ Public Class Main
 
         Call ChangeBatteryMenuItem_Click(sender, e)
 
+        If My.Settings.BeginnerHelp = False Then Call HelpMenuItemMenuItem_Click(sender, e) : My.Settings.BeginnerHelp = True
     End Sub
 
     Private Sub AutoLoad(filename As String, e As EventArgs)
@@ -501,9 +509,9 @@ Public Class Main
         Me.Height = 113
         TimerLabel.Width = 125
         TimerLabel.Height = 105
-        TimerLabel.Top = 24
+        TimerLabel.Top = 27
         TimerLabel.Left = 6
-        TimerBar.Top = 60
+        TimerBar.Top = 63
         TimerBar.Left = 6
         TimerBar.Width = TimerLabel.Width
         TimerBar.Height = 8
@@ -518,6 +526,7 @@ Public Class Main
         TimerLabel.Width = 234
         TimerLabel.Height = 91
         TimerLabel.Left = 12
+        TimerLabel.Top = 25
         TimerBar.Left = 12
         TimerBar.Top = 99
         TimerBar.Width = TimerLabel.Width

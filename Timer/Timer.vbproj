@@ -181,9 +181,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Resources\Roboto-Bold.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Resources\Roboto-Bold.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="16752.ico" />
