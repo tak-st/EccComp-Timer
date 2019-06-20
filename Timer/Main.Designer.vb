@@ -39,6 +39,7 @@ Partial Class Main
         Me.BatteryMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TopmostMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowBarMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MinMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowsecMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SizeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Size1MenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -127,7 +128,9 @@ Partial Class Main
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ColorDialog = New System.Windows.Forms.ColorDialog()
-        Me.MinMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ゲージ色ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarLabel = New System.Windows.Forms.Label()
+        Me.BarLabelTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -219,6 +222,12 @@ Partial Class Main
         Me.ShowBarMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ShowBarMenuItem.Name = "ShowBarMenuItem"
         resources.ApplyResources(Me.ShowBarMenuItem, "ShowBarMenuItem")
+        '
+        'MinMenuItem
+        '
+        Me.MinMenuItem.CheckOnClick = True
+        Me.MinMenuItem.Name = "MinMenuItem"
+        resources.ApplyResources(Me.MinMenuItem, "MinMenuItem")
         '
         'ShowsecMenuItem
         '
@@ -504,7 +513,7 @@ Partial Class Main
         '
         'ColorMenuItem
         '
-        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem})
+        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem, Me.ゲージ色ToolStripMenuItem})
         Me.ColorMenuItem.Name = "ColorMenuItem"
         resources.ApplyResources(Me.ColorMenuItem, "ColorMenuItem")
         '
@@ -687,16 +696,25 @@ Partial Class Main
         Me.ColorDialog.AnyColor = True
         Me.ColorDialog.FullOpen = True
         '
-        'MinMenuItem
+        'ゲージ色ToolStripMenuItem
         '
-        Me.MinMenuItem.CheckOnClick = True
-        Me.MinMenuItem.Name = "MinMenuItem"
-        resources.ApplyResources(Me.MinMenuItem, "MinMenuItem")
+        Me.ゲージ色ToolStripMenuItem.Name = "ゲージ色ToolStripMenuItem"
+        resources.ApplyResources(Me.ゲージ色ToolStripMenuItem, "ゲージ色ToolStripMenuItem")
+        '
+        'BarLabel
+        '
+        resources.ApplyResources(Me.BarLabel, "BarLabel")
+        Me.BarLabel.Name = "BarLabel"
+        '
+        'BarLabelTimer
+        '
+        Me.BarLabelTimer.Interval = 50
         '
         'Main
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.BarLabel)
         Me.Controls.Add(Me.TimerMenuStrip)
         Me.Controls.Add(Me.TimerBar)
         Me.Controls.Add(Me.TimerLabel)
@@ -817,4 +835,7 @@ Partial Class Main
     Friend WithEvents SettingSeparator2 As ToolStripSeparator
     Friend WithEvents BackTransMenuItem As ToolStripMenuItem
     Friend WithEvents MinMenuItem As ToolStripMenuItem
+    Friend WithEvents ゲージ色ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BarLabel As Label
+    Friend WithEvents BarLabelTimer As System.Windows.Forms.Timer
 End Class

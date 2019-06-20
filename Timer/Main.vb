@@ -1612,6 +1612,25 @@ Public Class Main
         End If
     End Sub
 
+    Private Sub ゲージ色ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ゲージ色ToolStripMenuItem.Click
+        If sender.checked = False Then
+            ColorDialog.Color = BarLabel.BackColor
+            ColorDialog.ShowDialog()
+            BarLabel.BackColor = ColorDialog.Color
+            BarLabel.Visible = True
+            sender.checked = True
+            BarLabelTimer.Start()
+        Else
+            BarLabel.Visible = False
+            BarLabelTimer.Stop()
+            sender.checked = False
+        End If
+    End Sub
+
+    Private Sub BarLabelTimer_Tick(sender As Object, e As EventArgs) Handles BarLabelTimer.Tick
+        BarLabel.Location = TimerBar.Location
+        BarLabel.Size = New Size(TimerBar.Value / TimerBar.Maximum * TimerBar.Width, TimerBar.Height)
+    End Sub
 
     Private Sub Size3MenuItem_Click(sender As Object, e As EventArgs) Handles Size3MenuItem.Click
         TimerLabel.Font = New Font(pfc.Families(0), 36, FontStyle.Bold)
