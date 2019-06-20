@@ -148,6 +148,21 @@ Public Class Main
         PerfectTransparentMenuItem.Checked = My.Settings.PerfectTrans
         Term5MenuItem.Checked = My.Settings.Term5
         Term6MenuItem.Checked = My.Settings.Term6
+        TimerLabel.ForeColor = My.Settings.ForeColor
+        If TimerLabel.ForeColor <> Color.Black Then
+            ForeColorMenuItem.Checked = True
+        End If
+        Me.BackColor = My.Settings.BackColor
+        If TimerLabel.BackColor <> SystemColors.Control Then
+            BackColorMenuItem.Checked = True
+        End If
+
+        If My.Settings.BarColor <> Color.Transparent Then
+            BarLabel.BackColor = My.Settings.BackColor
+            BarLabel.Visible = True
+            BackColorMenuItem.Checked = True
+            BarLabelTimer.Start()
+        End If
         DeviationToolStripTextBox.Text = My.Settings.Deviation
         Me.TopMost = True
         Me.Height = Me.Height + 26
@@ -879,6 +894,13 @@ Public Class Main
         My.Settings.Term5 = Term5MenuItem.Checked
         My.Settings.Term6 = Term6MenuItem.Checked
         My.Settings.PerfectTrans = PerfectTransparentMenuItem.Checked
+        My.Settings.BackColor = Me.BackColor
+        My.Settings.ForeColor = TimerLabel.ForeColor
+        If BarLabel.Visible = True Then
+            My.Settings.BarColor = BarLabel.BackColor
+        Else
+            My.Settings.BarColor = Color.Transparent
+        End If
         'End
     End Sub
     Private Sub alltimeroff()

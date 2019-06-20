@@ -434,6 +434,42 @@ Namespace My
                 Me("BeginnerHelp") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Control")>  _
+        Public Property BackColor() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("BackColor"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("BackColor") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Black")>  _
+        Public Property ForeColor() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("ForeColor"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("ForeColor") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Transparent")>  _
+        Public Property BarColor() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("BarColor"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("BarColor") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

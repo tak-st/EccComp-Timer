@@ -189,6 +189,39 @@
   <metadata name="TimerMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>106, 17</value>
   </metadata>
+  <data name="FuncMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="FuncMenuItem.Text" xml:space="preserve">
+    <value>機能(&amp;S)</value>
+  </data>
+  <data name="AdvancedMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="AdvancedMenuItem.Text" xml:space="preserve">
+    <value>高度な設定</value>
+  </data>
+  <data name="AdvancedMenuItem.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SettingMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="SettingMenuItem.Text" xml:space="preserve">
+    <value>設定(&amp;O)</value>
+  </data>
+  <data name="HelpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 20</value>
+  </data>
+  <data name="HelpMenuItem.Text" xml:space="preserve">
+    <value>操作方法(&amp;H)</value>
+  </data>
+  <data name="AboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="AboutMenuItem.Text" xml:space="preserve">
+    <value>about...</value>
+  </data>
   <data name="TimerMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -212,12 +245,6 @@
   </data>
   <data name="&gt;&gt;TimerMenuStrip.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="FuncMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
-  </data>
-  <data name="FuncMenuItem.Text" xml:space="preserve">
-    <value>機能(&amp;S)</value>
   </data>
   <data name="ModeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -342,15 +369,6 @@
   <data name="ExitMenuItem.Text" xml:space="preserve">
     <value>終了(&amp;X)</value>
   </data>
-  <data name="AdvancedMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 20</value>
-  </data>
-  <data name="AdvancedMenuItem.Text" xml:space="preserve">
-    <value>高度な設定</value>
-  </data>
-  <data name="AdvancedMenuItem.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="ChangeFontMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>290, 22</value>
   </data>
@@ -464,12 +482,6 @@
   </data>
   <data name="AdvancedOffMenuItem.Text" xml:space="preserve">
     <value>高度なデザイン設定をOFFにする</value>
-  </data>
-  <data name="SettingMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="SettingMenuItem.Text" xml:space="preserve">
-    <value>設定(&amp;O)</value>
   </data>
   <data name="SpecialTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 22</value>
@@ -614,18 +626,6 @@
   </data>
   <data name="AdvancedOnMenuItem.Text" xml:space="preserve">
     <value>高度なデザイン設定をONにする</value>
-  </data>
-  <data name="HelpMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 20</value>
-  </data>
-  <data name="HelpMenuItem.Text" xml:space="preserve">
-    <value>操作方法(&amp;H)</value>
-  </data>
-  <data name="AboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 20</value>
-  </data>
-  <data name="AboutMenuItem.Text" xml:space="preserve">
-    <value>about...</value>
   </data>
   <metadata name="WebTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>221, 17</value>
