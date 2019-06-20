@@ -5,6 +5,7 @@ Public Class Main
     Private ShowSecSwitch, OpacitySwitch, OpacityTimer, manual, NotifySwitch, TimeTableGetOK, countti
     Private counttm As DateTime
     Private pfc As New System.Drawing.Text.PrivateFontCollection()
+    Private forec As Color = Color.Black
     Private Sub ShowNotify()
         '通知表示用の関数です。
         Dim term = CheckTerm()
@@ -442,7 +443,7 @@ Public Class Main
             Else
                 If DiffTime > 5999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int(DiffTime / 60), "00") & ":" & Format(DiffTime Mod 60, "00")
             End If
-            TimerLabel.ForeColor = Color.Black
+            TimerLabel.ForeColor = forec
         End If
 
         If TitleShowTimerMenuItem.Checked = True And DiffTime >= 61 Then _
@@ -993,7 +994,7 @@ Public Class Main
             Else
                 If countti > 59990 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int((countti) / 600), "00") & ":" & Format(Int((countti Mod 600) / 10), "00")
             End If
-            TimerLabel.ForeColor = Color.Black
+            TimerLabel.ForeColor = forec
         End If
         'タイトルタイマー
         If TitleShowTimerMenuItem.Checked = True Then Me.Text = Format(Int((countti) / 600), "00") & ":" & Format(Int((countti Mod 600) / 10), "00") Else If Me.Text <> "" Then Me.Text = ""
@@ -1018,7 +1019,7 @@ Public Class Main
         Else
             If countti > 59990 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int((countti) / 600), "00") & ":" & Format(Int((countti Mod 600) / 10), "00")
         End If
-        TimerLabel.ForeColor = Color.Black
+        TimerLabel.ForeColor = forec
         'タイトルタイマー
         If TitleShowTimerMenuItem.Checked = True Then Me.Text = Format(Int((countti) / 600), "00") & ":" & Format(Int((countti Mod 600) / 10), "00") Else If Me.Text <> "" Then Me.Text = ""
         '通知アイコンタイトル
@@ -1188,7 +1189,7 @@ Public Class Main
                     TimerBar.Value = blp * 100
                     Select Case pls
                         Case PowerLineStatus.Offline
-                            If blp > 0.2 Then TimerLabel.ForeColor = Color.Black Else TimerLabel.ForeColor = Color.Red
+                            If blp > 0.2 Then TimerLabel.ForeColor = forec Else TimerLabel.ForeColor = Color.Red
                             Exit Select
                         Case PowerLineStatus.Online
                             TimerLabel.ForeColor = Color.DarkGreen
@@ -1205,7 +1206,7 @@ Public Class Main
 
                     Select Case pls
                         Case PowerLineStatus.Offline
-                            If blp > 0.2 Then TimerLabel.ForeColor = Color.Black Else TimerLabel.ForeColor = Color.Red
+                            If blp > 0.2 Then TimerLabel.ForeColor = forec Else TimerLabel.ForeColor = Color.Red
                             Exit Select
                         Case PowerLineStatus.Online
                             TimerLabel.ForeColor = Color.DarkGreen
@@ -1223,7 +1224,7 @@ Public Class Main
 
                 Select Case pls
                     Case PowerLineStatus.Offline
-                        If blp > 0.2 Then TimerLabel.ForeColor = Color.Black Else TimerLabel.ForeColor = Color.Red
+                        If blp > 0.2 Then TimerLabel.ForeColor = forec Else TimerLabel.ForeColor = Color.Red
                         Exit Select
                     Case PowerLineStatus.Online
                         TimerLabel.ForeColor = Color.DarkGreen
@@ -1473,7 +1474,7 @@ Public Class Main
         '現在時刻表示開始時の処理
 
         Call alltimeroff()
-        TimerLabel.ForeColor = Color.Black
+        TimerLabel.ForeColor = forec
         NowTimeMenuItem.Checked = True
         TimerBar.Style = ProgressBarStyle.Blocks
         TimerBar.Maximum = 6000
@@ -1523,12 +1524,7 @@ Public Class Main
     End Sub
 
     Private Sub SettingMenuItem_Click(sender As Object, e As EventArgs) Handles SettingMenuItem.Click
-        If Me.BackColor <> SystemColors.Control Then
-            BackColorMenuItem.Checked = True
-        Else
-            BackColorMenuItem.Checked = False
-        End If
-        If BackColorMenuItem.Checked = True Then ColorMenuItem.Checked = True Else ColorMenuItem.Checked = False
+        If BackColorMenuItem.Checked = True Or ForeColorMenuItem.Checked = True Then ColorMenuItem.Checked = True Else ColorMenuItem.Checked = False
         If Term5MenuItem.Checked = True Then
             SpecialTimeMenuItem.Checked = True
         Else
@@ -1564,7 +1560,7 @@ Public Class Main
             Else
                 If TimeDiff > 5999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int(TimeDiff / 60), "00") & ":" & Format(Int((TimeDiff Mod 60)), "00")
             End If
-            TimerLabel.ForeColor = Color.Black
+            TimerLabel.ForeColor = forec
         End If
         If TitleShowTimerMenuItem.Checked = True Then Me.Text = Format(Int(TimeDiff / 60), "00") & ":" & Format(Int((TimeDiff Mod 60)), "00") Else If Me.Text <> "" Then Me.Text = ""
         NotifyIcon.Text = "カウントダウンタイマー : 残り " & TimerLabel.Text & " (" & Format(Hour(counttm), "00") & ":" & Format(Minute(counttm), "00") & "まで)"
@@ -1586,6 +1582,18 @@ Public Class Main
             sender.checked = True
         Else
             Me.BackColor = SystemColors.Control
+            sender.checked = False
+        End If
+    End Sub
+
+    Private Sub ForeColorMenuItem_Click(sender As Object, e As EventArgs) Handles ForeColorMenuItem.Click
+        If sender.checked = False Then
+            ColorDialog.Color = forec
+            ColorDialog.ShowDialog()
+            forec = ColorDialog.Color
+            sender.checked = True
+        Else
+            forec = Color.Black
             sender.checked = False
         End If
     End Sub

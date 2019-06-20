@@ -125,6 +125,7 @@ Partial Class Main
         Me.ColorDialog = New System.Windows.Forms.ColorDialog()
         Me.ColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForeColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -133,7 +134,7 @@ Partial Class Main
         '
         resources.ApplyResources(Me.TimerLabel, "TimerLabel")
         Me.TimerLabel.Cursor = System.Windows.Forms.Cursors.Default
-        Me.TimerLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.TimerLabel.ForeColor = System.Drawing.Color.Black
         Me.TimerLabel.Name = "TimerLabel"
         '
         'TimerBar
@@ -665,7 +666,7 @@ Partial Class Main
         '
         'ColorMenuItem
         '
-        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem})
+        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem})
         Me.ColorMenuItem.Name = "ColorMenuItem"
         resources.ApplyResources(Me.ColorMenuItem, "ColorMenuItem")
         '
@@ -673,6 +674,11 @@ Partial Class Main
         '
         Me.BackColorMenuItem.Name = "BackColorMenuItem"
         resources.ApplyResources(Me.BackColorMenuItem, "BackColorMenuItem")
+        '
+        'ForeColorMenuItem
+        '
+        Me.ForeColorMenuItem.Name = "ForeColorMenuItem"
+        resources.ApplyResources(Me.ForeColorMenuItem, "ForeColorMenuItem")
         '
         'Main
         '
@@ -795,4 +801,5 @@ Partial Class Main
     Friend WithEvents ColorDialog As ColorDialog
     Friend WithEvents ColorMenuItem As ToolStripMenuItem
     Friend WithEvents BackColorMenuItem As ToolStripMenuItem
+    Friend WithEvents ForeColorMenuItem As ToolStripMenuItem
 End Class
