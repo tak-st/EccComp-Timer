@@ -1523,6 +1523,12 @@ Public Class Main
     End Sub
 
     Private Sub SettingMenuItem_Click(sender As Object, e As EventArgs) Handles SettingMenuItem.Click
+        If Me.BackColor <> SystemColors.Control Then
+            BackColorMenuItem.Checked = True
+        Else
+            BackColorMenuItem.Checked = False
+        End If
+        If BackColorMenuItem.Checked = True Then ColorMenuItem.Checked = True Else ColorMenuItem.Checked = False
         If Term5MenuItem.Checked = True Then
             SpecialTimeMenuItem.Checked = True
         Else
@@ -1569,6 +1575,18 @@ Public Class Main
             Me.TransparencyKey = Me.BackColor
         Else
             Me.TransparencyKey = Color.Empty
+        End If
+    End Sub
+
+    Private Sub BackColorMenuItem_Click(sender As Object, e As EventArgs) Handles BackColorMenuItem.Click
+        If sender.checked = False Then
+            ColorDialog.Color = Me.BackColor
+            ColorDialog.ShowDialog()
+            Me.BackColor = ColorDialog.Color
+            sender.checked = True
+        Else
+            Me.BackColor = SystemColors.Control
+            sender.checked = False
         End If
     End Sub
 
