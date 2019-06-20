@@ -508,7 +508,7 @@ Public Class Main
         Me.Width = 153
         Me.Height = 113
         TimerLabel.Width = 125
-        TimerLabel.Height = 105
+        TimerLabel.Height = 205
         TimerLabel.Top = 27
         TimerLabel.Left = 6
         TimerBar.Top = 63
@@ -524,7 +524,7 @@ Public Class Main
         Me.Width = 267
         Me.Height = 159
         TimerLabel.Width = 234
-        TimerLabel.Height = 91
+        TimerLabel.Height = 191
         TimerLabel.Left = 12
         TimerLabel.Top = 25
         TimerBar.Left = 12
@@ -550,7 +550,7 @@ Public Class Main
         Me.Width = 355
         Me.Height = 191
         TimerLabel.Width = 315
-        TimerLabel.Height = 114
+        TimerLabel.Height = 314
         TimerLabel.Left = 15
         TimerLabel.Top = 23
         TimerBar.Left = TimerLabel.Left
@@ -588,7 +588,7 @@ Public Class Main
 
     End Sub
 
-    Private Sub ShowAboutMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAboutMenuItem.Click
+    Private Sub ShowAboutMenuItem_Click(sender As Object, e As EventArgs) Handles AboutMenuItem.Click
         'バージョンを取得して表示
         Dim ver As System.Diagnostics.FileVersionInfo
         ver = System.Diagnostics.FileVersionInfo.GetVersionInfo(
@@ -606,7 +606,7 @@ Public Class Main
             NextTimeMenuItemN.Visible = False
             NotifySwitch = False
         Else
-            IDInput.ShowDialog()
+            IdInput.ShowDialog()
             If My.Settings.ID = "-1" Then
 
             Else
@@ -1155,7 +1155,7 @@ Public Class Main
         If NextTimeMenuItem.ForeColor <> Color.Gray Then
             If Me.WindowState = FormWindowState.Minimized Then
                 ShowNotify()
-                Else
+            Else
                 NextTimeForm.Show()
             End If
         Else
@@ -1452,7 +1452,7 @@ Public Class Main
                     Select Case PrevStat
                         Case 0, 3, 4, 5
                         Case 1
-                    Call ClassMenuItem_Click(sender, e)
+                            Call ClassMenuItem_Click(sender, e)
                         Case 2
                             Call NowTimeMenuItem_Click(sender, e)
                         Case 6
@@ -1563,12 +1563,21 @@ Public Class Main
         If TitleShowTimerMenuItem.Checked = True Then Me.Text = Format(Int(TimeDiff / 60), "00") & ":" & Format(Int((TimeDiff Mod 60)), "00") Else If Me.Text <> "" Then Me.Text = ""
         NotifyIcon.Text = "カウントダウンタイマー : 残り " & TimerLabel.Text & " (" & Format(Hour(counttm), "00") & ":" & Format(Minute(counttm), "00") & "まで)"
     End Sub
+
+    Private Sub BackTransMenuItem_Click(sender As Object, e As EventArgs) Handles BackTransMenuItem.Click
+        If BackTransMenuItem.Checked Then
+            Me.TransparencyKey = Me.BackColor
+        Else
+            Me.TransparencyKey = Color.Empty
+        End If
+    End Sub
+
     Private Sub Size3MenuItem_Click(sender As Object, e As EventArgs) Handles Size3MenuItem.Click
         TimerLabel.Font = New Font(pfc.Families(0), 36, FontStyle.Bold)
         Me.Width = 210
         Me.Height = 133
         TimerLabel.Width = 178
-        TimerLabel.Height = 98
+        TimerLabel.Height = 198
         TimerLabel.Top = 23
         TimerLabel.Left = 9
         TimerBar.Left = 8

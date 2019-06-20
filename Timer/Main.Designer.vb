@@ -77,14 +77,15 @@ Partial Class Main
         Me.PositionSaveMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LockStartMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AutorunMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CanSizeChangeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SizeSaveMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CanSizeChangeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeBatteryMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowNextTermMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IDPassMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IDPassSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.ShowNotifyMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowPopUpMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackTransMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NTPTimeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviationMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviationToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
@@ -92,7 +93,6 @@ Partial Class Main
         Me.AdvancedOnMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ShowAboutMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SelectFontDialog = New System.Windows.Forms.FontDialog()
         Me.CountupTimer = New System.Windows.Forms.Timer(Me.components)
@@ -111,6 +111,7 @@ Partial Class Main
         Me.ChangeLockMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovePadMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NextTimeMenuItemN = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Opacity100MenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MinimizeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RightSeparator = New System.Windows.Forms.ToolStripSeparator()
@@ -121,7 +122,7 @@ Partial Class Main
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.Opacity100MenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -380,7 +381,7 @@ Partial Class Main
         '
         'SettingMenuItem
         '
-        Me.SettingMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpecialTimeMenuItem, Me.TransparentMenuItem, Me.PositionSaveMenuItem, Me.LockStartMenuItem, Me.AutorunMenuItem, Me.CanSizeChangeMenuItem, Me.SizeSaveMenuItem, Me.ChangeBatteryMenuItem, Me.ShowNextTermMenuItem, Me.NTPTimeMenuItem, Me.DeviationMenuItem, Me.SettingSeparator1, Me.AdvancedOnMenuItem})
+        Me.SettingMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpecialTimeMenuItem, Me.TransparentMenuItem, Me.PositionSaveMenuItem, Me.LockStartMenuItem, Me.AutorunMenuItem, Me.SizeSaveMenuItem, Me.CanSizeChangeMenuItem, Me.ChangeBatteryMenuItem, Me.ShowNextTermMenuItem, Me.BackTransMenuItem, Me.NTPTimeMenuItem, Me.DeviationMenuItem, Me.SettingSeparator1, Me.AdvancedOnMenuItem})
         Me.SettingMenuItem.Name = "SettingMenuItem"
         resources.ApplyResources(Me.SettingMenuItem, "SettingMenuItem")
         '
@@ -429,17 +430,17 @@ Partial Class Main
         Me.AutorunMenuItem.Name = "AutorunMenuItem"
         resources.ApplyResources(Me.AutorunMenuItem, "AutorunMenuItem")
         '
-        'CanSizeChangeMenuItem
-        '
-        Me.CanSizeChangeMenuItem.CheckOnClick = True
-        Me.CanSizeChangeMenuItem.Name = "CanSizeChangeMenuItem"
-        resources.ApplyResources(Me.CanSizeChangeMenuItem, "CanSizeChangeMenuItem")
-        '
         'SizeSaveMenuItem
         '
         Me.SizeSaveMenuItem.CheckOnClick = True
         Me.SizeSaveMenuItem.Name = "SizeSaveMenuItem"
         resources.ApplyResources(Me.SizeSaveMenuItem, "SizeSaveMenuItem")
+        '
+        'CanSizeChangeMenuItem
+        '
+        Me.CanSizeChangeMenuItem.CheckOnClick = True
+        Me.CanSizeChangeMenuItem.Name = "CanSizeChangeMenuItem"
+        resources.ApplyResources(Me.CanSizeChangeMenuItem, "CanSizeChangeMenuItem")
         '
         'ChangeBatteryMenuItem
         '
@@ -475,6 +476,12 @@ Partial Class Main
         Me.ShowPopUpMenuItem.Name = "ShowPopUpMenuItem"
         resources.ApplyResources(Me.ShowPopUpMenuItem, "ShowPopUpMenuItem")
         '
+        'BackTransMenuItem
+        '
+        Me.BackTransMenuItem.CheckOnClick = True
+        Me.BackTransMenuItem.Name = "BackTransMenuItem"
+        resources.ApplyResources(Me.BackTransMenuItem, "BackTransMenuItem")
+        '
         'NTPTimeMenuItem
         '
         Me.NTPTimeMenuItem.Name = "NTPTimeMenuItem"
@@ -508,14 +515,8 @@ Partial Class Main
         '
         'AboutMenuItem
         '
-        Me.AboutMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShowAboutMenuItem})
         Me.AboutMenuItem.Name = "AboutMenuItem"
         resources.ApplyResources(Me.AboutMenuItem, "AboutMenuItem")
-        '
-        'ShowAboutMenuItem
-        '
-        Me.ShowAboutMenuItem.Name = "ShowAboutMenuItem"
-        resources.ApplyResources(Me.ShowAboutMenuItem, "ShowAboutMenuItem")
         '
         'WebTimer
         '
@@ -606,6 +607,12 @@ Partial Class Main
         Me.NextTimeMenuItemN.Name = "NextTimeMenuItemN"
         resources.ApplyResources(Me.NextTimeMenuItemN, "NextTimeMenuItemN")
         '
+        'Opacity100MenuItem
+        '
+        Me.Opacity100MenuItem.ForeColor = System.Drawing.Color.Black
+        Me.Opacity100MenuItem.Name = "Opacity100MenuItem"
+        resources.ApplyResources(Me.Opacity100MenuItem, "Opacity100MenuItem")
+        '
         'ShowMenuItem
         '
         Me.ShowMenuItem.Name = "ShowMenuItem"
@@ -649,12 +656,6 @@ Partial Class Main
         '
         Me.TimeTimer.Interval = 25
         '
-        'Opacity100MenuItem
-        '
-        Me.Opacity100MenuItem.ForeColor = System.Drawing.Color.Black
-        Me.Opacity100MenuItem.Name = "Opacity100MenuItem"
-        resources.ApplyResources(Me.Opacity100MenuItem, "Opacity100MenuItem")
-        '
         'Main
         '
         resources.ApplyResources(Me, "$this")
@@ -697,7 +698,6 @@ Partial Class Main
     Friend WithEvents PositionSaveMenuItem As ToolStripMenuItem
     Friend WithEvents LockStartMenuItem As ToolStripMenuItem
     Friend WithEvents AutorunMenuItem As ToolStripMenuItem
-    Friend WithEvents ShowAboutMenuItem As ToolStripMenuItem
     Friend WithEvents IDPassMenuItem As ToolStripMenuItem
     Friend WithEvents WebTimer As System.Windows.Forms.Timer
     Friend WithEvents NextTimeMenuItem As ToolStripMenuItem
@@ -773,4 +773,6 @@ Partial Class Main
     Friend WithEvents NowTimeMenuStripN As ToolStripMenuItem
     Friend WithEvents PerfectTransparentMenuItem As ToolStripMenuItem
     Friend WithEvents Opacity100MenuItem As ToolStripMenuItem
+    Friend WithEvents BackTransMenuItem As ToolStripMenuItem
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class
