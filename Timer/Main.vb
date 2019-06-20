@@ -1566,7 +1566,7 @@ Public Class Main
         NotifyIcon.Text = "カウントダウンタイマー : 残り " & TimerLabel.Text & " (" & Format(Hour(counttm), "00") & ":" & Format(Minute(counttm), "00") & "まで)"
     End Sub
 
-    Private Sub BackTransMenuItem_Click(sender As Object, e As EventArgs) Handles BackTransMenuItem.Click
+    Private Sub BackTransMenuItem_Click(sender As Object, e As EventArgs)
         If BackTransMenuItem.Checked Then
             Me.TransparencyKey = Me.BackColor
         Else
@@ -1579,6 +1579,7 @@ Public Class Main
             ColorDialog.Color = Me.BackColor
             ColorDialog.ShowDialog()
             Me.BackColor = ColorDialog.Color
+            Call BackTransMenuItem_Click(sender, e)
             sender.checked = True
         Else
             Me.BackColor = SystemColors.Control

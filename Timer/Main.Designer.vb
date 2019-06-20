@@ -79,13 +79,15 @@ Partial Class Main
         Me.AutorunMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SizeSaveMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CanSizeChangeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForeColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeBatteryMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowNextTermMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IDPassMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IDPassSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.ShowNotifyMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowPopUpMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackTransMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NTPTimeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviationMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviationToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
@@ -123,9 +125,8 @@ Partial Class Main
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ColorDialog = New System.Windows.Forms.ColorDialog()
-        Me.ColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ForeColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackTransMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -384,7 +385,7 @@ Partial Class Main
         '
         'SettingMenuItem
         '
-        Me.SettingMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpecialTimeMenuItem, Me.TransparentMenuItem, Me.PositionSaveMenuItem, Me.LockStartMenuItem, Me.AutorunMenuItem, Me.SizeSaveMenuItem, Me.CanSizeChangeMenuItem, Me.ColorMenuItem, Me.BackTransMenuItem, Me.ChangeBatteryMenuItem, Me.ShowNextTermMenuItem, Me.NTPTimeMenuItem, Me.DeviationMenuItem, Me.SettingSeparator1, Me.AdvancedOnMenuItem})
+        Me.SettingMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpecialTimeMenuItem, Me.TransparentMenuItem, Me.PositionSaveMenuItem, Me.LockStartMenuItem, Me.AutorunMenuItem, Me.SizeSaveMenuItem, Me.CanSizeChangeMenuItem, Me.ChangeBatteryMenuItem, Me.ShowNextTermMenuItem, Me.NTPTimeMenuItem, Me.DeviationMenuItem, Me.SettingSeparator2, Me.ColorMenuItem, Me.BackTransMenuItem, Me.SettingSeparator1, Me.AdvancedOnMenuItem})
         Me.SettingMenuItem.Name = "SettingMenuItem"
         resources.ApplyResources(Me.SettingMenuItem, "SettingMenuItem")
         '
@@ -445,6 +446,22 @@ Partial Class Main
         Me.CanSizeChangeMenuItem.Name = "CanSizeChangeMenuItem"
         resources.ApplyResources(Me.CanSizeChangeMenuItem, "CanSizeChangeMenuItem")
         '
+        'ColorMenuItem
+        '
+        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem})
+        Me.ColorMenuItem.Name = "ColorMenuItem"
+        resources.ApplyResources(Me.ColorMenuItem, "ColorMenuItem")
+        '
+        'BackColorMenuItem
+        '
+        Me.BackColorMenuItem.Name = "BackColorMenuItem"
+        resources.ApplyResources(Me.BackColorMenuItem, "BackColorMenuItem")
+        '
+        'ForeColorMenuItem
+        '
+        Me.ForeColorMenuItem.Name = "ForeColorMenuItem"
+        resources.ApplyResources(Me.ForeColorMenuItem, "ForeColorMenuItem")
+        '
         'ChangeBatteryMenuItem
         '
         Me.ChangeBatteryMenuItem.CheckOnClick = True
@@ -478,12 +495,6 @@ Partial Class Main
         Me.ShowPopUpMenuItem.CheckOnClick = True
         Me.ShowPopUpMenuItem.Name = "ShowPopUpMenuItem"
         resources.ApplyResources(Me.ShowPopUpMenuItem, "ShowPopUpMenuItem")
-        '
-        'BackTransMenuItem
-        '
-        Me.BackTransMenuItem.CheckOnClick = True
-        Me.BackTransMenuItem.Name = "BackTransMenuItem"
-        resources.ApplyResources(Me.BackTransMenuItem, "BackTransMenuItem")
         '
         'NTPTimeMenuItem
         '
@@ -664,21 +675,16 @@ Partial Class Main
         Me.ColorDialog.AnyColor = True
         Me.ColorDialog.FullOpen = True
         '
-        'ColorMenuItem
+        'BackTransMenuItem
         '
-        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem})
-        Me.ColorMenuItem.Name = "ColorMenuItem"
-        resources.ApplyResources(Me.ColorMenuItem, "ColorMenuItem")
+        Me.BackTransMenuItem.CheckOnClick = True
+        Me.BackTransMenuItem.Name = "BackTransMenuItem"
+        resources.ApplyResources(Me.BackTransMenuItem, "BackTransMenuItem")
         '
-        'BackColorMenuItem
+        'SettingSeparator2
         '
-        Me.BackColorMenuItem.Name = "BackColorMenuItem"
-        resources.ApplyResources(Me.BackColorMenuItem, "BackColorMenuItem")
-        '
-        'ForeColorMenuItem
-        '
-        Me.ForeColorMenuItem.Name = "ForeColorMenuItem"
-        resources.ApplyResources(Me.ForeColorMenuItem, "ForeColorMenuItem")
+        Me.SettingSeparator2.Name = "SettingSeparator2"
+        resources.ApplyResources(Me.SettingSeparator2, "SettingSeparator2")
         '
         'Main
         '
@@ -797,9 +803,10 @@ Partial Class Main
     Friend WithEvents NowTimeMenuStripN As ToolStripMenuItem
     Friend WithEvents PerfectTransparentMenuItem As ToolStripMenuItem
     Friend WithEvents Opacity100MenuItem As ToolStripMenuItem
-    Friend WithEvents BackTransMenuItem As ToolStripMenuItem
     Friend WithEvents ColorDialog As ColorDialog
     Friend WithEvents ColorMenuItem As ToolStripMenuItem
     Friend WithEvents BackColorMenuItem As ToolStripMenuItem
     Friend WithEvents ForeColorMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingSeparator2 As ToolStripSeparator
+    Friend WithEvents BackTransMenuItem As ToolStripMenuItem
 End Class
