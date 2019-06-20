@@ -362,49 +362,50 @@ Public Class Main
         Dim BreakTime5 As New DateTime(Year(DateTime.Today), Month(DateTime.Today), DateTime.Today.Day, 17, 0, 0)
         Dim Deviation As New TimeSpan(0, 0, 0, DeviationToolStripTextBox.Text)
         Dim NowTime As DateTime = DateTime.Now() + Deviation
+        Dim TimerBarMax As Integer
         Application.DoEvents()
         Call OpacityProcess()
         Select Case NowTime
             Case Is < BreakTime1
                 If NotifySwitch And NotifyShowFlag Then NotifySwitch = False : Call ShowNotify()
                 DiffTime = DateDiff("s", BreakTime1, NowTime)
-                TimerBar.Maximum = 900
+                TimerBarMax = 900
                 TimeName = "1時限目待ち時間"
             Case Is < ClassTime1
                 NotifySwitch = True
                 DiffTime = DateDiff("s", ClassTime1, NowTime)
-                TimerBar.Maximum = 5400
+                TimerBarMax = 5400
                 TimeName = "1時限目"
             Case Is < BreakTime2
                 If NotifySwitch And NotifyShowFlag Then NotifySwitch = False : Call ShowNotify()
                 DiffTime = DateDiff("s", BreakTime2, NowTime)
-                TimerBar.Maximum = 900
+                TimerBarMax = 900
                 TimeName = "2時限目待ち時間"
             Case Is < ClassTime2
                 NotifySwitch = True
                 DiffTime = DateDiff("s", ClassTime2, NowTime)
-                TimerBar.Maximum = 5400
+                TimerBarMax = 5400
                 TimeName = "2時限目"
             Case Is < BreakTime3
                 If NotifySwitch And NotifyShowFlag Then NotifySwitch = False : Call ShowNotify()
                 DiffTime = DateDiff("s", BreakTime3, NowTime)
-                TimerBar.Maximum = 3600
+                TimerBarMax = 3600
                 TimeName = "昼休み"
             Case Is < ClassTime3
                 NotifySwitch = True
                 DiffTime = DateDiff("s", ClassTime3, NowTime)
-                TimerBar.Maximum = 5400
+                TimerBarMax = 5400
                 TimeName = "3時限目"
 
             Case Is < BreakTime4
                 If NotifySwitch And NotifyShowFlag Then NotifySwitch = False : Call ShowNotify()
                 DiffTime = DateDiff("s", BreakTime4, NowTime)
-                TimerBar.Maximum = 900
+                TimerBarMax = 900
                 TimeName = "4時限目待ち時間"
             Case Is < ClassTime4
                 NotifySwitch = True
                 DiffTime = DateDiff("s", ClassTime4, NowTime)
-                TimerBar.Maximum = 5400
+                TimerBarMax = 5400
                 TimeName = "4時限目"
             Case Else
                 If Term5MenuItem.Checked Then
@@ -412,19 +413,19 @@ Public Class Main
                         Case Is < BreakTime5
                             If NotifySwitch And NotifyShowFlag Then NotifySwitch = False : Call ShowNotify()
                             DiffTime = DateDiff("s", BreakTime5, NowTime)
-                            TimerBar.Maximum = 900
+                            TimerBarMax = 900
                             TimeName = "5時限目待ち時間"
                         Case Is < ClassTime5
                             NotifySwitch = True
                             DiffTime = DateDiff("s", ClassTime5, NowTime)
-                            TimerBar.Maximum = 5400
+                            TimerBarMax = 5400
                             TimeName = "5時限目"
                         Case Else
                             If Term6MenuItem.Checked Then
                                 If NowTime < ClassTime6 Then
                                     NotifySwitch = True
                                     DiffTime = DateDiff("s", ClassTime5, NowTime)
-                                    TimerBar.Maximum = 5400
+                                    TimerBarMax = 5400
                                     TimeName = "6時限目"
                                 End If
                             End If
@@ -438,10 +439,20 @@ Public Class Main
             TimerLabel.Text = DiffTime
             TimerLabel.ForeColor = Color.Red
         Else
-            If ShowSecSwitch = True Then
-                If DiffTime > 9999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = DiffTime
+            If MinMenuItem.Checked Then
+                If DiffTime > 599940 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = Format(Int(DiffTime / 60), "00")
+                TimerBar.Maximum = 600
+                If Format(DiffTime Mod 60, "00") < 0 Then TimerBar.Value = 0 Else _
+                    TimerBar.Value = Math.Min((60 - (DiffTime Mod 60)) * 10 + Math.Min(NowTime.Millisecond \ 100, 10), 600)
             Else
-                If DiffTime > 5999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int(DiffTime / 60), "00") & ":" & Format(DiffTime Mod 60, "00")
+                If ShowSecSwitch = True Then
+                    If DiffTime > 9999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = DiffTime
+                Else
+                    If DiffTime > 5999 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "99:59" Else TimerLabel.Text = Format(Int(DiffTime / 60), "00") & ":" & Format(DiffTime Mod 60, "00")
+                End If
+                TimerBar.Maximum = TimerBarMax
+                If (TimerBar.Maximum - DiffTime) < 0 Then TimerBar.Value = 0 Else _
+                    TimerBar.Value = TimerBar.Maximum - DiffTime
             End If
             TimerLabel.ForeColor = forec
         End If
@@ -451,8 +462,6 @@ Public Class Main
 
         If TitleShowTimerMenuItem.Checked = True And DiffTime < 61 Then Me.Text = DiffTime
 
-        If (TimerBar.Maximum - DiffTime) < 0 Then TimerBar.Value = 0 Else _
-            TimerBar.Value = TimerBar.Maximum - DiffTime
 
         NotifyIcon.Text = TimeName & " : 残り " & TimerLabel.Text
     End Sub
@@ -1520,7 +1529,11 @@ Public Class Main
         If ClassTimer.Enabled Or CountupTimer.Enabled Or CountdownTimer.Enabled Or KitchenMenuItem.Enabled Then ShowsecMenuItem.Text = "秒数表示"
         If BatteryTimer.Enabled Then ShowsecMenuItem.Text = "残り時間表示"
         If TimeTimer.Enabled Then ShowsecMenuItem.Text = "日付表示"
-
+        If statid() = 1 Then
+            MinMenuItem.Visible = True
+        Else
+            MinMenuItem.Visible = False
+        End If
     End Sub
 
     Private Sub SettingMenuItem_Click(sender As Object, e As EventArgs) Handles SettingMenuItem.Click
@@ -1566,7 +1579,7 @@ Public Class Main
         NotifyIcon.Text = "カウントダウンタイマー : 残り " & TimerLabel.Text & " (" & Format(Hour(counttm), "00") & ":" & Format(Minute(counttm), "00") & "まで)"
     End Sub
 
-    Private Sub BackTransMenuItem_Click(sender As Object, e As EventArgs)
+    Private Sub BackTransMenuItem_Click(sender As Object, e As EventArgs) Handles BackTransMenuItem.Click
         If BackTransMenuItem.Checked Then
             Me.TransparencyKey = Me.BackColor
         Else
@@ -1598,6 +1611,7 @@ Public Class Main
             sender.checked = False
         End If
     End Sub
+
 
     Private Sub Size3MenuItem_Click(sender As Object, e As EventArgs) Handles Size3MenuItem.Click
         TimerLabel.Font = New Font(pfc.Families(0), 36, FontStyle.Bold)

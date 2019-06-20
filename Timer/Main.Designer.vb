@@ -79,9 +79,6 @@ Partial Class Main
         Me.AutorunMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SizeSaveMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CanSizeChangeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ForeColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangeBatteryMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowNextTermMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IDPassMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -91,6 +88,11 @@ Partial Class Main
         Me.NTPTimeMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviationMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeviationToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.SettingSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForeColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackTransMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.AdvancedOnMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -125,8 +127,7 @@ Partial Class Main
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ColorDialog = New System.Windows.Forms.ColorDialog()
-        Me.BackTransMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SettingSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.MinMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerMenuStrip.SuspendLayout()
         Me.NotifyRightMenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -150,13 +151,13 @@ Partial Class Main
         'TimerMenuStrip
         '
         Me.TimerMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FuncMenuItem, Me.AdvancedMenuItem, Me.SettingMenuItem, Me.HelpMenuItem, Me.AboutMenuItem})
-        Me.TimerMenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
+        Me.TimerMenuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         resources.ApplyResources(Me.TimerMenuStrip, "TimerMenuStrip")
         Me.TimerMenuStrip.Name = "TimerMenuStrip"
         '
         'FuncMenuItem
         '
-        Me.FuncMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItem, Me.TopmostMenuItem, Me.ShowBarMenuItem, Me.ShowsecMenuItem, Me.SizeMenuItem, Me.NextTimeMenuItem, Me.FuncSeparator1, Me.ExitMenuItem})
+        Me.FuncMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModeMenuItem, Me.TopmostMenuItem, Me.ShowBarMenuItem, Me.MinMenuItem, Me.ShowsecMenuItem, Me.SizeMenuItem, Me.NextTimeMenuItem, Me.FuncSeparator1, Me.ExitMenuItem})
         Me.FuncMenuItem.Name = "FuncMenuItem"
         resources.ApplyResources(Me.FuncMenuItem, "FuncMenuItem")
         '
@@ -446,22 +447,6 @@ Partial Class Main
         Me.CanSizeChangeMenuItem.Name = "CanSizeChangeMenuItem"
         resources.ApplyResources(Me.CanSizeChangeMenuItem, "CanSizeChangeMenuItem")
         '
-        'ColorMenuItem
-        '
-        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem})
-        Me.ColorMenuItem.Name = "ColorMenuItem"
-        resources.ApplyResources(Me.ColorMenuItem, "ColorMenuItem")
-        '
-        'BackColorMenuItem
-        '
-        Me.BackColorMenuItem.Name = "BackColorMenuItem"
-        resources.ApplyResources(Me.BackColorMenuItem, "BackColorMenuItem")
-        '
-        'ForeColorMenuItem
-        '
-        Me.ForeColorMenuItem.Name = "ForeColorMenuItem"
-        resources.ApplyResources(Me.ForeColorMenuItem, "ForeColorMenuItem")
-        '
         'ChangeBatteryMenuItem
         '
         Me.ChangeBatteryMenuItem.CheckOnClick = True
@@ -511,6 +496,33 @@ Partial Class Main
         '
         Me.DeviationToolStripTextBox.Name = "DeviationToolStripTextBox"
         resources.ApplyResources(Me.DeviationToolStripTextBox, "DeviationToolStripTextBox")
+        '
+        'SettingSeparator2
+        '
+        Me.SettingSeparator2.Name = "SettingSeparator2"
+        resources.ApplyResources(Me.SettingSeparator2, "SettingSeparator2")
+        '
+        'ColorMenuItem
+        '
+        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem})
+        Me.ColorMenuItem.Name = "ColorMenuItem"
+        resources.ApplyResources(Me.ColorMenuItem, "ColorMenuItem")
+        '
+        'BackColorMenuItem
+        '
+        Me.BackColorMenuItem.Name = "BackColorMenuItem"
+        resources.ApplyResources(Me.BackColorMenuItem, "BackColorMenuItem")
+        '
+        'ForeColorMenuItem
+        '
+        Me.ForeColorMenuItem.Name = "ForeColorMenuItem"
+        resources.ApplyResources(Me.ForeColorMenuItem, "ForeColorMenuItem")
+        '
+        'BackTransMenuItem
+        '
+        Me.BackTransMenuItem.CheckOnClick = True
+        Me.BackTransMenuItem.Name = "BackTransMenuItem"
+        resources.ApplyResources(Me.BackTransMenuItem, "BackTransMenuItem")
         '
         'SettingSeparator1
         '
@@ -675,16 +687,11 @@ Partial Class Main
         Me.ColorDialog.AnyColor = True
         Me.ColorDialog.FullOpen = True
         '
-        'BackTransMenuItem
+        'MinMenuItem
         '
-        Me.BackTransMenuItem.CheckOnClick = True
-        Me.BackTransMenuItem.Name = "BackTransMenuItem"
-        resources.ApplyResources(Me.BackTransMenuItem, "BackTransMenuItem")
-        '
-        'SettingSeparator2
-        '
-        Me.SettingSeparator2.Name = "SettingSeparator2"
-        resources.ApplyResources(Me.SettingSeparator2, "SettingSeparator2")
+        Me.MinMenuItem.CheckOnClick = True
+        Me.MinMenuItem.Name = "MinMenuItem"
+        resources.ApplyResources(Me.MinMenuItem, "MinMenuItem")
         '
         'Main
         '
@@ -809,4 +816,5 @@ Partial Class Main
     Friend WithEvents ForeColorMenuItem As ToolStripMenuItem
     Friend WithEvents SettingSeparator2 As ToolStripSeparator
     Friend WithEvents BackTransMenuItem As ToolStripMenuItem
+    Friend WithEvents MinMenuItem As ToolStripMenuItem
 End Class
