@@ -145,6 +145,7 @@ Public Class Main
 
         '起動時の処理です
         '設定ファイルから各種データを読み込みます
+        MinMenuItem.Checked = My.Settings.MinSwitch
         PerfectTransparentMenuItem.Checked = My.Settings.PerfectTrans
         Term5MenuItem.Checked = My.Settings.Term5
         Term6MenuItem.Checked = My.Settings.Term6
@@ -451,8 +452,16 @@ Public Class Main
         DiffTime = DiffTime * -1
 
         If DiffTime <= 60 Then
-            TimerLabel.Text = DiffTime
-            TimerLabel.ForeColor = Color.Red
+            If MinMenuItem.Checked Then
+                TimerLabel.Text = 0
+                TimerLabel.ForeColor = Color.Red
+                TimerBar.Maximum = 600
+                If Format(DiffTime Mod 60, "00") < 0 Then TimerBar.Value = 0 Else _
+                    TimerBar.Value = Math.Min((60 - (DiffTime Mod 60)) * 10 + Math.Min(NowTime.Millisecond \ 100, 10), 600)
+            Else
+                TimerLabel.Text = DiffTime
+                TimerLabel.ForeColor = Color.Red
+            End If
         Else
             If MinMenuItem.Checked Then
                 If DiffTime > 599940 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = Format(Int(DiffTime / 60), "00")
@@ -901,6 +910,7 @@ Public Class Main
         Else
             My.Settings.BarColor = Color.Transparent
         End If
+        My.Settings.MinSwitch = MinMenuItem.Checked
         'End
     End Sub
     Private Sub alltimeroff()
