@@ -128,7 +128,7 @@ Partial Class Main
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ColorDialog = New System.Windows.Forms.ColorDialog()
-        Me.ゲージ色ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarLabel = New System.Windows.Forms.Label()
         Me.BarLabelTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimerMenuStrip.SuspendLayout()
@@ -513,7 +513,7 @@ Partial Class Main
         '
         'ColorMenuItem
         '
-        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem, Me.ゲージ色ToolStripMenuItem})
+        Me.ColorMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackColorMenuItem, Me.ForeColorMenuItem, Me.BarColorMenuItem})
         Me.ColorMenuItem.Name = "ColorMenuItem"
         resources.ApplyResources(Me.ColorMenuItem, "ColorMenuItem")
         '
@@ -696,10 +696,10 @@ Partial Class Main
         Me.ColorDialog.AnyColor = True
         Me.ColorDialog.FullOpen = True
         '
-        'ゲージ色ToolStripMenuItem
+        'BarColorMenuItem
         '
-        Me.ゲージ色ToolStripMenuItem.Name = "ゲージ色ToolStripMenuItem"
-        resources.ApplyResources(Me.ゲージ色ToolStripMenuItem, "ゲージ色ToolStripMenuItem")
+        Me.BarColorMenuItem.Name = "BarColorMenuItem"
+        resources.ApplyResources(Me.BarColorMenuItem, "BarColorMenuItem")
         '
         'BarLabel
         '
@@ -835,7 +835,7 @@ Partial Class Main
     Friend WithEvents SettingSeparator2 As ToolStripSeparator
     Friend WithEvents BackTransMenuItem As ToolStripMenuItem
     Friend WithEvents MinMenuItem As ToolStripMenuItem
-    Friend WithEvents ゲージ色ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BarColorMenuItem As ToolStripMenuItem
     Friend WithEvents BarLabel As Label
     Friend WithEvents BarLabelTimer As System.Windows.Forms.Timer
 End Class

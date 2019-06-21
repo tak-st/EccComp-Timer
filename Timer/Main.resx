@@ -204,6 +204,114 @@
   <data name="AdvancedMenuItem.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="SpecialTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="SpecialTimeMenuItem.Text" xml:space="preserve">
+    <value>特殊な時限を使用する</value>
+  </data>
+  <data name="TransparentMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="TransparentMenuItem.Text" xml:space="preserve">
+    <value>固定時マウスオーバーで透明化(&amp;H)</value>
+  </data>
+  <data name="PositionSaveMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="PositionSaveMenuItem.Text" xml:space="preserve">
+    <value>フォームの位置を記憶する(&amp;P)</value>
+  </data>
+  <data name="LockStartMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="LockStartMenuItem.Text" xml:space="preserve">
+    <value>起動時固定状態にする(&amp;L)</value>
+  </data>
+  <data name="AutorunMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="AutorunMenuItem.Text" xml:space="preserve">
+    <value>Windowsの起動時に自動的に起動する(&amp;A)</value>
+  </data>
+  <data name="SizeSaveMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="SizeSaveMenuItem.Text" xml:space="preserve">
+    <value>フォームのサイズを記憶する(&amp;F)</value>
+  </data>
+  <data name="CanSizeChangeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="CanSizeChangeMenuItem.Text" xml:space="preserve">
+    <value>フォームのサイズ変更を可能にする(&amp;S)</value>
+  </data>
+  <data name="ChangeBatteryMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="ChangeBatteryMenuItem.Text" xml:space="preserve">
+    <value>充電停止時、バッテリー表示に切り替える</value>
+  </data>
+  <data name="ShowNextTermMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="ShowNextTermMenuItem.Text" xml:space="preserve">
+    <value>休み時間時次の授業情報表示(&amp;I)</value>
+  </data>
+  <data name="NTPTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="NTPTimeMenuItem.Text" xml:space="preserve">
+    <value>ネットワークでシステム時刻を補正する</value>
+  </data>
+  <data name="DeviationMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="DeviationMenuItem.Text" xml:space="preserve">
+    <value>タイマーの時間をずらす (秒)</value>
+  </data>
+  <data name="SettingSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 6</value>
+  </data>
+  <data name="BackColorMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="BackColorMenuItem.Text" xml:space="preserve">
+    <value>背景色</value>
+  </data>
+  <data name="ForeColorMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="ForeColorMenuItem.Text" xml:space="preserve">
+    <value>文字色</value>
+  </data>
+  <data name="BarColorMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="BarColorMenuItem.Text" xml:space="preserve">
+    <value>バー色</value>
+  </data>
+  <data name="ColorMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="ColorMenuItem.Text" xml:space="preserve">
+    <value>色を変更する</value>
+  </data>
+  <data name="BackTransMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="BackTransMenuItem.Text" xml:space="preserve">
+    <value>背景色を透明にする</value>
+  </data>
+  <data name="SettingSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 6</value>
+  </data>
+  <data name="AdvancedOnMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="AdvancedOnMenuItem.Text" xml:space="preserve">
+    <value>高度なデザイン設定をONにする</value>
+  </data>
   <data name="SettingMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 20</value>
   </data>
@@ -483,12 +591,6 @@
   <data name="AdvancedOffMenuItem.Text" xml:space="preserve">
     <value>高度なデザイン設定をOFFにする</value>
   </data>
-  <data name="SpecialTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="SpecialTimeMenuItem.Text" xml:space="preserve">
-    <value>特殊な時限を使用する</value>
-  </data>
   <data name="Term5MenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 22</value>
   </data>
@@ -503,54 +605,6 @@
   </data>
   <data name="Term6MenuItem.Text" xml:space="preserve">
     <value>6時限目</value>
-  </data>
-  <data name="TransparentMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="TransparentMenuItem.Text" xml:space="preserve">
-    <value>固定時マウスオーバーで透明化(&amp;H)</value>
-  </data>
-  <data name="PositionSaveMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="PositionSaveMenuItem.Text" xml:space="preserve">
-    <value>フォームの位置を記憶する(&amp;P)</value>
-  </data>
-  <data name="LockStartMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="LockStartMenuItem.Text" xml:space="preserve">
-    <value>起動時固定状態にする(&amp;L)</value>
-  </data>
-  <data name="AutorunMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="AutorunMenuItem.Text" xml:space="preserve">
-    <value>Windowsの起動時に自動的に起動する(&amp;A)</value>
-  </data>
-  <data name="SizeSaveMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="SizeSaveMenuItem.Text" xml:space="preserve">
-    <value>フォームのサイズを記憶する(&amp;F)</value>
-  </data>
-  <data name="CanSizeChangeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="CanSizeChangeMenuItem.Text" xml:space="preserve">
-    <value>フォームのサイズ変更を可能にする(&amp;S)</value>
-  </data>
-  <data name="ChangeBatteryMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="ChangeBatteryMenuItem.Text" xml:space="preserve">
-    <value>充電停止時、バッテリー表示に切り替える</value>
-  </data>
-  <data name="ShowNextTermMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="ShowNextTermMenuItem.Text" xml:space="preserve">
-    <value>休み時間時次の授業情報表示(&amp;I)</value>
   </data>
   <data name="IDPassMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 22</value>
@@ -573,59 +627,11 @@
   <data name="ShowPopUpMenuItem.Text" xml:space="preserve">
     <value>ポップアップを表示</value>
   </data>
-  <data name="NTPTimeMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="NTPTimeMenuItem.Text" xml:space="preserve">
-    <value>ネットワークでシステム時刻を補正する</value>
-  </data>
-  <data name="DeviationMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="DeviationMenuItem.Text" xml:space="preserve">
-    <value>タイマーの時間をずらす (秒)</value>
-  </data>
   <data name="DeviationToolStripTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
   <data name="DeviationToolStripTextBox.Text" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="SettingSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 6</value>
-  </data>
-  <data name="ColorMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="ColorMenuItem.Text" xml:space="preserve">
-    <value>色を変更する</value>
-  </data>
-  <data name="BackColorMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="BackColorMenuItem.Text" xml:space="preserve">
-    <value>背景色</value>
-  </data>
-  <data name="ForeColorMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="ForeColorMenuItem.Text" xml:space="preserve">
-    <value>文字色</value>
-  </data>
-  <data name="BackTransMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="BackTransMenuItem.Text" xml:space="preserve">
-    <value>背景色を透明にする</value>
-  </data>
-  <data name="SettingSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 6</value>
-  </data>
-  <data name="AdvancedOnMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 22</value>
-  </data>
-  <data name="AdvancedOnMenuItem.Text" xml:space="preserve">
-    <value>高度なデザイン設定をONにする</value>
   </data>
   <metadata name="WebTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>221, 17</value>
@@ -1513,12 +1519,6 @@
   <metadata name="ColorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>461, 56</value>
   </metadata>
-  <data name="ゲージ色ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="ゲージ色ToolStripMenuItem.Text" xml:space="preserve">
-    <value>バー色</value>
-  </data>
   <data name="BarLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>50, 56</value>
   </data>
@@ -1544,7 +1544,7 @@
     <value>0</value>
   </data>
   <metadata name="BarLabelTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>577, 56</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2885,10 +2885,10 @@
   <data name="&gt;&gt;ColorDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ゲージ色ToolStripMenuItem.Name" xml:space="preserve">
-    <value>ゲージ色ToolStripMenuItem</value>
+  <data name="&gt;&gt;BarColorMenuItem.Name" xml:space="preserve">
+    <value>BarColorMenuItem</value>
   </data>
-  <data name="&gt;&gt;ゲージ色ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;BarColorMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BarLabelTimer.Name" xml:space="preserve">

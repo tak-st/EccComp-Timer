@@ -149,8 +149,8 @@ Public Class Main
         PerfectTransparentMenuItem.Checked = My.Settings.PerfectTrans
         Term5MenuItem.Checked = My.Settings.Term5
         Term6MenuItem.Checked = My.Settings.Term6
-        TimerLabel.ForeColor = My.Settings.ForeColor
-        If TimerLabel.ForeColor <> Color.Black Then
+        forec = My.Settings.ForeColor
+        If forec <> Color.Black Then
             ForeColorMenuItem.Checked = True
         End If
         Me.BackColor = My.Settings.BackColor
@@ -159,9 +159,9 @@ Public Class Main
         End If
 
         If My.Settings.BarColor <> Color.Transparent Then
-            BarLabel.BackColor = My.Settings.BackColor
+            BarLabel.BackColor = My.Settings.BarColor
             BarLabel.Visible = True
-            BackColorMenuItem.Checked = True
+            BarColorMenuItem.Checked = True
             BarLabelTimer.Start()
         End If
         DeviationToolStripTextBox.Text = My.Settings.Deviation
@@ -1645,7 +1645,7 @@ Public Class Main
         End If
     End Sub
 
-    Private Sub ゲージ色ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ゲージ色ToolStripMenuItem.Click
+    Private Sub ゲージ色ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BarColorMenuItem.Click
         If sender.checked = False Then
             ColorDialog.Color = BarLabel.BackColor
             ColorDialog.ShowDialog()
