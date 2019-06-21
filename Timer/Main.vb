@@ -464,7 +464,7 @@ Public Class Main
             End If
         Else
             If MinMenuItem.Checked Then
-                If DiffTime > 599940 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = Format(Int(DiffTime / 60), "00")
+                If DiffTime > 599940 And CanSizeChangeMenuItem.Checked = False Then TimerLabel.Text = "9999" Else TimerLabel.Text = Format(Int(DiffTime / 60), "0")
                 TimerBar.Maximum = 600
                 If Format(DiffTime Mod 60, "00") < 0 Then TimerBar.Value = 0 Else _
                     TimerBar.Value = Math.Min((60 - (DiffTime Mod 60)) * 10 + Math.Min(NowTime.Millisecond \ 100, 10), 600)
