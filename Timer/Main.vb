@@ -1628,6 +1628,7 @@ Public Class Main
             sender.checked = True
         Else
             Me.BackColor = SystemColors.Control
+            Call BackTransMenuItem_Click(sender, e)
             sender.checked = False
         End If
     End Sub
