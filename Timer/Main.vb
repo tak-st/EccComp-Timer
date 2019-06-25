@@ -132,17 +132,15 @@ Public Class Main
             'PrivateFontCollectionにフォントを追加する
             pfc.AddFontFile(My.Application.Info.DirectoryPath & "\Resources\Roboto-Bold.ttf")
 
-            'PrivateFontCollectionの先頭のフォントのFontオブジェクトを作成する
-            Dim f As New System.Drawing.Font(pfc.Families(0), 12, FontStyle.Bold)
 
-            'Labelコントロールのフォントに設定する
-            TimerLabel.Font = f
         Catch ex As System.IO.FileNotFoundException
             Me.Visible = False
             MessageBox.Show("起動に必要なファイルが見つかりません。終了します。", "System.IO.FileNotFoundException", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End
         End Try
 
+        'PrivateFontCollectionの先頭のフォントのFontオブジェクトを作成する
+        Dim f As New System.Drawing.Font(pfc.Families(0), 12, FontStyle.Bold)
         '起動時の処理です
         '設定ファイルから各種データを読み込みます
         MinMenuItem.Checked = My.Settings.MinSwitch
@@ -225,12 +223,16 @@ Public Class Main
                 TimerLabel.Width = Me.Width - TimerLabel.Left - My.Settings.RightSpace
                 TimerBar.Width = TimerLabel.Width
             Case 1
+                TimerLabel.Font = f
                 Call Size4MenuItem_Click(Me, e)
             Case 2
+                TimerLabel.Font = f
                 Call Size3MenuItem_Click(Me, e)
             Case 3
+                TimerLabel.Font = f
                 Call Size2MenuItem_Click(Me, e)
             Case 4
+                TimerLabel.Font = f
                 Call Size1MenuItem_Click(Me, e)
         End Select
 
