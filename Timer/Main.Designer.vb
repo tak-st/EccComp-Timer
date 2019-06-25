@@ -93,6 +93,7 @@ Partial Class Main
         Me.ColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForeColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackTransMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.AdvancedOnMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -128,7 +129,6 @@ Partial Class Main
         Me.BatteryMonitorTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ColorDialog = New System.Windows.Forms.ColorDialog()
-        Me.BarColorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarLabel = New System.Windows.Forms.Label()
         Me.BarLabelTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TimerMenuStrip.SuspendLayout()
@@ -527,6 +527,11 @@ Partial Class Main
         Me.ForeColorMenuItem.Name = "ForeColorMenuItem"
         resources.ApplyResources(Me.ForeColorMenuItem, "ForeColorMenuItem")
         '
+        'BarColorMenuItem
+        '
+        Me.BarColorMenuItem.Name = "BarColorMenuItem"
+        resources.ApplyResources(Me.BarColorMenuItem, "BarColorMenuItem")
+        '
         'BackTransMenuItem
         '
         Me.BackTransMenuItem.CheckOnClick = True
@@ -695,11 +700,6 @@ Partial Class Main
         '
         Me.ColorDialog.AnyColor = True
         Me.ColorDialog.FullOpen = True
-        '
-        'BarColorMenuItem
-        '
-        Me.BarColorMenuItem.Name = "BarColorMenuItem"
-        resources.ApplyResources(Me.BarColorMenuItem, "BarColorMenuItem")
         '
         'BarLabel
         '

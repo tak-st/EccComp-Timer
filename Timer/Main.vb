@@ -1216,6 +1216,7 @@ Public Class Main
     Private Sub BatteryTimer_Tick(sender As Object, e As EventArgs) Handles BatteryTimer.Tick
         Application.DoEvents()
         Call OpacityProcess()
+        TimerBar.Maximum = 100
         'AC電源の状態
         Dim pls As PowerLineStatus = SystemInformation.PowerStatus.PowerLineStatus
         Dim blp As Single = SystemInformation.PowerStatus.BatteryLifePercent
@@ -1228,7 +1229,11 @@ Public Class Main
             If ShowSecSwitch = True Then
                 'バッテリー残量（時間）
                 If -1 < blr Then
-                    TimerLabel.Text = Int(blr / 60) & "m"
+                    If Int(blr / 60) > 99 Then
+                        TimerLabel.Text = "99m"
+                    Else
+                        TimerLabel.Text = Int(blr / 60) & "m"
+                    End If
                     TimerBar.Value = blp * 100
                     Select Case pls
                         Case PowerLineStatus.Offline
@@ -1244,7 +1249,7 @@ Public Class Main
                     End Select
                 Else
                     'バッテリー残量（割合）
-                    TimerLabel.Text = "--m"
+                    TimerLabel.Text = "??m"
                     TimerBar.Value = blp * 100
 
                     Select Case pls
@@ -1262,7 +1267,15 @@ Public Class Main
                 End If
             Else
                 'バッテリー残量（割合）
-                TimerLabel.Text = blp * 100 & "%"
+                If MinMenuItem.Checked Then
+                    If blp > 0.99 Then
+                        TimerLabel.Text = "99%"
+                    Else
+                        TimerLabel.Text = blp * 100 & "%"
+                    End If
+                Else
+                    TimerLabel.Text = blp * 100 & "%"
+                End If
                 TimerBar.Value = blp * 100
 
                 Select Case pls
@@ -1563,7 +1576,7 @@ Public Class Main
         If ClassTimer.Enabled Or CountupTimer.Enabled Or CountdownTimer.Enabled Or KitchenMenuItem.Enabled Then ShowsecMenuItem.Text = "秒数表示"
         If BatteryTimer.Enabled Then ShowsecMenuItem.Text = "残り時間表示"
         If TimeTimer.Enabled Then ShowsecMenuItem.Text = "日付表示"
-        If statid() = 1 Then
+        If statid() = 1 Or statid() = 6 Then
             MinMenuItem.Visible = True
         Else
             MinMenuItem.Visible = False
@@ -1666,6 +1679,7 @@ Public Class Main
         BarLabel.Location = TimerBar.Location
         BarLabel.Size = New Size(TimerBar.Value / TimerBar.Maximum * TimerBar.Width, TimerBar.Height)
     End Sub
+
 
     Private Sub Size3MenuItem_Click(sender As Object, e As EventArgs) Handles Size3MenuItem.Click
         TimerLabel.Font = New Font(pfc.Families(0), 36, FontStyle.Bold)
