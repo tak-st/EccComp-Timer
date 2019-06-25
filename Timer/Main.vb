@@ -1230,7 +1230,11 @@ Public Class Main
                 'バッテリー残量（時間）
                 If -1 < blr Then
                     If Int(blr / 60) > 99 Then
-                        TimerLabel.Text = "99m"
+                        If Int(blr / 3600) < 10 Then
+                            TimerLabel.Text = Int(blr / 3600) & "h"
+                        Else
+                            TimerLabel.Text = "9h"
+                        End If
                     Else
                         TimerLabel.Text = Int(blr / 60) & "m"
                     End If
