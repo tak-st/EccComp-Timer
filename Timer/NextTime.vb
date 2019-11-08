@@ -9,7 +9,7 @@ Public Class NextTimeForm
         Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TimeTable)
         For i As Integer = 0 To TimeTable.Timetable.Count - 1
             If TimeTable.Timetable(i).Week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.Timetable(i).Term = term Then
-                ShowNextTimeLabel.Text = TimeTable.Timetable(i).LessonName
+                ShowNextTimeLabel.Text = TimeTable.Timetable(i).Lesson_Name
                 RoomLabel.Text = TimeTable.Timetable(i).Room
             End If
         Next
@@ -24,7 +24,7 @@ Public Class TimeTable
     Public Property Id As Integer
     Public Property Week As Integer
     Public Property Term As Integer
-    Public Property LessonName As String
+    Public Property Lesson_Name As String
     Public Property Room As String
     Public Property Teachers As Teachers()
 End Class

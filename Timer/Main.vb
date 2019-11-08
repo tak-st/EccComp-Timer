@@ -14,7 +14,7 @@ Public Class Main
         Dim TimeTable = JsonConvert.DeserializeObject(Of RootTimeTable)(My.Settings.TimeTable)
         For i As Integer = 0 To TimeTable.Timetable.Count - 1
             If TimeTable.Timetable(i).Week = Weekday(Today, FirstDayOfWeek.Monday) And TimeTable.Timetable(i).Term = term Then
-                lessonname = TimeTable.Timetable(i).LessonName
+                lessonname = TimeTable.Timetable(i).Lesson_Name
                 Room = TimeTable.Timetable(i).Room
             End If
         Next
